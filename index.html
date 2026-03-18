@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joana Wöhl – Freiheit & Figur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-nav-link active">Start</a>
+  <a href="ueber-mich.html" class="mobile-nav-link">Über mich</a>
+  <a href="kurs.html" class="mobile-nav-link">Freiheit &amp; Figur</a>
+  <a href="rezepte.html" class="mobile-nav-link">Rezepte</a>
+  <a href="coaching.html" class="mobile-nav-link">Coaching</a>
+  <a href="#warteliste" class="mobile-nav-cta" onclick="document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('navHamburger').classList.remove('open');">Auf die Warteliste</a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">Joana Wöhl</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link active">Start</a>
+    <a href="ueber-mich.html" class="nav-link">Über mich</a>
+    <a href="kurs.html" class="nav-link">Freiheit &amp; Figur</a>
+    <a href="rezepte.html" class="nav-link">Rezepte</a>
+    <a href="coaching.html" class="nav-link">Coaching</a>
+  </div>
+  <a href="#warteliste" class="nav-cta">Auf die Warteliste</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Online-Kurs &middot; Warteliste jetzt offen</div>
+    <h1 class="hero-headline">
+      Du denkst mehr über<br><em>Essen</em> nach als<br>über das Leben selbst.
+    </h1>
+    <p class="hero-sub">
+      Freiheit &amp; Figur ist kein Diät-Kurs. Es ist der Weg raus aus dem inneren Kampf — zu echtem Frieden mit Essen und deinem Körper.
+    </p>
+    <div class="hero-actions">
+      <a href="#warteliste" class="btn-primary">
+        Jetzt auf die Warteliste
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <span class="hero-note">Kostenlos &middot; Keine Verpflichtung</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-wrap">
+      <img src="assets/joana2.jpg" alt="Joana Wöhl" loading="eager">
+    </div>
+    <div class="hero-badge">
+      <span class="badge-main">4.75</span>
+      <span class="badge-sub">von 5 ★</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Verstehen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Erleben</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Integration</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Frieden mit Essen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Freiheit</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Figur</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Vertrauen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Innere Ruhe</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Nervensystem</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Selbstverständnis</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Verstehen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Erleben</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Integration</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Frieden mit Essen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Freiheit</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Figur</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Vertrauen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Innere Ruhe</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Nervensystem</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Selbstverständnis</span>
+    <span class="marquee-item gold">&middot;</span>
+  </div>
+</div>
+
+<!-- PAIN MIRROR -->
+<section class="pain-section">
+  <div class="section-inner">
+    <div class="pain-grid">
+      <div>
+        <div class="section-label reveal">Erkennst du dich darin?</div>
+        <h2 class="pain-headline reveal reveal-delay-1">
+          Der innere Kampf mit Essen <em>erschöpft</em><br>mehr, als du zugeben möchtest.
+        </h2>
+        <p class="pain-lead reveal reveal-delay-2">
+          Viele Frauen haben bereits vieles versucht. Diäten, Programme, Willenskraft. Und trotzdem kommt dieser eine Moment, in dem Essen aufhört, einfach zu sein.
+        </p>
+      </div>
+      <ul class="pain-list">
+        <li class="pain-item reveal">
+          <span class="pain-number">01</span>
+          <span class="pain-text">Du denkst ständig über Essen nach — was du gegessen hast, was du essen wirst, was du lieber nicht essen solltest.</span>
+        </li>
+        <li class="pain-item reveal reveal-delay-1">
+          <span class="pain-number">02</span>
+          <span class="pain-text">Du kennst das Gefühl von Schuld nach dem Essen — auch wenn du weißt, dass es eigentlich keinen Grund dafür gibt.</span>
+        </li>
+        <li class="pain-item reveal reveal-delay-2">
+          <span class="pain-number">03</span>
+          <span class="pain-text">Du schwankst zwischen Kontrolle und Kontrollverlust — und fragst dich, wann das endlich aufhört.</span>
+        </li>
+        <li class="pain-item reveal reveal-delay-3">
+          <span class="pain-number">04</span>
+          <span class="pain-text">Du hast viel Wissen über Ernährung — aber dieses Wissen bringt dir keinen inneren Frieden.</span>
+        </li>
+        <li class="pain-item reveal reveal-delay-4">
+          <span class="pain-number">05</span>
+          <span class="pain-text">Du wünschst dir, endlich einfach essen zu können — ohne Kampf, ohne Bewertung, ohne Nachdenken.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto-section">
+  <div class="manifesto-inner">
+    <blockquote class="manifesto-quote reveal">
+      „Aus Selbstkritik entsteht <strong>Selbstverständnis.</strong><br>
+      Aus Kontrolle entsteht <strong>Vertrauen.</strong>"
+    </blockquote>
+    <div class="manifesto-rule reveal reveal-delay-1"></div>
+    <p class="manifesto-sub reveal reveal-delay-2">
+      Freiheit &amp; Figur ist kein Programm über perfektes Essen. Es ist ein Weg zurück zu dir selbst — zu einem Körper, dem du wieder vertraust, und zu einem Leben, in dem Essen nicht mehr im Mittelpunkt jedes Gedankens steht.
+    </p>
+    <p class="manifesto-attribution reveal reveal-delay-3">— Joana Wöhl</p>
+  </div>
+</section>
+
+<!-- COURSE -->
+<section class="course-section">
+  <div class="section-inner">
+    <div class="course-header">
+      <div>
+        <div class="section-label reveal">Der Online-Kurs</div>
+        <h2 class="course-headline reveal reveal-delay-1">
+          Freiheit &amp; Figur —
+          <span>Dein Weg nach innen.</span>
+        </h2>
+      </div>
+      <p class="course-intro reveal">
+        Ein geführtes Online-Programm über mehrere Wochen. Keine Diätregeln. Keine Verbotslisten. Stattdessen: echtes Verstehen, neue Körpererfahrungen und eine nachhaltige Veränderung, die von innen kommt.
+      </p>
+    </div>
+    <div class="layers-grid">
+      <div class="layer-card reveal">
+        <div class="layer-num">01</div>
+        <h3 class="layer-title">Verstehen</h3>
+        <p class="layer-text">Du lernst die Zusammenhänge zwischen deinem Nervensystem, Stress, Epigenetik und Essverhalten zu verstehen. Dieses Wissen verändert alles — denn wer versteht, warum etwas entsteht, muss es nicht mehr bekämpfen.</p>
+      </div>
+      <div class="layer-card reveal reveal-delay-2">
+        <div class="layer-num">02</div>
+        <h3 class="layer-title">Erleben</h3>
+        <p class="layer-text">Über geführte Meditationen, Reflexionen und sanfte Körperübungen entstehen neue Erfahrungen mit deinem Körper. Du spürst, wie Ruhe sich anfühlt — nicht als Konzept, sondern als echte Empfindung.</p>
+      </div>
+      <div class="layer-card reveal reveal-delay-4">
+        <div class="layer-num">03</div>
+        <h3 class="layer-title">Integration</h3>
+        <p class="layer-text">Die neuen Erkenntnisse werden in deinen Alltag übertragen. Das Ziel ist ein entspannter, freier Umgang mit Essen — ganz ohne Druck, Kontrolle oder Schuldgefühle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE -->
+<section class="inside-section">
+  <div class="section-inner">
+    <div class="inside-header">
+      <div class="section-label reveal" style="justify-content:center">Was dich erwartet</div>
+      <h2 class="section-headline reveal reveal-delay-1">Was im Kurs auf dich wartet.</h2>
+      <p class="section-sub reveal reveal-delay-2">Alles, was du für deinen Weg brauchst — auf mehreren Ebenen.</p>
+    </div>
+    <div class="inside-grid">
+      <div class="inside-card reveal">
+        <div class="inside-icon">🧘</div>
+        <h3 class="inside-title">Meditationen</h3>
+        <p class="inside-desc">Geführte Meditationen, die dich dabei unterstützen, Stille zu erleben und deinem Körper näherzukommen. Von 75&nbsp;% der Teilnehmerinnen als wertvollster Inhalt bewertet.</p>
+      </div>
+      <div class="inside-card featured reveal reveal-delay-1">
+        <div class="inside-icon">💡</div>
+        <h3 class="inside-title">Wissensimpulse</h3>
+        <p class="inside-desc">Fundiertes Wissen über Nervensystem, Epigenetik, alte Glaubenssätze und Essverhalten. Du verstehst endlich, warum dein Körper so reagiert wie er reagiert.</p>
+      </div>
+      <div class="inside-card reveal reveal-delay-2">
+        <div class="inside-icon">✍️</div>
+        <h3 class="inside-title">Journaling &amp; Reflexion</h3>
+        <p class="inside-desc">Gezielte Reflexionsfragen, die dich einladen, tiefer hinzuschauen — ohne Bewertung, nur mit ehrlichem Verständnis für dich selbst.</p>
+      </div>
+      <div class="inside-card reveal reveal-delay-1">
+        <div class="inside-icon">📖</div>
+        <h3 class="inside-title">Workbook</h3>
+        <p class="inside-desc">Dein persönliches Begleitbuch durch den Kurs. Zum Schreiben, Spüren und Festhalten — für Erkenntnisse, die wirklich bleiben.</p>
+      </div>
+      <div class="inside-card reveal reveal-delay-2">
+        <div class="inside-icon">🌿</div>
+        <h3 class="inside-title">Körperübungen</h3>
+        <p class="inside-desc">Sanfte Übungen, die deinen Körper wieder als Heimat erfahrbar machen — nicht als etwas, das optimiert oder kontrolliert werden muss.</p>
+      </div>
+      <div class="inside-card reveal reveal-delay-3">
+        <div class="inside-icon">🤝</div>
+        <h3 class="inside-title">Geschützter Raum</h3>
+        <p class="inside-desc">Du bist nicht allein auf diesem Weg. Ein geschützter Rahmen, in dem du dich zeigen darfst — ehrlich, ohne Schönreden und ohne Urteil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATION -->
+<section class="transform-section">
+  <div class="section-inner">
+    <div class="section-label reveal">Die Veränderung</div>
+    <h2 class="section-headline reveal reveal-delay-1">Von hier — nach dort.</h2>
+    <div class="transform-grid">
+      <div>
+        <div class="transform-col-label before reveal">Vorher</div>
+        <ul class="transform-items reveal reveal-delay-1">
+          <li class="transform-item">Ständige Gedanken rund ums Essen</li>
+          <li class="transform-item">Schuldgefühle nach dem Essen</li>
+          <li class="transform-item">Kampf zwischen Kontrolle &amp; Kontrollverlust</li>
+          <li class="transform-item">Körper als Gegner</li>
+          <li class="transform-item">Essen als kompliziert erleben</li>
+          <li class="transform-item">Mentale Erschöpfung &amp; innerer Druck</li>
+        </ul>
+      </div>
+      <div class="transform-divider reveal">
+        <div class="transform-arrow">→</div>
+      </div>
+      <div>
+        <div class="transform-col-label after reveal">Nachher</div>
+        <ul class="transform-items reveal reveal-delay-1">
+          <li class="transform-item after-item">Mehr Ruhe &amp; Freiheit im Kopf</li>
+          <li class="transform-item after-item">Mehr Selbstverständnis &amp; Mitgefühl</li>
+          <li class="transform-item after-item">Vertrauen statt Kontrolle</li>
+          <li class="transform-item after-item">Körper als Verbündeten erleben</li>
+          <li class="transform-item after-item">Essen darf einfach sein</li>
+          <li class="transform-item after-item">Innere Leichtigkeit &amp; Freiheit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="section-inner">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-number" data-count="4.75" data-suffix="">0</span>
+        <span class="stat-label">von 5 Sternen —<br>durchschnittliche Bewertung</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <span class="stat-number" data-count="100" data-suffix="%">0</span>
+        <span class="stat-label">empfanden Struktur &amp; Länge<br>als „genau richtig"</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-inner">
+    <div class="section-label reveal">Stimmen aus dem Reset</div>
+    <h2 class="section-headline reveal reveal-delay-1">Was Frauen sagen,<br>die schon dabei waren.</h2>
+  </div>
+  <div class="testimonials-scroll" id="testimonialsScroll">
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Ich fühle mich so unglaublich befreit und erlöst. Das Coaching hat tiefsitzende Blockaden gelöst. Wie wundervoll ist doch mein Körper — mein Tempel.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Überzeugt, voller Energie und viel Vorfreude auf den Weg, der jetzt gestartet ist und nicht mehr enden soll.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Absolutes Spa-Erlebnis, das mich auf sanfte Art geweckt hat. Das war genau das, was ich gebraucht habe — ich musste schon selbst tun, aber mit dem Vertrauen, dass es klappt.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Ein Weg zu Frieden und Gelassenheit. Ein großes Stück näher an Freiheit.</p>
+      <div class="testimonial-stars">★★★★☆</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Tu es. Es ist einfach wundervoll investierte Zeit in dich. Du bist der einzige Mensch, der dafür verantwortlich ist, dass es dir gut geht.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Sei mutig und wage diesen Schritt. Er ist ein Schritt zu dir — und du wirst begeistert sein, versprochen.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-image-frame">
+          <img src="assets/joana.jpg" alt="Joana Wöhl – Lehrerin, Gründerin, Mama von drei Jungs" loading="lazy">
+        </div>
+        <div class="about-badge">
+          <span class="ab-num">2018</span>
+          <span class="ab-label">seit<br>MAKECAKE</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-label reveal">Über Joana Wöhl</div>
+        <h2 class="about-headline reveal reveal-delay-1">
+          Ich kenne diesen Kampf —<br><em>aus eigener Erfahrung.</em>
+        </h2>
+        <div class="about-text reveal reveal-delay-2">
+          <p>Ich bin Joana — Mama von drei Jungs, Biologielehrerin und Gründerin von MAKECAKE. In meiner Jugend habe ich Anorexie erlebt. Diese Erfahrung hat mein Leben geprägt — und mich zu der Arbeit geführt, die ich heute tue.</p>
+          <p>In den letzten Jahren habe ich aktiv an meiner eigenen Heilung gearbeitet. Ich weiß, wie sich der innere Kampf anfühlt. Und ich weiß, wie es ist, wenn dieser Kampf aufhört.</p>
+          <p>Diese Erkenntnis — wie man mit Leichtigkeit zur Wohlfühlfigur kommt — möchte ich jetzt weitergeben.</p>
+        </div>
+        <div class="about-values reveal reveal-delay-3">
+          <span class="value-tag">Ehrlichkeit</span>
+          <span class="value-tag">Mitgefühl</span>
+          <span class="value-tag">Tiefe</span>
+          <span class="value-tag">Klarheit</span>
+          <span class="value-tag">Ruhe</span>
+          <span class="value-tag">Selbstverantwortung</span>
+        </div>
+        <div style="margin-top: 36px;" class="reveal reveal-delay-4">
+          <a href="ueber-mich.html" class="btn-secondary">Mehr über mich erfahren →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE TEASER -->
+<section class="explore-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label reveal">Alles auf einem Blick</div>
+      <h2 class="section-headline reveal reveal-delay-1">Was ich dir anbiete.</h2>
+      <p class="section-sub reveal reveal-delay-2">Von meiner Geschichte bis zu deiner Transformation — hier findest du alles.</p>
+    </div>
+    <div class="explore-grid" style="margin-top: 56px;">
+      <a href="kurs.html" class="explore-card reveal">
+        <div class="explore-card-img">
+          <div class="explore-card-img-placeholder">✦</div>
+        </div>
+        <div class="explore-card-body">
+          <div class="explore-card-label">Online-Kurs</div>
+          <h3 class="explore-card-title">Freiheit &amp; Figur — Der Kurs</h3>
+          <p class="explore-card-text">Mein 8-Wochen-Programm für Frauen, die echten inneren Frieden mit Essen und ihrem Körper finden wollen. Wissenschaftlich fundiert, persönlich begleitet.</p>
+          <span class="explore-card-link">Zum Kurs →</span>
+        </div>
+      </a>
+      <a href="coaching.html" class="explore-card reveal reveal-delay-1">
+        <div class="explore-card-img">
+          <img src="assets/joana2.jpg" alt="1:1 Coaching mit Joana Wöhl">
+        </div>
+        <div class="explore-card-body">
+          <div class="explore-card-label">1:1 Coaching</div>
+          <h3 class="explore-card-title">Persönliche Begleitung, direkt buchbar.</h3>
+          <p class="explore-card-text">Du möchtest individuell begleitet werden? Im 1:1 Coaching arbeiten wir gemeinsam an deinem ganz persönlichen Weg — tief, direkt und ehrlich.</p>
+          <span class="explore-card-link">Coaching buchen →</span>
+        </div>
+      </a>
+      <a href="rezepte.html" class="explore-card reveal reveal-delay-2">
+        <div class="explore-card-img">
+          <div class="explore-card-img-placeholder">🌿</div>
+        </div>
+        <div class="explore-card-body">
+          <div class="explore-card-label">Meine Küche</div>
+          <h3 class="explore-card-title">Rezepte, die nähren — ohne Regeln.</h3>
+          <p class="explore-card-text">Grüne Smoothies, herzhaftes Frühstück, buntes Mittagessen. Ich koche intuitiv, ohne Rezepte — und genau das spürst du in der Küche.</p>
+          <span class="explore-card-link">Zur Küche →</span>
+        </div>
+      </a>
+      <a href="ueber-mich.html" class="explore-card reveal reveal-delay-3">
+        <div class="explore-card-img">
+          <img src="assets/joana.jpg" alt="Joana Wöhl – Über mich">
+        </div>
+        <div class="explore-card-body">
+          <div class="explore-card-label">Meine Geschichte</div>
+          <h3 class="explore-card-title">Wer ich bin — und warum ich diesen Weg gehe.</h3>
+          <p class="explore-card-text">Mama, Lehrerin, Gründerin, Heilungsweg. Ich erzähle dir, woher ich komme und warum ich heute genau das tue, was ich tue.</p>
+          <span class="explore-card-link">Meine Geschichte →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section class="waitlist-section" id="warteliste">
+  <div class="waitlist-inner">
+    <div class="waitlist-eyebrow reveal">Warteliste — Kostenlos eintragen</div>
+    <h2 class="waitlist-headline reveal reveal-delay-1">
+      Du bist bereit für<br>mehr <em>Freiheit.</em>
+    </h2>
+    <p class="waitlist-sub reveal reveal-delay-2">
+      Trag dich jetzt kostenlos auf die Warteliste ein. Du erfährst als Erste, wenn Freiheit &amp; Figur startet — und bekommst exklusiven Vorab-Zugang.
+    </p>
+    <form class="waitlist-form reveal reveal-delay-3" id="waitlistForm">
+      <div class="form-row">
+        <div class="form-field">
+          <input type="text" name="firstname" placeholder="Dein Vorname" required autocomplete="given-name">
+        </div>
+        <div class="form-field">
+          <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+        </div>
+      </div>
+      <button type="submit" class="form-submit">
+        Jetzt auf die Warteliste eintragen
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <p class="form-privacy">Kein Spam. Keine Weitergabe deiner Daten. Du kannst dich jederzeit austragen.</p>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <div class="success-icon">✓</div>
+      <h3 class="success-title">Du bist dabei.</h3>
+      <p class="success-text">Ich freue mich so sehr, dich bald auf diesem Weg zu begleiten.<br>Du erfährst als Erste, wenn Freiheit &amp; Figur öffnet.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Joana Wöhl</div>
+        <div class="footer-tagline">Frieden mit Essen. Vertrauen in den Körper.</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Start</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kurs.html">Freiheit &amp; Figur</a>
+        <a href="rezepte.html">Rezepte</a>
+        <a href="coaching.html">Coaching</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">Instagram @joanawoehl</a>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Joana Wöhl. Alle Rechte vorbehalten.</span>
+      <div class="footer-instagram"><a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">@joanawoehl</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // CURSOR
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  });
+  document.querySelectorAll('a, button, input, .testimonial-card, .layer-card, .inside-card, .explore-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { dot.classList.add('active'); ring.classList.add('active'); });
+    el.addEventListener('mouseleave', () => { dot.classList.remove('active'); ring.classList.remove('active'); });
+  });
+  (function animRing() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  // STICKY NAV
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+  // HAMBURGER
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // SCROLL REVEAL
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+  revealEls.forEach(el => obs.observe(el));
+
+  // COUNT-UP
+  const statEls = document.querySelectorAll('.stat-number[data-count]');
+  const countObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseFloat(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const isDecimal = String(target).includes('.');
+      const dur = 1800; const t0 = performance.now();
+      (function tick(now) {
+        const p = Math.min((now - t0) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = (isDecimal ? (target * ease).toFixed(2) : Math.round(target * ease)) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = (isDecimal ? target.toFixed(2) : target) + suffix;
+      })(t0);
+      countObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  statEls.forEach(el => countObs.observe(el));
+
+  // TESTIMONIALS DRAG
+  const scrl = document.getElementById('testimonialsScroll');
+  let isDown = false, startX, scrollLeft;
+  scrl.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - scrl.offsetLeft; scrollLeft = scrl.scrollLeft; });
+  scrl.addEventListener('mouseleave', () => { isDown = false; });
+  scrl.addEventListener('mouseup', () => { isDown = false; });
+  scrl.addEventListener('mousemove', e => {
+    if (!isDown) return; e.preventDefault();
+    scrl.scrollLeft = scrollLeft - (e.pageX - scrl.offsetLeft - startX) * 1.5;
+  });
+
+  // FORM
+  document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('formSuccess').classList.add('visible');
+  });
+</script>
+<script src="premium.js"></script>
+</body>
+</html>

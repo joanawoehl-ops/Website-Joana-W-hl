@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Küche – Rezepte | Joana Wöhl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-nav-link">Start</a>
+  <a href="ueber-mich.html" class="mobile-nav-link">Über mich</a>
+  <a href="kurs.html" class="mobile-nav-link">Freiheit &amp; Figur</a>
+  <a href="rezepte.html" class="mobile-nav-link active">Rezepte</a>
+  <a href="coaching.html" class="mobile-nav-link">Coaching</a>
+  <a href="kurs.html#warteliste" class="mobile-nav-cta">Auf die Warteliste</a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav" class="inner">
+  <a href="index.html" class="nav-logo">Joana Wöhl</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Start</a>
+    <a href="ueber-mich.html" class="nav-link">Über mich</a>
+    <a href="kurs.html" class="nav-link">Freiheit &amp; Figur</a>
+    <a href="rezepte.html" class="nav-link active">Rezepte</a>
+    <a href="coaching.html" class="nav-link">Coaching</a>
+  </div>
+  <a href="kurs.html#warteliste" class="nav-cta">Auf die Warteliste</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero page-hero--cream">
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-hero-eyebrow">Meine Küche</div>
+      <h1 class="page-hero-title">
+        Essen, das nährt —<br>ohne <em>Regeln.</em>
+      </h1>
+      <p class="page-hero-sub">
+        Ich koche intuitiv. Keine genauen Mengen, kein strenges Rezept, keine Verbotsliste. Einfach: was der Körper will, was schmeckt, was nährt.
+      </p>
+    </div>
+    <div class="page-hero-image">
+      <img src="images/rezepte/kueche-hero.jpg" alt="Joana Wöhls Küche – frisch, bunt, intuitiv" loading="eager" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- INTRO TEXT -->
+<section class="rezepte-intro-section">
+  <div class="section-inner">
+    <div class="rezepte-intro-grid">
+      <div class="rezepte-intro-image reveal">
+        <img src="images/rezepte/zutaten-kueche.jpg" alt="Frische Zutaten auf dem Küchentisch – bunt und ungestellt" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <div class="section-label reveal">Meine Kochphilosophie</div>
+        <h2 class="rezepte-intro-title reveal reveal-delay-1">
+          Intuition statt<br><em>Kochbuch.</em>
+        </h2>
+        <div class="rezepte-intro-text reveal reveal-delay-2">
+          <p>Ich habe nie nach strikten Rezepten gekocht — und tue es heute noch nicht. Was ich auf diese Seite schreibe, sind eher Inspirationen, Ideen, Richtlinien. Kein Gramm, keine Kalorien, keine Bewertung.</p>
+          <p>Denn genau das ist mir wichtig: Essen darf sich gut anfühlen. Es darf bunt, fröhlich, warm und nährend sein — ohne dass du dabei nachdenken musst, ob es „erlaubt" ist.</p>
+          <p>Meine Küche ist grün und frisch. Ein grüner Smoothie morgens, ein herzhaftes Frühstück wenn mir danach ist, ein buntes Mittagessen aus dem, was gerade da ist. So koche ich — und so lernst du es hier kennen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SMOOTHIES -->
+<section class="rezepte-categories-section">
+  <div class="section-inner">
+
+    <!-- Kategorie: Grüne Smoothies -->
+    <div class="rezepte-category-label reveal">Grüne Smoothies</div>
+    <h2 class="rezepte-category-title reveal reveal-delay-1">Der beste Start in den Tag.</h2>
+    <div class="rezepte-grid">
+      <div class="rezept-card reveal">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">gruener-morgen-smoothie.jpg</div>
+          <img src="images/rezepte/gruener-morgen-smoothie.jpg" alt="Grüner Morgen-Smoothie" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Smoothie</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Grüner Morgen-Smoothie</h3>
+          <p class="rezept-card-desc">Spinat, Banane, Apfel, etwas Ingwer, Wasser oder Mandelmilch. Einfach, grün, nährend.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 5 Min</span>
+            <span class="rezept-meta-item">🌿 Vegan</span>
+          </div>
+        </div>
+      </div>
+      <div class="rezept-card reveal reveal-delay-1">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">gruener-kraftdrink.jpg</div>
+          <img src="images/rezepte/gruener-kraftdrink.jpg" alt="Grüner Kraftdrink" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Smoothie</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Grüner Kraftdrink</h3>
+          <p class="rezept-card-desc">Gurke, Petersilie, Zitrone, Apfel, etwas Kurkuma. Erfrischend und voller Vitamine.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 5 Min</span>
+            <span class="rezept-meta-item">🌿 Rohkost</span>
+          </div>
+        </div>
+      </div>
+      <div class="rezept-card reveal reveal-delay-2">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">matcha-minze-smoothie.jpg</div>
+          <img src="images/rezepte/matcha-minze-smoothie.jpg" alt="Matcha-Minze-Smoothie" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Smoothie</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Matcha-Minze-Smoothie</h3>
+          <p class="rezept-card-desc">Banane, Mandelmilch, Matcha, frische Minze, Datteln. Süß ohne Zucker, aufweckend ohne Koffein-Crash.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 5 Min</span>
+            <span class="rezept-meta-item">🌿 Vegan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kategorie: Herzhaftes Frühstück -->
+    <div class="rezepte-category-label reveal" style="margin-top: 24px;">Herzhaftes Frühstück</div>
+    <h2 class="rezepte-category-title reveal reveal-delay-1">Wenn der Körper Wärme braucht.</h2>
+    <div class="rezepte-grid">
+      <div class="rezept-card reveal">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">eier-avocado.jpg</div>
+          <img src="images/rezepte/eier-avocado.jpg" alt="Eier mit Kräutern und Avocado" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Frühstück</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Eier mit Kräutern und Avocado</h3>
+          <p class="rezept-card-desc">Spiegeleier oder Rührei, frische Kräuter, Avocado, ein bisschen Salz. Fertig in zehn Minuten, sättigend für Stunden.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 10 Min</span>
+            <span class="rezept-meta-item">💛 Vegetarisch</span>
+          </div>
+        </div>
+      </div>
+      <div class="rezept-card reveal reveal-delay-1">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">haferbrei-bowl.jpg</div>
+          <img src="images/rezepte/haferbrei-bowl.jpg" alt="Warmes Haferbrei-Bowl" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Frühstück</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Warmes Haferbrei-Bowl</h3>
+          <p class="rezept-card-desc">Hafer mit Mandelmilch gekocht, frische Beeren, etwas Zimt, ein Löffel Mandelmus. Wärmt von innen.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 15 Min</span>
+            <span class="rezept-meta-item">🌿 Vegan</span>
+          </div>
+        </div>
+      </div>
+      <div class="rezept-card reveal reveal-delay-2">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">gemuese-bowl-ei.jpg</div>
+          <img src="images/rezepte/gemuese-bowl-ei.jpg" alt="Herzhafte Gemüse-Bowl mit Ei zum Frühstück" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Frühstück</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Gemüse-Bowl mit weichem Ei</h3>
+          <p class="rezept-card-desc">Was der Kühlschrank hergibt: Gemüse angebraten, ein weiches Ei obendrauf, etwas Tahini-Dressing. So spontan wie echt.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 20 Min</span>
+            <span class="rezept-meta-item">💛 Vegetarisch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kategorie: Buntes Mittagessen -->
+    <div class="rezepte-category-label reveal" style="margin-top: 24px;">Buntes Mittagessen</div>
+    <h2 class="rezepte-category-title reveal reveal-delay-1">Farben, die nähren.</h2>
+    <div class="rezepte-grid" style="margin-bottom: 0;">
+      <div class="rezept-card reveal">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">bunter-salat.jpg</div>
+          <img src="images/rezepte/bunter-salat.jpg" alt="Bunter Salat mit allem" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Mittagessen</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Bunter Salat mit allem</h3>
+          <p class="rezept-card-desc">Rucola, Tomaten, Gurke, Paprika, Kichererbsen, Feta, Oliven. Dressing: Olivenöl, Zitrone, Senf, Honig. Kein Rezept — nur Freude.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 10 Min</span>
+            <span class="rezept-meta-item">💛 Vegetarisch</span>
+          </div>
+        </div>
+      </div>
+      <div class="rezept-card reveal reveal-delay-1">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">linsensuppe.jpg</div>
+          <img src="images/rezepte/linsensuppe.jpg" alt="Linsensuppe mit Kurkuma" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Mittagessen</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Linsensuppe mit Kurkuma</h3>
+          <p class="rezept-card-desc">Rote Linsen, Zwiebeln, Tomaten, Kurkuma, Kreuzkümmel. Warm, sättigend, gut für Körper und Seele.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 30 Min</span>
+            <span class="rezept-meta-item">🌿 Vegan</span>
+          </div>
+        </div>
+      </div>
+      <div class="rezept-card reveal reveal-delay-2">
+        <div class="rezept-card-img">
+          <div class="rezept-img-placeholder">suesskartoffel-tahini.jpg</div>
+          <img src="images/rezepte/suesskartoffel-tahini.jpg" alt="Geröstete Süßkartoffeln mit Tahini und Granatapfel" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <span class="rezept-card-tag">Mittagessen</span>
+        </div>
+        <div class="rezept-card-body">
+          <h3 class="rezept-card-title">Süßkartoffel mit Tahini</h3>
+          <p class="rezept-card-desc">Ofensüßkartoffeln, Tahini-Dressing, Granatapfelkerne, frische Petersilie. Farbe, die glücklich macht.</p>
+          <div class="rezept-card-meta">
+            <span class="rezept-meta-item">⏱ 40 Min</span>
+            <span class="rezept-meta-item">🌿 Vegan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM CTA -->
+<section class="manifesto-section">
+  <div class="manifesto-inner">
+    <blockquote class="manifesto-quote reveal">
+      „Essen soll sich <strong>gut anfühlen.</strong><br>
+      Nicht verdient werden."
+    </blockquote>
+    <div class="manifesto-rule reveal reveal-delay-1"></div>
+    <p class="manifesto-sub reveal reveal-delay-2">
+      Mehr aus meiner Küche findest du täglich auf Instagram. Ungestellt, direkt aus dem Alltag mit drei Jungs — ehrlich und ohne Perfektion.
+    </p>
+    <div class="reveal reveal-delay-3" style="margin-top: 40px;">
+      <a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener" class="btn-primary">
+        @joanawoehl auf Instagram
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="waitlist-section" style="padding: 100px 0;">
+  <div class="waitlist-inner">
+    <div class="waitlist-eyebrow reveal">Newsletter</div>
+    <h2 class="waitlist-headline reveal reveal-delay-1">
+      Neue Rezepte &amp;<br>Impulse direkt zu dir.
+    </h2>
+    <p class="waitlist-sub reveal reveal-delay-2">
+      Trag dich ein und erhalte neue Rezepte, Gedanken zu Essen und Körper sowie Infos zum Kurs — direkt in dein Postfach.
+    </p>
+    <form class="waitlist-form reveal reveal-delay-3" id="newsletterForm">
+      <div class="form-row">
+        <div class="form-field">
+          <input type="text" name="firstname" placeholder="Dein Vorname" required autocomplete="given-name">
+        </div>
+        <div class="form-field">
+          <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+        </div>
+      </div>
+      <button type="submit" class="form-submit">
+        Jetzt eintragen
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <p class="form-privacy">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <div class="success-icon">✓</div>
+      <h3 class="success-title">Schön, dass du dabei bist.</h3>
+      <p class="success-text">Ab sofort bekommst du neue Rezepte und Impulse direkt von mir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Joana Wöhl</div>
+        <div class="footer-tagline">Frieden mit Essen. Vertrauen in den Körper.</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Start</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kurs.html">Freiheit &amp; Figur</a>
+        <a href="rezepte.html">Rezepte</a>
+        <a href="coaching.html">Coaching</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">Instagram @joanawoehl</a>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Joana Wöhl. Alle Rechte vorbehalten.</span>
+      <div class="footer-instagram"><a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">@joanawoehl</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  });
+  document.querySelectorAll('a, button, input, .rezept-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { dot.classList.add('active'); ring.classList.add('active'); });
+    el.addEventListener('mouseleave', () => { dot.classList.remove('active'); ring.classList.remove('active'); });
+  });
+  (function animRing() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+  revealEls.forEach(el => obs.observe(el));
+
+  document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('formSuccess').classList.add('visible');
+  });
+</script>
+<script src="premium.js"></script>
+</body>
+</html>

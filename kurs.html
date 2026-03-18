@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freiheit & Figur – Der Kurs | Joana Wöhl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-nav-link">Start</a>
+  <a href="ueber-mich.html" class="mobile-nav-link">Über mich</a>
+  <a href="kurs.html" class="mobile-nav-link active">Freiheit &amp; Figur</a>
+  <a href="rezepte.html" class="mobile-nav-link">Rezepte</a>
+  <a href="coaching.html" class="mobile-nav-link">Coaching</a>
+  <a href="#warteliste" class="mobile-nav-cta" onclick="document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('navHamburger').classList.remove('open');">Auf die Warteliste</a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav" class="inner">
+  <a href="index.html" class="nav-logo">Joana Wöhl</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Start</a>
+    <a href="ueber-mich.html" class="nav-link">Über mich</a>
+    <a href="kurs.html" class="nav-link active">Freiheit &amp; Figur</a>
+    <a href="rezepte.html" class="nav-link">Rezepte</a>
+    <a href="coaching.html" class="nav-link">Coaching</a>
+  </div>
+  <a href="#warteliste" class="nav-cta">Auf die Warteliste</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner centered">
+    <div class="page-hero-eyebrow">Online-Kurs · In Entwicklung</div>
+    <h1 class="page-hero-title">
+      Freiheit &amp; Figur —<br>Dein Weg nach <em>innen.</em>
+    </h1>
+    <p class="page-hero-sub">
+      Kein Diät-Kurs. Kein Ernährungsplan. Ein geführter Weg zu echtem inneren Frieden — mit Essen, mit deinem Körper, mit dir selbst.
+    </p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Verstehen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Erleben</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Integration</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Frieden mit Essen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Freiheit</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Innere Ruhe</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Vertrauen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Nervensystem</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Verstehen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Erleben</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Integration</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Frieden mit Essen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Freiheit</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Innere Ruhe</span>
+    <span class="marquee-item gold">&middot;</span>
+  </div>
+</div>
+
+<!-- KURS TEASER -->
+<section class="kurs-teaser-section">
+  <div class="section-inner">
+    <div class="kurs-teaser-grid">
+      <div class="kurs-teaser-image reveal">
+        <img src="images/placeholder.jpg" alt="Freiheit & Figur – Online-Kurs von Joana Wöhl" loading="lazy">
+      </div>
+      <div>
+        <span class="kurs-label reveal">Kurs in Entwicklung</span>
+        <h2 class="kurs-teaser-title reveal reveal-delay-1">
+          Kein weiterer Diät-Kurs.<br>Ein Weg zu dir <em>selbst.</em>
+        </h2>
+        <div class="kurs-teaser-text reveal reveal-delay-2">
+          <p>Freiheit &amp; Figur ist mein Online-Kurs für Frauen, die wissen, dass der Kampf mit Essen nicht durch mehr Wissen oder mehr Willenskraft endet.</p>
+          <p>Er ist ein geführtes Programm über mehrere Wochen, das auf drei Ebenen arbeitet: Verstehen, Erleben, Integration. Wissenschaftlich fundiert — und zutiefst persönlich.</p>
+          <p>Der Kurs befindet sich gerade in der finalen Entwicklung. Wenn du dabei sein möchtest, wenn er startet: Trag dich auf die Warteliste ein.</p>
+        </div>
+        <div class="kurs-teaser-cta reveal reveal-delay-3">
+          <a href="#warteliste" class="btn-primary">
+            Auf die Warteliste
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <span style="font-size: 13px; color: rgba(30,28,26,0.4); font-weight: 300;">Kostenlos · Keine Verpflichtung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN MIRROR -->
+<section class="pain-section">
+  <div class="section-inner">
+    <div class="pain-grid">
+      <div>
+        <div class="section-label reveal">Für wen ist dieser Kurs?</div>
+        <h2 class="pain-headline reveal reveal-delay-1">
+          Du bist genau richtig hier, wenn du <em>erschöpft</em> bist vom Kämpfen.
+        </h2>
+        <p class="pain-lead reveal reveal-delay-2">
+          Freiheit &amp; Figur ist für Frauen, die schon vieles versucht haben — und trotzdem noch nicht dort angekommen sind, wo sie hinwollen. Nicht, weil sie zu wenig versucht haben. Sondern weil sie am falschen Punkt angesetzt haben.
+        </p>
+      </div>
+      <ul class="pain-list">
+        <li class="pain-item reveal">
+          <span class="pain-number">01</span>
+          <span class="pain-text">Du denkst ständig über Essen nach und wünschst dir, es wäre endlich einfach.</span>
+        </li>
+        <li class="pain-item reveal reveal-delay-1">
+          <span class="pain-number">02</span>
+          <span class="pain-text">Du schwankst zwischen Diät und Kontrollverlust — und bist es leid, diesen Kreislauf zu kennen.</span>
+        </li>
+        <li class="pain-item reveal reveal-delay-2">
+          <span class="pain-number">03</span>
+          <span class="pain-text">Du weißt eigentlich, was du essen solltest — aber irgendwie funktioniert es trotzdem nicht.</span>
+        </li>
+        <li class="pain-item reveal reveal-delay-3">
+          <span class="pain-number">04</span>
+          <span class="pain-text">Du willst Frieden mit deinem Körper — nicht nur theoretisch, sondern wirklich, tief in dir.</span>
+        </li>
+        <li class="pain-item reveal reveal-delay-4">
+          <span class="pain-number">05</span>
+          <span class="pain-text">Du bist bereit, ehrlich hinzuschauen — auch wenn das manchmal unbequem ist.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WAS DICH ERWARTET -->
+<section class="kurs-details-section">
+  <div class="section-inner">
+    <div class="section-label reveal" style="justify-content: center;">Was dich erwartet</div>
+    <h2 class="section-headline reveal reveal-delay-1" style="text-align: center; margin-bottom: 16px;">Der Kurs auf drei Ebenen.</h2>
+    <p class="section-sub reveal reveal-delay-2" style="text-align: center; margin-bottom: 72px;">Nicht nur Wissen. Nicht nur Motivation. Sondern echter, nachhaltiger Wandel.</p>
+    <div class="layers-grid">
+      <div class="layer-card reveal">
+        <div class="layer-num">01</div>
+        <h3 class="layer-title">Verstehen</h3>
+        <p class="layer-text">Du lernst die Zusammenhänge zwischen deinem Nervensystem, Stress, Epigenetik und Essverhalten zu verstehen. Dieses Wissen verändert alles — denn wer versteht, warum etwas entsteht, muss es nicht mehr bekämpfen.</p>
+      </div>
+      <div class="layer-card reveal reveal-delay-2">
+        <div class="layer-num">02</div>
+        <h3 class="layer-title">Erleben</h3>
+        <p class="layer-text">Über geführte Meditationen, Reflexionen und sanfte Körperübungen entstehen neue Erfahrungen mit deinem Körper. Du spürst, wie Ruhe sich anfühlt — nicht als Konzept, sondern als echte Empfindung.</p>
+      </div>
+      <div class="layer-card reveal reveal-delay-4">
+        <div class="layer-num">03</div>
+        <h3 class="layer-title">Integration</h3>
+        <p class="layer-text">Die neuen Erkenntnisse werden in deinen Alltag übertragen. Das Ziel ist ein entspannter, freier Umgang mit Essen — ganz ohne Druck, Kontrolle oder Schuldgefühle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE -->
+<section class="inside-section">
+  <div class="section-inner">
+    <div class="inside-header">
+      <div class="section-label reveal" style="justify-content:center">Im Kurs enthalten</div>
+      <h2 class="section-headline reveal reveal-delay-1">Was auf dich wartet.</h2>
+      <p class="section-sub reveal reveal-delay-2">Alles, was du brauchst — und nichts, was du nicht brauchst.</p>
+    </div>
+    <div class="inside-grid">
+      <div class="inside-card reveal">
+        <div class="inside-icon">🧘</div>
+        <h3 class="inside-title">Meditationen</h3>
+        <p class="inside-desc">Geführte Meditationen, die dich dabei unterstützen, Stille zu erleben und deinem Körper näherzukommen.</p>
+      </div>
+      <div class="inside-card featured reveal reveal-delay-1">
+        <div class="inside-icon">💡</div>
+        <h3 class="inside-title">Wissensimpulse</h3>
+        <p class="inside-desc">Fundiertes Wissen über Nervensystem, Epigenetik, alte Glaubenssätze und Essverhalten — verständlich erklärt.</p>
+      </div>
+      <div class="inside-card reveal reveal-delay-2">
+        <div class="inside-icon">✍️</div>
+        <h3 class="inside-title">Journaling &amp; Reflexion</h3>
+        <p class="inside-desc">Gezielte Reflexionsfragen, die dich einladen, tiefer hinzuschauen — ohne Bewertung, nur mit ehrlichem Verständnis.</p>
+      </div>
+      <div class="inside-card reveal reveal-delay-1">
+        <div class="inside-icon">📖</div>
+        <h3 class="inside-title">Workbook</h3>
+        <p class="inside-desc">Dein persönliches Begleitbuch durch den Kurs — zum Schreiben, Spüren und Festhalten.</p>
+      </div>
+      <div class="inside-card reveal reveal-delay-2">
+        <div class="inside-icon">🌿</div>
+        <h3 class="inside-title">Körperübungen</h3>
+        <p class="inside-desc">Sanfte Übungen, die deinen Körper wieder als Heimat erfahrbar machen — nicht als etwas, das optimiert werden muss.</p>
+      </div>
+      <div class="inside-card reveal reveal-delay-3">
+        <div class="inside-icon">🤝</div>
+        <h3 class="inside-title">Geschützter Raum</h3>
+        <p class="inside-desc">Du bist nicht allein. Ein geschützter Rahmen, in dem du dich zeigen darfst — ehrlich, ohne Urteil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS + TESTIMONIALS -->
+<section class="stats-section">
+  <div class="section-inner">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-number" data-count="4.75" data-suffix="">0</span>
+        <span class="stat-label">von 5 Sternen —<br>durchschnittliche Bewertung</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <span class="stat-number" data-count="100" data-suffix="%">0</span>
+        <span class="stat-label">empfanden Struktur &amp; Länge<br>als „genau richtig"</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-inner">
+    <div class="section-label reveal">Stimmen der Teilnehmerinnen</div>
+    <h2 class="section-headline reveal reveal-delay-1">Was Frauen sagen,<br>die schon dabei waren.</h2>
+  </div>
+  <div class="testimonials-scroll" id="testimonialsScroll">
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Ich fühle mich so unglaublich befreit und erlöst. Das Coaching hat tiefsitzende Blockaden gelöst. Wie wundervoll ist doch mein Körper — mein Tempel.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Überzeugt, voller Energie und viel Vorfreude auf den Weg, der jetzt gestartet ist und nicht mehr enden soll.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Ein Weg zu Frieden und Gelassenheit. Ein großes Stück näher an Freiheit.</p>
+      <div class="testimonial-stars">★★★★☆</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Tu es. Es ist einfach wundervoll investierte Zeit in dich. Du bist der einzige Mensch, der dafür verantwortlich ist, dass es dir gut geht.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">"</span>
+      <p class="testimonial-text">Sei mutig und wage diesen Schritt. Er ist ein Schritt zu dir — und du wirst begeistert sein, versprochen.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-name">Teilnehmerin, Reset Freiheit &amp; Figur</div>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section class="waitlist-section" id="warteliste">
+  <div class="waitlist-inner">
+    <div class="waitlist-eyebrow reveal">Warteliste — Kostenlos eintragen</div>
+    <h2 class="waitlist-headline reveal reveal-delay-1">
+      Sei dabei, wenn<br><em>Freiheit &amp; Figur</em> startet.
+    </h2>
+    <p class="waitlist-sub reveal reveal-delay-2">
+      Der Kurs ist noch in Entwicklung. Trag dich jetzt ein — du erfährst als Erste vom Start und bekommst exklusiven Vorab-Zugang.
+    </p>
+    <form class="waitlist-form reveal reveal-delay-3" id="waitlistForm">
+      <div class="form-row">
+        <div class="form-field">
+          <input type="text" name="firstname" placeholder="Dein Vorname" required autocomplete="given-name">
+        </div>
+        <div class="form-field">
+          <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+        </div>
+      </div>
+      <button type="submit" class="form-submit">
+        Auf die Warteliste eintragen
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <p class="form-privacy">Kein Spam. Keine Weitergabe deiner Daten. Jederzeit abmeldbar.</p>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <div class="success-icon">✓</div>
+      <h3 class="success-title">Du bist dabei.</h3>
+      <p class="success-text">Ich melde mich, sobald der Kurs startet. Ich freue mich auf dich.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Joana Wöhl</div>
+        <div class="footer-tagline">Frieden mit Essen. Vertrauen in den Körper.</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Start</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kurs.html">Freiheit &amp; Figur</a>
+        <a href="rezepte.html">Rezepte</a>
+        <a href="coaching.html">Coaching</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">Instagram @joanawoehl</a>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Joana Wöhl. Alle Rechte vorbehalten.</span>
+      <div class="footer-instagram"><a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">@joanawoehl</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  });
+  document.querySelectorAll('a, button, input, .inside-card, .layer-card, .testimonial-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { dot.classList.add('active'); ring.classList.add('active'); });
+    el.addEventListener('mouseleave', () => { dot.classList.remove('active'); ring.classList.remove('active'); });
+  });
+  (function animRing() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+  revealEls.forEach(el => obs.observe(el));
+
+  const statEls = document.querySelectorAll('.stat-number[data-count]');
+  const countObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseFloat(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const isDecimal = String(target).includes('.');
+      const dur = 1800; const t0 = performance.now();
+      (function tick(now) {
+        const p = Math.min((now - t0) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = (isDecimal ? (target * ease).toFixed(2) : Math.round(target * ease)) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = (isDecimal ? target.toFixed(2) : target) + suffix;
+      })(t0);
+      countObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  statEls.forEach(el => countObs.observe(el));
+
+  const scrl = document.getElementById('testimonialsScroll');
+  let isDown = false, startX, scrollLeft;
+  scrl.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - scrl.offsetLeft; scrollLeft = scrl.scrollLeft; });
+  scrl.addEventListener('mouseleave', () => { isDown = false; });
+  scrl.addEventListener('mouseup', () => { isDown = false; });
+  scrl.addEventListener('mousemove', e => {
+    if (!isDown) return; e.preventDefault();
+    scrl.scrollLeft = scrollLeft - (e.pageX - scrl.offsetLeft - startX) * 1.5;
+  });
+
+  document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('formSuccess').classList.add('visible');
+  });
+</script>
+<script src="premium.js"></script>
+</body>
+</html>
