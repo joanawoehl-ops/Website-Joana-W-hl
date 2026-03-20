@@ -95,18 +95,19 @@
   }
 
   /* ---- 7. BREVO — Kontakt zur Mailingliste hinzufügen ---- */
-  // Brevo-Endpunkt wird nach Einrichtung des Subscription-Formulars gesetzt
-  var BREVO_FORM_URL = ''; // wird ergänzt
+  var BREVO_FORM_URL = 'https://611fc40e.sibforms.com/serve/MUIFAOMI_2-6ZKNYGi5U-jWF5G4jEWIIE3MXZ82uWcBwsV5exwpImyWyzdwXQZC139GsaIB2obfto0VWa9CjDu1dmhdv3jpnNdyAYkwpZhXRujaqY-pVBIkEjf1VO6GhqKUQai-jU-XNP0y6WSwyJV0OsO0KltF0YrEhWmCJ6XJYHebtUzuRdCmhSpWRDXUHe8CjdbbksI5NRdFrqA==';
 
   function addToBrevo(email, firstname) {
-    if (!BREVO_FORM_URL) return;
     var data = new URLSearchParams();
     data.append('EMAIL', email);
     data.append('FIRSTNAME', firstname);
+    data.append('email_address_check', '');
+    data.append('locale', 'de');
     fetch(BREVO_FORM_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: data.toString()
+      body: data.toString(),
+      mode: 'no-cors'
     }).catch(function() {});
   }
 
