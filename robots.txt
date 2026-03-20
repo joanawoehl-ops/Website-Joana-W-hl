@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joanawoehl-ops.github.io/Website-Joana-W-hl/sitemap.xml
