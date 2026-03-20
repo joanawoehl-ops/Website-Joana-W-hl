@@ -211,7 +211,11 @@
         Füll das Formular aus — ich melde mich persönlich bei dir. Unverbindlich, ehrlich, auf Augenhöhe.
       </p>
 
-      <form class="form-light reveal reveal-delay-3" id="coachingForm">
+      <form class="form-light reveal reveal-delay-3" id="coachingForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="a3418d41-cf30-4d9e-85d7-22b952fc1d8d">
+        <input type="hidden" name="subject" value="Coaching-Anfrage – Joana Wöhl">
+        <input type="hidden" name="from_name" value="Joana Wöhl Website">
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
         <div class="coaching-form-grid">
           <div class="form-field">
             <input type="text" name="firstname" placeholder="Vorname" required autocomplete="given-name">

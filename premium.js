@@ -94,4 +94,56 @@
     });
   }
 
+  /* ---- 7. WEB3FORMS — Formular-Handling ---- */
+  var forms = [
+    { formId: 'waitlistForm',   successId: 'formSuccess'    },
+    { formId: 'newsletterForm', successId: 'formSuccess'    },
+    { formId: 'coachingForm',   successId: 'coachingSuccess'}
+  ];
+
+  forms.forEach(function(cfg) {
+    var form = document.getElementById(cfg.formId);
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var btn = form.querySelector('[type="submit"]');
+      var originalText = btn.innerHTML;
+      btn.innerHTML = 'Wird gesendet…';
+      btn.disabled = true;
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.success) {
+          form.style.display = 'none';
+          var success = document.getElementById(cfg.successId);
+          if (success) {
+            success.style.display = 'block';
+            success.style.opacity  = '0';
+            success.style.transform = 'translateY(16px)';
+            setTimeout(function() {
+              success.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+              success.style.opacity   = '1';
+              success.style.transform = 'translateY(0)';
+            }, 30);
+          }
+        } else {
+          btn.innerHTML = originalText;
+          btn.disabled  = false;
+          alert('Etwas hat nicht geklappt. Bitte versuche es erneut.');
+        }
+      })
+      .catch(function() {
+        btn.innerHTML = originalText;
+        btn.disabled  = false;
+        alert('Netzwerkfehler. Bitte überprüfe deine Verbindung und versuche es erneut.');
+      });
+    });
+  });
+
 })();

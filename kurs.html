@@ -403,7 +403,11 @@
     <p class="waitlist-sub reveal reveal-delay-2">
       Der Kurs ist noch in Entwicklung. Trag dich jetzt ein — du erfährst als Erste vom Start und bekommst exklusiven Vorab-Zugang.
     </p>
-    <form class="waitlist-form reveal reveal-delay-3" id="waitlistForm">
+    <form class="waitlist-form reveal reveal-delay-3" id="waitlistForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a3418d41-cf30-4d9e-85d7-22b952fc1d8d">
+      <input type="hidden" name="subject" value="Warteliste – Freiheit & Figur (Kurs)">
+      <input type="hidden" name="from_name" value="Joana Wöhl Website">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
       <div class="form-row">
         <div class="form-field">
           <input type="text" name="firstname" placeholder="Dein Vorname" required autocomplete="given-name">

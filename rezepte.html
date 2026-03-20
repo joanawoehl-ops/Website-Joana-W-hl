@@ -297,7 +297,11 @@
     <p class="waitlist-sub reveal reveal-delay-2">
       Trag dich ein und erhalte neue Rezepte, Gedanken zu Essen und Körper sowie Infos zum Kurs — direkt in dein Postfach.
     </p>
-    <form class="waitlist-form reveal reveal-delay-3" id="newsletterForm">
+    <form class="waitlist-form reveal reveal-delay-3" id="newsletterForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a3418d41-cf30-4d9e-85d7-22b952fc1d8d">
+      <input type="hidden" name="subject" value="Newsletter-Eintrag – Meine Küche">
+      <input type="hidden" name="from_name" value="Joana Wöhl Website">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
       <div class="form-row">
         <div class="form-field">
           <input type="text" name="firstname" placeholder="Dein Vorname" required autocomplete="given-name">
