@@ -94,11 +94,27 @@
     });
   }
 
-  /* ---- 7. WEB3FORMS — Formular-Handling ---- */
+  /* ---- 7. BREVO — Kontakt zur Mailingliste hinzufügen ---- */
+  // Brevo-Endpunkt wird nach Einrichtung des Subscription-Formulars gesetzt
+  var BREVO_FORM_URL = ''; // wird ergänzt
+
+  function addToBrevo(email, firstname) {
+    if (!BREVO_FORM_URL) return;
+    var data = new URLSearchParams();
+    data.append('EMAIL', email);
+    data.append('FIRSTNAME', firstname);
+    fetch(BREVO_FORM_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data.toString()
+    }).catch(function() {});
+  }
+
+  /* ---- 8. WEB3FORMS — Formular-Handling ---- */
   var forms = [
-    { formId: 'waitlistForm',   successId: 'formSuccess'    },
-    { formId: 'newsletterForm', successId: 'formSuccess'    },
-    { formId: 'coachingForm',   successId: 'coachingSuccess'}
+    { formId: 'waitlistForm',   successId: 'formSuccess',     brevo: true  },
+    { formId: 'newsletterForm', successId: 'formSuccess',     brevo: true  },
+    { formId: 'coachingForm',   successId: 'coachingSuccess', brevo: false }
   ];
 
   forms.forEach(function(cfg) {
@@ -120,6 +136,13 @@
       .then(function(res) { return res.json(); })
       .then(function(data) {
         if (data.success) {
+          // Brevo: Kontakt in Mailingliste eintragen
+          if (cfg.brevo) {
+            var emailVal = form.querySelector('[name="email"]').value;
+            var nameVal  = (form.querySelector('[name="firstname"]') || {}).value || '';
+            addToBrevo(emailVal, nameVal);
+          }
+          // Erfolgsanzeige
           form.style.display = 'none';
           var success = document.getElementById(cfg.successId);
           if (success) {
