@@ -1263,7 +1263,7 @@ footer::before {
 .kitchen-mosaic {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-template-rows: 264px 204px;
+  grid-template-rows: 360px 280px;
   gap: 10px;
 }
 .mosaic-item {
@@ -1318,7 +1318,7 @@ footer::before {
   .stats-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .kitchen-layout { grid-template-columns: 1fr; gap: 48px; }
-  .kitchen-mosaic { grid-template-rows: 220px 170px; }
+  .kitchen-mosaic { grid-template-rows: 300px 230px; }
   .form-row { grid-template-columns: 1fr; }
   .testimonials-scroll { padding: 0 24px 16px; }
   .footer-top { grid-template-columns: 1fr; text-align: center; }
@@ -1345,7 +1345,7 @@ footer::before {
   .inside-grid { grid-template-columns: 1fr; }
   .hero-headline { font-size: clamp(32px, 8vw, 52px); }
   .page-hero-title { font-size: clamp(40px, 10vw, 60px); }
-  .kitchen-mosaic { grid-template-rows: 170px 130px; }
+  .kitchen-mosaic { grid-template-rows: 240px 185px; }
 }
 
 /* =====================================================
