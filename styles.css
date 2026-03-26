@@ -806,11 +806,10 @@ nav.inner .nav-hamburger span { background: var(--color-dark); }
 }
 .explore-card:hover { transform: translateY(-6px); box-shadow: 0 28px 56px rgba(58,53,48,0.10); }
 .explore-card-img {
-  aspect-ratio: 16/9; overflow: hidden; background: var(--cream-mid);
-  position: relative;
+  overflow: hidden; background: var(--cream-mid);
 }
 .explore-card-img img {
-  width: 100%; height: 100%; object-fit: cover;
+  width: 100%; height: auto; display: block;
   transition: transform 0.7s var(--ease-spring);
 }
 .explore-card:hover .explore-card-img img { transform: scale(1.03); }
