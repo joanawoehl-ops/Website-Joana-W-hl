@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datenschutzerklärung | Joana Wöhl</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     .legal-section {
@@ -164,12 +161,15 @@
 
     <div class="legal-divider"></div>
 
-    <h2>4. Cookies</h2>
+    <h2>4. Cookies &amp; Schriftarten</h2>
     <p>
       Diese Website verwendet keine Tracking-Cookies und keine Analyse- oder Werbedienste von Drittanbietern. Es werden keine Cookies gesetzt, die eine Verfolgung deines Verhaltens über diese Website hinaus ermöglichen.
     </p>
     <p>
-      Beim Laden der Schriftarten über Google Fonts werden Verbindungen zu Servern von Google aufgebaut. Dabei wird deine IP-Adresse an Google übermittelt. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a>.
+      Die auf dieser Website verwendeten Schriftarten (Cormorant Garamond, DM Sans) sind lokal auf dem Webserver gespeichert und werden nicht von externen Diensten wie Google Fonts geladen. Es findet daher keine Verbindung zu Servern Dritter beim Abruf der Schriftarten statt.
+    </p>
+    <p>
+      Ein technischer Hinweis-Banner beim ersten Besuch der Website speichert deine Bestätigung im lokalen Speicher (localStorage) deines Browsers. Diese Information verlässt dein Gerät nicht und wird nicht für Tracking genutzt.
     </p>
 
     <div class="legal-divider"></div>
@@ -283,5 +283,6 @@
   revealEls.forEach(el => obs.observe(el));
 </script>
 <script src="premium.js"></script>
+<script src="cookie-banner.js"></script>
 </body>
 </html>
