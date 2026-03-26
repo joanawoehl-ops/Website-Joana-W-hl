@@ -1343,7 +1343,7 @@ footer::before {
   .rezepte-grid { grid-template-columns: 1fr; }
   .testimonial-card { flex: 0 0 300px; }
   .inside-grid { grid-template-columns: 1fr; }
-  .hero-headline { font-size: clamp(44px, 11vw, 64px); }
+  .hero-headline { font-size: clamp(32px, 8vw, 52px); }
   .page-hero-title { font-size: clamp(40px, 10vw, 60px); }
   .kitchen-mosaic { grid-template-rows: 170px 130px; }
 }
