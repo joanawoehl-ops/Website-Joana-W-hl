@@ -59,8 +59,9 @@
       --warm-white: #FAFAF8;
       --gold: #c8b4ad;
       --gold-light: #d9c8c2;
-      --text-muted: #7a6e65;
-      --border: rgba(200,180,173,0.25);
+      --text-muted: #9ea39a;
+      --accent: #b5baaa;
+      --border: rgba(181,186,170,0.25);
       --serif: 'Cormorant Garamond', Georgia, serif;
       --sans: 'DM Sans', system-ui, sans-serif;
     }
@@ -132,7 +133,7 @@
       font-size: 11px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--accent);
       margin-bottom: 24px;
       justify-content: center;
     }
@@ -142,7 +143,7 @@
       display: block;
       width: 32px;
       height: 1px;
-      background: var(--gold);
+      background: var(--accent);
       flex-shrink: 0;
     }
 
@@ -178,8 +179,8 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      background: var(--dark);
-      color: var(--warm-white);
+      background: #c8b4ad;
+      color: #3a3530;
       font-family: var(--sans);
       font-weight: 400;
       font-size: 16px;
@@ -189,11 +190,11 @@
       border: none;
       cursor: pointer;
       text-decoration: none;
-      transition: opacity 0.2s ease;
+      transition: background 0.2s ease;
     }
 
     .btn-download:hover {
-      opacity: 0.85;
+      background: #d9c8c2;
     }
 
     .download-meta {
@@ -251,7 +252,7 @@
       font-weight: 300;
       font-size: 64px;
       line-height: 1;
-      color: var(--cream-dark);
+      color: var(--accent);
       flex-shrink: 0;
       width: 80px;
       text-align: right;
