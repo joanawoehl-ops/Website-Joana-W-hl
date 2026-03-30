@@ -696,7 +696,7 @@
       btn.textContent = 'Wird gesendet...';
 
       try {
-        const res = await fetch('/.netlify/functions/brevo-subscribe', {
+        const res = await fetch('https://relaxed-pasca-48eda4.netlify.app/.netlify/functions/brevo-subscribe', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ email, firstname })
