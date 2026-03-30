@@ -661,12 +661,7 @@
   </footer>
 
   <script>
-    // ─── BREVO API-KONFIGURATION ───────────────────────────
-    const BREVO_API_KEY    = 'BREVO_API_KEY_HIER_EINFÜGEN';
-    const BREVO_LIST_ID    = 0;   // Listen-ID aus Brevo einsetzen
-    const BREVO_TEMPLATE   = 0;   // DOI-Template-ID aus Brevo einsetzen
-    const REDIRECT_URL     = 'https://woehl.de/funnel/danke.html';
-    // ───────────────────────────────────────────────────────
+    const REDIRECT_URL = 'https://woehl.de/funnel/danke.html';
 
     // Sticky Nav
     const nav = document.getElementById('mainNav');
@@ -701,23 +696,13 @@
       btn.textContent = 'Wird gesendet...';
 
       try {
-        const res = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
+        const res = await fetch('/.netlify/functions/brevo-subscribe', {
           method: 'POST',
-          headers: {
-            'accept': 'application/json',
-            'content-type': 'application/json',
-            'api-key': BREVO_API_KEY
-          },
-          body: JSON.stringify({
-            email: email,
-            attributes: { FIRSTNAME: firstname },
-            includeListIds: [BREVO_LIST_ID],
-            templateId: BREVO_TEMPLATE,
-            redirectionUrl: REDIRECT_URL
-          })
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ email, firstname })
         });
 
-        if (res.status === 201 || res.status === 204) {
+        if (res.ok) {
           // Erfolg
           this.style.display = 'none';
           successEl.style.display = 'block';
