@@ -1,18 +1,28 @@
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': 'https://woehl.de',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
 exports.handler = async function (event) {
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 204, headers: CORS_HEADERS, body: '' };
+  }
+
   if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
+    return { statusCode: 405, headers: CORS_HEADERS, body: 'Method Not Allowed' };
   }
 
   let body;
   try {
     body = JSON.parse(event.body);
   } catch {
-    return { statusCode: 400, body: JSON.stringify({ message: 'Ungültige Anfrage.' }) };
+    return { statusCode: 400, headers: CORS_HEADERS, body: JSON.stringify({ message: 'Ungültige Anfrage.' }) };
   }
 
   const { email, firstname } = body;
   if (!email || !firstname) {
-    return { statusCode: 400, body: JSON.stringify({ message: 'E-Mail und Vorname erforderlich.' }) };
+    return { statusCode: 400, headers: CORS_HEADERS, body: JSON.stringify({ message: 'E-Mail und Vorname erforderlich.' }) };
   }
 
   const BREVO_API_KEY  = process.env.BREVO_API_KEY;
@@ -39,7 +49,7 @@ exports.handler = async function (event) {
   if (res.status === 201 || res.status === 204) {
     return {
       statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },
       body: JSON.stringify({ success: true })
     };
   }
@@ -47,7 +57,7 @@ exports.handler = async function (event) {
   const data = await res.json().catch(() => ({}));
   return {
     statusCode: res.status,
-    headers: { 'Content-Type': 'application/json' },
+    headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },
     body: JSON.stringify({ message: data.message || 'Fehler beim Senden.' })
   };
 };
