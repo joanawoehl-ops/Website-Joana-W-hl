@@ -55,6 +55,7 @@ exports.handler = async function (event) {
   }
 
   const data = await res.json().catch(() => ({}));
+  console.log('Brevo error:', res.status, JSON.stringify(data));
   return {
     statusCode: res.status,
     headers: { ...CORS_HEADERS, 'Content-Type': 'application/json' },
