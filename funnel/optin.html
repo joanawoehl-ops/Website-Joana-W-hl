@@ -715,7 +715,7 @@
           throw new Error(data.message || 'Unbekannter Fehler (Status ' + res.status + ')');
         }
       } catch (err) {
-        errorEl.textContent = 'Etwas hat nicht geklappt. Bitte versuche es erneut.';
+        errorEl.textContent = err.message || 'Etwas hat nicht geklappt. Bitte versuche es erneut.';
         errorEl.style.display = 'block';
         btn.disabled = false;
         btn.textContent = 'Ja, schick mir den Guide →';
