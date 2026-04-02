@@ -577,6 +577,7 @@
     }
   </style>
   <script src="/cookie-consent.js"></script>
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 </head>
 <body>
 
@@ -607,15 +608,18 @@
       <p class="card-sub">Trag dich jetzt ein – du erhältst ihn sofort per E-Mail.</p>
       <div class="card-divider"></div>
 
-      <form id="optinForm" novalidate>
-        <input type="text" id="firstname" name="firstname" placeholder="Dein Vorname" required autocomplete="given-name">
-        <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
-        <div id="formError" class="form-error" style="display:none;"></div>
-        <button type="submit" id="submitBtn">Ja, schick mir den Guide →</button>
-      </form>
-      <div id="formSuccess" style="display:none;">
-        <p class="form-success-text">Fast geschafft! Schau in dein Postfach und bestätige kurz.</p>
+      <div id="error-message" class="sib-form-message-panel" style="display:none; font-size:13px; font-family:var(--sans); color:#661d1d; background-color:#ffeded; border-radius:2px; border:1px solid #ff4949; padding:10px; margin-bottom:12px;">
+        Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.
       </div>
+      <div id="success-message" class="sib-form-message-panel" style="display:none; font-size:13px; font-family:var(--sans); color:#085229; background-color:#e7faf0; border-radius:2px; border:1px solid #13ce66; padding:10px; margin-bottom:12px;">
+        Fast geschafft! Schau in dein Postfach und bestätige kurz.
+      </div>
+      <form id="sib-form" method="POST" action="https://611fc40e.sibforms.com/serve/MUIFAOMI_2-6ZKNYGi5U-jWF5G4jEWIIE3MXZ82uWcBwsV5exwpImyWyzdwXQZC139GsaIB2obfto0VWa9CjDu1dmhdv3jpnNdyAYkwpZhXRujaqY-pVBIkEjf1VO6GhqKUQai-jU-XNP0y6WSwyJV0OsO0KltF0YrEhWmCJ6XJYHebtUzuRdCmhSpWRDXUHe8CjdbbksI5NRdFrqA==" data-type="subscription" style="display:flex; flex-direction:column; gap:16px;">
+        <input type="text" id="EMAIL" name="EMAIL" placeholder="Deine E-Mail-Adresse" required autocomplete="email" data-required="true">
+        <button type="submit" class="sib-form-block__button">Jetzt Guide sichern &amp; dabei sein →</button>
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="de">
+      </form>
       <p class="form-trust">Kein Spam. Jederzeit abmeldbar.</p>
     </div>
   </section>
@@ -662,8 +666,6 @@
   </footer>
 
   <script>
-    const REDIRECT_URL = 'https://woehl.de/funnel/danke.html';
-
     // Sticky Nav
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', function() {
@@ -681,48 +683,17 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     revealElements.forEach(function(el) { observer.observe(el); });
-
-    // Formular Submit → Brevo Double Opt-In API
-    document.getElementById('optinForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-
-      const btn       = document.getElementById('submitBtn');
-      const errorEl   = document.getElementById('formError');
-      const successEl = document.getElementById('formSuccess');
-      const email     = document.getElementById('email').value.trim();
-      const firstname = document.getElementById('firstname').value.trim();
-
-      errorEl.style.display = 'none';
-      btn.disabled = true;
-      btn.textContent = 'Wird gesendet...';
-
-      try {
-        const res = await fetch('https://relaxed-pasca-48eda4.netlify.app/.netlify/functions/brevo-subscribe', {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ email, firstname })
-        });
-
-        if (res.ok) {
-          // Erfolg
-          this.style.display = 'none';
-          successEl.style.display = 'block';
-          setTimeout(function() {
-            window.location.href = REDIRECT_URL;
-          }, 2000);
-        } else {
-          const data = await res.json().catch(() => ({}));
-          throw new Error(data.message || 'Unbekannter Fehler (Status ' + res.status + ')');
-        }
-      } catch (err) {
-        errorEl.textContent = err.message || 'Etwas hat nicht geklappt. Bitte versuche es erneut.';
-        errorEl.style.display = 'block';
-        btn.disabled = false;
-        btn.textContent = 'Ja, schick mir den Guide →';
-        console.error('Brevo API Fehler:', err);
-      }
-    });
   </script>
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Wähle bitte einen Ländervorwahl aus.';
+    window.LOCALE = 'de';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
+    window.REQUIRED_ERROR_MESSAGE = "Dieses Feld darf nicht leer sein.";
+    window.GENERIC_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
+    window.translation = { common: { selectedList: '{quantity} Liste ausgewählt', selectedLists: '{quantity} Listen ausgewählt', selectedOption: '{quantity} ausgewählt', selectedOptions: '{quantity} ausgewählt' } };
+    var AUTOHIDE = Boolean(0);
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 </body>
 </html>
