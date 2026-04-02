@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&amp;display=swap');
+      .logo-text {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 32px;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        fill: #3a3530;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <!-- Hintergrund Salbeigrün -->
+  <rect width="420" height="100" fill="#b5baaa"/>
+  <!-- Logo Text -->
+  <text class="logo-text" x="50%" y="57%" text-anchor="middle" dominant-baseline="middle">JOANA WÖHL</text>
+</svg>

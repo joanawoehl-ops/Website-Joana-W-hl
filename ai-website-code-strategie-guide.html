@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Website Code – Was eine Seite zum Verkaufsinstrument macht</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange:       #D8622A;
+    --orange-mid:   #E8894E;
+    --orange-pale:  #F5CFA8;
+    --orange-deep:  #B84E1E;
+    --warm-black:   #160C05;
+    --warm-dark:    #2A1608;
+    --warm-brown:   #472B18;
+    --mid-brown:    #6B4530;
+    --tan:          #A88960;
+    --sand:         #D0B896;
+    --beige:        #EDE4D7;
+    --cream:        #F6F0E6;
+    --off-white:    #FBF7F2;
+    --warm-gray:    #7A6A5A;
+    --mid-gray:     #BDB0A0;
+    --light-gray:   #D8CFC4;
+    --font-heading: 'Cormorant', Georgia, serif;
+    --font-body:    'DM Sans', system-ui, sans-serif;
+    --font-accent:  'Montserrat', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #FFFFFF;
+    color: var(--warm-black);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── BLOG LAYOUT ── */
+  .blog-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--beige);
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .blog-header-brand {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--warm-brown);
+  }
+
+  .blog-header-tag {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--orange);
+    background: rgba(216, 98, 42, 0.08);
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: #FFFFFF;
+    padding: 96px 32px 80px;
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(216,98,42,0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-kicker {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-kicker::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--orange);
+    opacity: 0.6;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(44px, 7vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--warm-black);
+    letter-spacing: -1px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--orange-mid);
+  }
+
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 48px;
+  }
+
+  .hero-toc {
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--orange);
+    background: var(--off-white);
+    padding: 32px 36px;
+    border-radius: 2px;
+    margin-bottom: 48px;
+  }
+
+  .hero-toc-label {
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 20px;
+  }
+
+  .hero-toc-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    text-decoration: none;
+  }
+
+  .hero-toc-num {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--orange);
+    min-width: 48px;
+  }
+
+  .hero-toc-title {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--warm-brown);
+  }
+
+  .hero-toc-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--mid-gray);
+    margin-left: auto;
+    font-style: italic;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    border-top: 1px solid var(--beige);
+    padding-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item span {
+    display: block;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 4px;
+  }
+
+  .hero-meta-item strong {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--warm-brown);
+  }
+
+  /* ── INTRO STATEMENT ── */
+  .intro-block {
+    background: var(--beige);
+    border-left: 4px solid var(--orange);
+    padding: 40px 44px;
+    margin: 0 auto;
+    max-width: 860px;
+    margin-bottom: 0;
+  }
+
+  .intro-block p {
+    font-family: var(--font-heading);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--warm-brown);
+    margin: 0;
+  }
+
+  .intro-block p + p {
+    margin-top: 20px;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── SECTION DIVIDER ── */
+  .section-block {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .section-block:last-child {
+    border-bottom: none;
+  }
+
+  .section-kicker {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-kicker::after {
+    content: '';
+    width: 40px; height: 1px;
+    background: var(--orange);
+    opacity: 0.5;
+  }
+
+  /* ── HEADINGS ── */
+  h2.part-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    color: var(--warm-black);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  h2.part-headline em {
+    font-style: italic;
+    color: var(--orange-mid);
+  }
+
+  .part-sub {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  h3.content-h3 {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 28px;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  h3.content-h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--beige);
+  }
+
+  p.body-text {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--warm-gray);
+    margin-bottom: 20px;
+    max-width: 680px;
+  }
+
+  p.body-text strong {
+    color: var(--warm-black);
+    font-weight: 600;
+  }
+
+  /* ── NUMBERED ANATOMY ── */
+  .anatomy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+  }
+
+  .anatomy-item {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--beige);
+    align-items: flex-start;
+  }
+
+  .anatomy-item:last-child {
+    border-bottom: none;
+  }
+
+  .anatomy-num {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--orange-pale);
+    line-height: 1;
+    min-width: 48px;
+    margin-top: -4px;
+  }
+
+  .anatomy-content {}
+
+  .anatomy-title {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--warm-black);
+    margin-bottom: 8px;
+  }
+
+  .anatomy-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--warm-gray);
+    max-width: 600px;
+  }
+
+  /* ── PRINZIPIEN ── */
+  .prinzip-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  .prinzip-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: var(--off-white);
+    border: 1px solid var(--beige);
+    border-left: 3px solid var(--orange);
+    padding: 24px 28px;
+    border-radius: 2px;
+  }
+
+  .prinzip-num {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--orange);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .prinzip-content {}
+
+  .prinzip-title {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--warm-black);
+    margin-bottom: 6px;
+  }
+
+  .prinzip-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--warm-gray);
+  }
+
+  /* ── TABLES ── */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 36px 0;
+    border-radius: 2px;
+    border: 1px solid var(--beige);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+    font-size: 14px;
+  }
+
+  thead th {
+    background: var(--warm-black);
+    color: #FFFFFF;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    text-align: left;
+  }
+
+  tbody tr:nth-child(even) {
+    background: var(--off-white);
+  }
+
+  tbody tr:nth-child(odd) {
+    background: #FFFFFF;
+  }
+
+  tbody tr:hover {
+    background: rgba(216, 98, 42, 0.04);
+  }
+
+  tbody td {
+    padding: 16px 20px;
+    color: var(--warm-gray);
+    border-bottom: 1px solid var(--beige);
+    line-height: 1.5;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody td:first-child {
+    color: var(--warm-brown);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* Compare table */
+  .compare-table thead th:first-child {
+    background: var(--warm-brown);
+  }
+  .compare-table thead th:last-child {
+    background: var(--orange-deep);
+  }
+
+  .compare-table tbody td:first-child {
+    color: var(--warm-gray);
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .compare-table tbody td:last-child {
+    color: var(--warm-brown);
+    font-weight: 600;
+  }
+
+  /* ── FEHLER LIST ── */
+  .fehler-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .fehler-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px 24px;
+    background: #FFFFFF;
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+  }
+
+  .fehler-num {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--orange);
+    min-width: 28px;
+    padding-top: 1px;
+  }
+
+  .fehler-content {}
+
+  .fehler-title {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--warm-black);
+    margin-bottom: 5px;
+  }
+
+  .fehler-text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--warm-gray);
+  }
+
+  /* ── FUNNEL FLOW ── */
+  .funnel-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 32px 0;
+  }
+
+  .funnel-step {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0;
+    position: relative;
+  }
+
+  .funnel-step-label {
+    background: var(--warm-black);
+    color: #FFFFFF;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .funnel-step:last-child .funnel-step-label {
+    border-bottom: none;
+  }
+
+  .funnel-step-content {
+    padding: 20px 24px;
+    border: 1px solid var(--beige);
+    border-left: none;
+    border-bottom: none;
+    background: #FFFFFF;
+  }
+
+  .funnel-step:last-child .funnel-step-content {
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .funnel-step-title {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--warm-black);
+    margin-bottom: 4px;
+  }
+
+  .funnel-step-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--warm-gray);
+    font-style: italic;
+  }
+
+  /* ── PROMPT BOX ── */
+  .prompt-box {
+    background: var(--warm-black);
+    border-radius: 2px;
+    padding: 36px 40px;
+    margin: 36px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .prompt-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--orange-mid));
+  }
+
+  .prompt-box-label {
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .prompt-box-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--sand);
+    margin-bottom: 24px;
+  }
+
+  .prompt-box-text {
+    font-family: 'Courier New', 'Courier', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--mid-gray);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .prompt-box-text strong {
+    color: var(--orange-pale);
+  }
+
+  /* ── CHECKLISTE ── */
+  .checklist-section {
+    background: var(--off-white);
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--orange);
+    border-radius: 2px;
+    padding: 36px 40px;
+    margin: 36px 0;
+  }
+
+  .checklist-title {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--warm-brown);
+    margin-bottom: 20px;
+  }
+
+  .checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--warm-gray);
+    line-height: 1.5;
+  }
+
+  .checklist-box {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--sand);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── CLOSING ── */
+  .closing {
+    background: var(--warm-black);
+    padding: 96px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .closing::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(216,98,42,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .closing-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .closing h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+  }
+
+  .closing h2 em {
+    font-style: italic;
+    color: var(--orange-mid);
+  }
+
+  .closing p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--mid-gray);
+    margin-bottom: 0;
+  }
+
+  .closing p strong {
+    color: var(--sand);
+    font-weight: 600;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--warm-dark);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copy {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+
+  .footer-authors {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--tan);
+    font-style: italic;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: 16px;
+  }
+
+  .footer-legal a {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-decoration: none;
+  }
+
+  .footer-legal a:hover {
+    color: var(--tan);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    .blog-header { padding: 18px 20px; }
+    .hero { padding: 64px 20px 56px; }
+    .article { padding: 0 20px; }
+    .hero-toc { padding: 24px; }
+    .hero-toc-desc { display: none; }
+    .anatomy-num { font-size: 36px; min-width: 36px; }
+    .prompt-box { padding: 24px; }
+    .prompt-box-text { font-size: 12px; }
+    .checklist-section { padding: 24px; }
+    .funnel-step { grid-template-columns: 120px 1fr; }
+    .closing { padding: 64px 20px; }
+    .footer { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="blog-header">
+  <div class="blog-header-brand">@hanna.gpt × @martin_thun_</div>
+  <div class="blog-header-tag">AI Website Code</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-kicker">Video 1 · Vorbereitung & Strategie · April 2026</div>
+  <h1>Was eine Seite zum <em>Verkaufs&shy;instrument</em> macht.</h1>
+  <p class="hero-sub">Das strategische Fundament für Websites, Salespages und Funnels, bevor du auch nur eine einzige Zeile generierst.</p>
+
+  <div class="hero-toc">
+    <div class="hero-toc-label">Inhalt dieses Guides</div>
+    <div class="hero-toc-items">
+      <div class="hero-toc-item">
+        <span class="hero-toc-num">Teil 01</span>
+        <span class="hero-toc-title">Website</span>
+        <span class="hero-toc-desc">Die Visitenkarte, die verkauft</span>
+      </div>
+      <div class="hero-toc-item">
+        <span class="hero-toc-num">Teil 02</span>
+        <span class="hero-toc-title">Salespage</span>
+        <span class="hero-toc-desc">Die Seite, die überzeugt</span>
+      </div>
+      <div class="hero-toc-item">
+        <span class="hero-toc-num">Teil 03</span>
+        <span class="hero-toc-title">Funnel</span>
+        <span class="hero-toc-desc">Das System, das automatisiert</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span>Dieses Dokument</span>
+      <strong>dein Strategie-Fundament</strong>
+    </div>
+    <div class="hero-meta-item">
+      <span>Lies es</span>
+      <strong>bevor du deinen ersten Prompt gibst</strong>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STATEMENT -->
+<div class="intro-block">
+  <p>Lies es, bevor du Claude deinen ersten Prompt gibst. Es macht den Unterschied zwischen einer zufällig generierten Seite und einem Online-Auftritt, der wirklich verkauft.</p>
+</div>
+
+<!-- ARTICLE -->
+<main class="article">
+
+  <!-- SECTION: FUNDAMENT -->
+  <div class="section-block">
+    <div class="section-kicker">Das Fundament</div>
+    <h2 class="part-headline">Bevor wir bauen, müssen wir <em>verstehen.</em></h2>
+
+    <p class="body-text">Die meisten Menschen bauen eine Website und fragen sich danach, warum niemand kauft. Der Fehler liegt nicht im Design, nicht im Code und nicht im Tool. Der Fehler liegt in der fehlenden Strategie dahinter.</p>
+
+    <p class="body-text">Dieses Dokument gibt dir das Fundament. Es erklärt, was eine Website, eine Salespage und einen Funnel wirklich zum Verkaufsinstrument macht, und zwar auf eine Weise, die du direkt in deinen Claude-Prompts anwenden kannst.</p>
+
+    <h3 class="content-h3">Die 3 universellen Prinzipien</h3>
+
+    <div class="prinzip-list">
+      <div class="prinzip-item">
+        <div class="prinzip-num">1</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Jede Seite hat genau eine Aufgabe.</div>
+          <div class="prinzip-text">Eine Website erklärt wer du bist. Eine Salespage überzeugt zum Kauf. Eine Funnel-Seite führt zur nächsten Aktion. Wenn eine Seite alles auf einmal will, erreicht sie nichts.</div>
+        </div>
+      </div>
+      <div class="prinzip-item">
+        <div class="prinzip-num">2</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Besucher entscheiden in Sekunden.</div>
+          <div class="prinzip-text">8 Sekunden, so lange schauen sich Besucher eine Seite an, bevor sie entscheiden zu bleiben oder zu gehen. Die ersten 3 Elemente (Headline, Subheadline, CTA) müssen die gesamte Botschaft tragen.</div>
+        </div>
+      </div>
+      <div class="prinzip-item">
+        <div class="prinzip-num">3</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Vertrauen kommt vor Conversion.</div>
+          <div class="prinzip-text">Niemand kauft von jemandem, dem er nicht vertraut. Jeder Abschnitt einer Seite baut entweder Vertrauen auf oder untergräbt es. Es gibt kein Dazwischen.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="content-h3">Auf einen Blick: Was ist was?</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Format</th>
+            <th>Kernaufgabe</th>
+            <th>Primäres Ziel</th>
+            <th>Typische Länge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Website</td>
+            <td>Vertrauen &amp; Orientierung</td>
+            <td>Kontakt / Anfrage / Buchung</td>
+            <td>5–8 Sektionen</td>
+          </tr>
+          <tr>
+            <td>Salespage</td>
+            <td>Überzeugung &amp; Verkauf</td>
+            <td>Direkte Kaufentscheidung</td>
+            <td>8–15 Sektionen</td>
+          </tr>
+          <tr>
+            <td>Funnel</td>
+            <td>Führung &amp; Automatisierung</td>
+            <td>Abschluss &amp; Maximierung</td>
+            <td>3–6 Seiten gesamt</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TEIL 01: WEBSITE -->
+  <div class="section-block">
+    <div class="section-kicker">Teil 01</div>
+    <h2 class="part-headline"><em>Website</em></h2>
+    <p class="part-sub">Die digitale Heimat, die Vertrauen aufbaut und Anfragen erzeugt.</p>
+
+    <p class="body-text">Eine Website ist kein digitales Schaufenster. Sie ist ein aktiver Verkäufer, der 24/7 für dich arbeitet, wenn sie richtig aufgebaut ist.</p>
+
+    <p class="body-text">Die meisten Websites scheitern nicht wegen schlechtem Design. Sie scheitern, weil sie keinen klaren Weg für den Besucher definieren: Wer bist du? Was bietest du an? Warum soll ich dir vertrauen? Was soll ich als nächstes tun?</p>
+
+    <h3 class="content-h3">Die Anatomie einer Website, die wirkt</h3>
+
+    <div class="anatomy-list">
+      <div class="anatomy-item">
+        <div class="anatomy-num">1</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Hero-Sektion (Above the Fold)</div>
+          <div class="anatomy-text">Das Erste, was jeder sieht. Es entscheidet in 3 Sekunden, ob jemand bleibt oder geht. Muss enthalten: (1) Eine klare Aussage, wer du bist und was du anbietest. (2) Den konkreten Nutzen für den Besucher. (3) Einen einzigen, klaren Call-to-Action. Kein Slider, keine Animation um der Animation willen, Klarheit schlägt alles.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">2</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Problem &amp; Relevanz</div>
+          <div class="anatomy-text">Zeige dem Besucher, dass du seinen Schmerz kennst. Nicht deine Lösung, sein Problem. Der klassische Fehler: Unternehmen reden über sich selbst, statt über den Besucher. Faustregel: 70% Besucher-Perspektive, 30% Anbieter-Perspektive.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">3</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Lösung &amp; Positionierung</div>
+          <div class="anatomy-text">Erkläre, was du anbietest, aber nicht als Feature-Liste. Als Transformation. Nicht "Ich biete 1:1-Coaching an", sondern: "In 90 Tagen von XY zu XY." Der Besucher kauft das Ergebnis, nicht den Prozess.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">4</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Vertrauen &amp; Glaubwürdigkeit</div>
+          <div class="anatomy-text">Logos, Testimonials, Zahlen, Erfahrung, aber strategisch platziert. Social Proof wirkt am stärksten direkt nach der Lösung, nicht erst am Ende. Ein konkretes Ergebnis überzeugt mehr als zehn vage Lob-Zitate.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">5</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Angebot &amp; CTA</div>
+          <div class="anatomy-text">Was genau bekommt der Besucher? Zu welchem Preis oder nächsten Schritt? Jede Website braucht genau einen primären CTA, der sich durch die gesamte Seite zieht. Mehr als einen CTA = kein CTA.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">6</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Über mich / Über uns</div>
+          <div class="anatomy-text">Nicht als Lebenslauf, sondern als Relevanz-Beweis. Warum bist genau du die richtige Person für dieses Problem? Persönlichkeit schlägt Profil, Menschen kaufen von Menschen.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="content-h3">Was eine 10.000 € Website von einer 500 € Website unterscheidet</h3>
+
+    <div class="table-wrapper">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>500 € Website</th>
+            <th>10.000 € Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Erklärt, was das Unternehmen macht</td>
+            <td>Erklärt, welches Problem es löst</td>
+          </tr>
+          <tr>
+            <td>Feature-Liste des Angebots</td>
+            <td>Transformation für den Kunden</td>
+          </tr>
+          <tr>
+            <td>Design als Selbstzweck</td>
+            <td>Design führt den Blick zum CTA</td>
+          </tr>
+          <tr>
+            <td>Ein CTA pro Sektion</td>
+            <td>Ein einziger CTA durch die gesamte Seite</td>
+          </tr>
+          <tr>
+            <td>Generische Stock-Fotos</td>
+            <td>Authentische Bilder, die Vertrauen erzeugen</td>
+          </tr>
+          <tr>
+            <td>Texte vom Anbieter über den Anbieter</td>
+            <td>Texte über den Besucher und sein Problem</td>
+          </tr>
+          <tr>
+            <td>Mobile als Nachgedanke</td>
+            <td>Mobile-First von Anfang an</td>
+          </tr>
+          <tr>
+            <td>Kein SEO-Fundament</td>
+            <td>Jede Sektion trägt zur Auffindbarkeit bei</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-box-label">Der Strategie-Prompt für deine Website</div>
+      <div class="prompt-box-title">Gib Claude diesen Prompt, bevor du auch nur eine Sektion baust. Er zwingt Claude, strategisch zu denken statt generisch zu generieren:</div>
+      <div class="prompt-box-text">Ich möchte eine Website für <strong>[DEIN ANGEBOT]</strong> erstellen. Bevor du anfängst zu bauen, beantworte mir folgende Fragen strategisch:
+
+1. Was ist das eine primäre Ziel dieser Website (Kontaktanfrage / Buchung / Kauf)?
+2. Wer ist der Besucher – und welches konkrete Problem hat er?
+3. Was ist meine einzigartige Positionierung gegenüber Alternativen?
+4. Welche 3 Einwände hat der Besucher, bevor er auf den CTA klickt?
+5. Was ist der eine CTA, der sich durch die gesamte Seite ziehen soll?
+
+Entwickle basierend auf deinen Antworten eine Sektions-Struktur mit klarer Begründung für jede Sektion. Erst dann beginnen wir mit dem Code.</div>
+    </div>
+  </div>
+
+  <!-- TEIL 02: SALESPAGE -->
+  <div class="section-block">
+    <div class="section-kicker">Teil 02</div>
+    <h2 class="part-headline"><em>Salespage</em></h2>
+    <p class="part-sub">Die Seite, die einen Unbekannten in einen zahlenden Kunden verwandelt.</p>
+
+    <p class="body-text">Eine Salespage ist die disziplinierteste Form des digitalen Marketings. Kein Menü, keine Ablenkung, kein Weg nach links oder rechts, nur ein Besucher, ein Angebot und eine Entscheidung.</p>
+
+    <p class="body-text">Eine Salespage ist nicht länger als nötig. Sie ist so lang wie nötig. Und jede Sektion hat genau eine Aufgabe: den letzten Einwand des Besuchers aus dem Weg zu räumen und ihm einen Schritt näher zur Kaufentscheidung zu bringen.</p>
+
+    <h3 class="content-h3">Das Conversion-Gerüst einer Salespage</h3>
+
+    <div class="anatomy-list">
+      <div class="anatomy-item">
+        <div class="anatomy-num">1</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Headline: Das Versprechen in einem Satz</div>
+          <div class="anatomy-text">Die stärkste Headline benennt die Transformation: Von [Ausgangszustand] zu [Zielzustand] in [Zeitraum/Kontext]. Sie muss sofort klar machen, für wen die Seite ist und was der Besucher bekommt. Keine cleveren Wortspiele, keine Rätsel.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">2</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Problem-Agitation (Der Schmerz)</div>
+          <div class="anatomy-text">Beschreibe den aktuellen Schmerz des Besuchers so präzise, dass er denkt: "Die meinen genau mich." Nicht dramatisieren, aber auch nicht beschönigen. Je spezifischer der Schmerz, desto größer die Resonanz.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">3</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Die Lösung vorstellen</div>
+          <div class="anatomy-text">Erst wenn der Besucher sich im Problem erkannt hat, präsentiere die Lösung. Nicht als Produkt, sondern als Weg. "Deshalb habe ich X entwickelt, für Menschen, die Y wollen, aber Z noch blockiert."</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">4</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Was du bekommst (Das Angebot)</div>
+          <div class="anatomy-text">Erst hier: die konkreten Inhalte, Module, Boni, Deliverables. Wichtig: Übersetze jedes Feature direkt in einen Nutzen. Nicht "3 Live Calls" sondern "3 Live Calls, in denen wir gemeinsam deine Blockaden lösen."</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">5</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Social Proof (Beweise, die überzeugen)</div>
+          <div class="anatomy-text">Testimonials, Case Studies, Vorher-Nachher, Zahlen. Die stärksten Testimonials sind spezifisch: Sie nennen das Problem, den Weg und das Ergebnis. "Toll" überzeugt niemanden. "In 4 Wochen habe ich meinen ersten 5-stelligen Monat gemacht" schon.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">6</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Über dich (Warum du)</div>
+          <div class="anatomy-text">Hier beantwortest du die unausgesprochene Frage: "Wer bist du, dass du mir das verkaufst?" Kein Lebenslauf. Ein klares Statement, warum du das Problem besser löst als jede Alternative.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">7</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Einwand-Handling (FAQ / "Nicht geeignet für")</div>
+          <div class="anatomy-text">Benenne die wichtigsten Einwände explizit und räume sie aus. Ein gut geschriebener FAQ-Abschnitt erhöht die Conversion um 15–30%. Und: "Nicht geeignet für" schafft Vertrauen, weil es Ehrlichkeit signalisiert.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">8</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Preis &amp; CTA</div>
+          <div class="anatomy-text">Der Preis kommt erst, wenn der Wert klar ist. Stelle den Preis immer neben den Gesamtwert oder die Alternative (was würde dasselbe sonst kosten?). Der CTA ist handlungsorientiert, nicht passiv: "Ich bin dabei" statt "Kaufen".</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">9</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Dringlichkeit &amp; Scarcity</div>
+          <div class="anatomy-text">Optional, aber wirkungsvoll wenn authentisch. Echter Zeitdruck (Frühbucher-Preis bis X) oder echte Begrenzung (max. Y Plätze) mobilisieren zur Entscheidung. Falsche Scarcity zerstört das Vertrauen.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="content-h3">Die 5 häufigsten Fehler auf Salespages</h3>
+
+    <div class="fehler-list">
+      <div class="fehler-item">
+        <div class="fehler-num">01</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Der Preis kommt zu früh.</div>
+          <div class="fehler-text">Besucher sehen den Preis, bevor sie den Wert verstanden haben, und verlassen die Seite. Der Preis darf erst erscheinen, wenn der Wert ihn überwiegt.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">02</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Die Headline ist zu vage.</div>
+          <div class="fehler-text">"Mehr Freiheit und Erfolg" sagt nichts. "In 10 Tagen deine erste eigene Website live, ohne Agentur" sagt alles.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">03</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Zu viele CTAs.</div>
+          <div class="fehler-text">"Hier buchen / Hier anfragen / Hier Newsletter abonnieren", wer die Wahl hat, trifft keine. Genau ein CTA pro Salespage.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">04</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Testimonials ohne Spezifität.</div>
+          <div class="fehler-text">"Sehr empfehlenswert!" erzeugt kein Vertrauen. Echte Zahlen, echte Ergebnisse, echte Namen wirken.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">05</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Kein klares "Für wen ist das?"</div>
+          <div class="fehler-text">Wenn die Salespage versucht, alle anzusprechen, spricht sie niemanden an. Je klarer die Zielgruppe, desto höher die Conversion.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-box-label">Der Strategie-Prompt für deine Salespage</div>
+      <div class="prompt-box-text">Ich möchte eine Salespage für <strong>[DEIN ANGEBOT / KURS / PRODUKT]</strong> erstellen. Das Angebot kostet <strong>[PREIS]</strong>. Die Zielgruppe ist <strong>[ZIELGRUPPE]</strong>.
+
+Erstelle mir zuerst eine vollständige Conversion-Strategie:
+
+1. Headline-Optionen (3 Varianten: direkt / emotional / neugierig)
+2. Die 5 größten Einwände meiner Zielgruppe gegen dieses Angebot
+3. Die 3 stärksten Argumente, warum sie jetzt kaufen sollten
+4. Reihenfolge der Sektionen mit Begründung
+5. Wo auf der Seite Social Proof am stärksten wirkt
+
+Erst wenn wir die Strategie abgestimmt haben, beginnen wir mit dem Code.</div>
+    </div>
+  </div>
+
+  <!-- TEIL 03: FUNNEL -->
+  <div class="section-block">
+    <div class="section-kicker">Teil 03</div>
+    <h2 class="part-headline"><em>Funnel</em></h2>
+    <p class="part-sub">Das System, das Interessenten automatisch zu Kunden führt.</p>
+
+    <p class="body-text">Ein Funnel ist kein Tool. Ein Funnel ist eine Denkweise. Es ist die Erkenntnis, dass Menschen Entscheidungen in Stufen treffen, und dass deine Aufgabe ist, jeden Schritt so frictionless wie möglich zu gestalten.</p>
+
+    <p class="body-text">Ein gut gebauter Funnel arbeitet 24/7 für dich. Er qualifiziert Leads, baut Vertrauen auf und führt zur Kaufentscheidung, ohne dass du dabei sein musst. Das ist der Unterschied zwischen einem Business und einem Job.</p>
+
+    <h3 class="content-h3">Die Anatomie eines Funnels</h3>
+
+    <div class="funnel-flow">
+      <div class="funnel-step">
+        <div class="funnel-step-label">Aufmerksamkeit</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Opt-in / Lead Magnet Page</div>
+          <div class="funnel-step-desc">Wer bist du? Was bekommst du gratis?</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Interesse</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Thank-You Page / Bridge Page</div>
+          <div class="funnel-step-desc">Danke. Und hier ist der nächste Schritt.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Entscheidung</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Salespage / Offer Page</div>
+          <div class="funnel-step-desc">Warum du, warum jetzt, warum dieses Angebot?</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Aktion</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Checkout / Buchungsseite</div>
+          <div class="funnel-step-desc">So einfach wie möglich zum Abschluss.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Maximierung</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Upsell / Downsell / Cross-Sell</div>
+          <div class="funnel-step-desc">Willst du mehr? Oder das hier stattdessen?</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="content-h3">Jede Seite im Funnel: Die 3 Regeln</h3>
+
+    <div class="prinzip-list">
+      <div class="prinzip-item">
+        <div class="prinzip-num">1</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Genau eine Aktion.</div>
+          <div class="prinzip-text">Jede Funnel-Seite hat genau einen Ausweg: die gewünschte Aktion. Kein Menü, kein Link, der woanders hinführt, keine Ablenkung. Der Besucher entscheidet: Ja oder Nein. Nicht: Ja, Nein oder vielleicht woanders.</div>
+        </div>
+      </div>
+      <div class="prinzip-item">
+        <div class="prinzip-num">2</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Kontinuität im Design &amp; Ton.</div>
+          <div class="prinzip-text">Wenn jemand auf eine Anzeige klickt und landet auf einer Seite mit anderem Farbschema und anderem Ton, fühlt es sich falsch an, und er geht. Die visuelle und textliche Kontinuität durch den gesamten Funnel ist nicht optional.</div>
+        </div>
+      </div>
+      <div class="prinzip-item">
+        <div class="prinzip-num">3</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Micro-Commitments führen zu Macro-Entscheidungen.</div>
+          <div class="prinzip-text">Wer einmal "Ja" gesagt hat (z.B. E-Mail eingetragen), ist mental bereit, nochmal Ja zu sagen. Jede Funnel-Seite baut auf dem vorherigen Ja auf. Deshalb: nie den nächsten Schritt größer machen als den vorherigen.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="content-h3">Upsell, Downsell &amp; Order Bump</h3>
+    <p class="body-text"><strong>Das unterschätzte Potenzial: Was nach dem "Ja" passiert.</strong></p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Format</th>
+            <th>Timing</th>
+            <th>Ziel</th>
+            <th>Typische Conversion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Order Bump</td>
+            <td>Auf der Checkout-Seite</td>
+            <td>Kleiner Zusatz, 1 Klick</td>
+            <td>15–30%</td>
+          </tr>
+          <tr>
+            <td>Upsell</td>
+            <td>Direkt nach dem Kauf</td>
+            <td>Größeres Angebot / Upgrade</td>
+            <td>10–25%</td>
+          </tr>
+          <tr>
+            <td>Downsell</td>
+            <td>Nach Ablehnung des Upsells</td>
+            <td>Günstigere Alternative</td>
+            <td>5–15%</td>
+          </tr>
+          <tr>
+            <td>Cross-Sell</td>
+            <td>Thank-You / Danke-Seite</td>
+            <td>Ergänzendes Angebot</td>
+            <td>8–20%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-box-label">Der Strategie-Prompt für deinen Funnel</div>
+      <div class="prompt-box-text">Ich möchte einen kompletten Funnel für <strong>[DEIN ANGEBOT]</strong> bauen. Mein Einstiegsprodukt kostet <strong>[PREIS]</strong>. Die Zielgruppe ist <strong>[ZIELGRUPPE]</strong>.
+
+Entwickle für mich:
+
+1. Den Lead Magnet: Was biete ich gratis an, das den Kaufwunsch weckt?
+2. Die Funnel-Architektur: Alle Seiten in Reihenfolge mit ihrer Kernaufgabe
+3. Den "Roten Faden": Wie lautet die konsistente Botschaft durch alle Seiten?
+4. Die Upsell-Logik: Was biete ich nach dem Kauf an und zu welchem Preis?
+5. Die 3 häufigsten Abbruchpunkte in Funnels und wie wir sie vermeiden
+
+Erstelle dann einen Seiten-Blueprint für jede Funnel-Seite (Sektionen + Kernbotschaft je Sektion). Danach starten wir mit dem Code.</div>
+    </div>
+  </div>
+
+  <!-- MASTER CHECKLISTE -->
+  <div class="section-block">
+    <div class="section-kicker">Die Master-Checkliste</div>
+    <h2 class="part-headline">Bevor du deine Seite <em>veröffentlichst:</em></h2>
+    <p class="part-sub">Hake diese Punkte ab.</p>
+
+    <div class="checklist-section">
+      <div class="checklist-title">Website</div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Das primäre Ziel der Website ist eindeutig (1 CTA dominiert die Seite)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Die Hero-Headline erklärt in einem Satz, wer du bist und was du anbietest
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Das Angebot ist als Transformation formuliert, nicht als Feature-Liste
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Social Proof ist direkt nach der Lösung platziert, nicht erst am Ende
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Die Seite funktioniert auf Mobile genauso gut wie auf Desktop
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          SEO: Jede Sektion enthält relevante Keywords natürlich eingebettet
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Ladezeit unter 3 Sekunden (keine unnötigen Animationen / große Bilder)
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <div class="checklist-title">Salespage</div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Die Headline benennt die Transformation (Von X zu Y in Z)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Das Problem ist aus Besucher-Perspektive beschrieben, nicht aus Anbieter-Perspektive
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Jedes Feature ist in einen konkreten Nutzen übersetzt
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Mindestens 2 spezifische Testimonials mit echtem Ergebnis
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          FAQ räumt die 5 häufigsten Einwände explizit aus
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Preis erscheint erst nach dem Wert-Stack
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Genau 1 CTA, der sich durch die gesamte Seite wiederholt
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          "Nicht geeignet für" ist vorhanden und ehrlich formuliert
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <div class="checklist-title">Funnel</div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Jede Seite hat genau einen Exit: die gewünschte Aktion
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Kein Navigationsmenü auf Funnel-Seiten
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Visuelles Design und Ton sind konsistent durch alle Seiten
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Thank-You-Seite enthält direkt den nächsten Schritt (kein Vakuum)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Upsell ist logisch aufbauend auf dem, was gekauft wurde
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Downsell ist vorhanden für Nicht-Käufer des Upsells
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          E-Mail-Automation ist mit dem Funnel verknüpft
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Split-Test für mindestens Headline und CTA eingeplant
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-inner">
+    <h2>Strategie zuerst. <em>Code danach.</em></h2>
+    <p>Ein Prompt, der auf diesem Fundament basiert, erzeugt eine Seite, die verkauft. Ein Prompt ohne dieses Fundament erzeugt eine Seite, die existiert. <strong>Der Unterschied liegt nicht in Claude. Er liegt in dir.</strong></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-copy">AI Website Code · © 2026 Hanna Marzian</div>
+  <div class="footer-authors">hanna marzian × martin thun</div>
+</footer>
+
+</body>
+</html>
