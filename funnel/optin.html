@@ -715,6 +715,31 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     revealElements.forEach(function(el) { observer.observe(el); });
+
+    // Form Submit Handler
+    document.getElementById('sib-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var btn = form.querySelector('button[type="submit"]');
+      var successEl = document.getElementById('success-message');
+      var errorEl = document.getElementById('error-message');
+      var sibContainer = document.getElementById('sib-container');
+
+      btn.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function() {
+        sibContainer.style.display = 'none';
+        successEl.style.display = 'block';
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }).catch(function() {
+        btn.disabled = false;
+        errorEl.style.display = 'block';
+      });
+    });
   </script>
   <script>
     window.REQUIRED_CODE_ERROR_MESSAGE = 'Wähle bitte einen Ländervorwahl aus.';
