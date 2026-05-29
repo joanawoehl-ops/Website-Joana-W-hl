@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komm nach Hause – Das Workbook | Joana Wöhl</title>
+  <meta name="description" content="28 Tage. Vier Kapitel. Ein Weg zurück zu dir. Das Workbook von Joana Wöhl – ohne Diät, ohne Druck, mit echten Rezepten und tiefen Reflexionen.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Joana Wöhl">
+  <link rel="canonical" href="https://woehl.de/workbook.html">
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Komm nach Hause – Das Workbook | Joana Wöhl">
+  <meta property="og:description" content="Ein 28-Tage-Erlebnis für deinen Körper. Ohne Diät. Ohne Druck. Mit dir.">
+  <meta property="og:url" content="https://woehl.de/workbook.html">
+  <meta property="og:site_name" content="Joana Wöhl">
+  <meta property="og:locale" content="de_DE">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ====  WORKBOOK SALES PAGE – eigene Stile  ==== */
+
+    /* Hero */
+    .wb-hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background: var(--color-sage);
+      padding: 140px 64px 100px;
+    }
+    .wb-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .wb-hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.65;
+      margin-bottom: 24px;
+    }
+    .wb-hero-title {
+      font-family: var(--serif);
+      font-size: clamp(54px, 7vw, 96px);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--color-dark);
+      margin-bottom: 28px;
+    }
+    .wb-hero-title em {
+      font-style: italic;
+      color: var(--color-cream);
+    }
+    .wb-hero-sub {
+      font-family: var(--sans);
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--color-dark);
+      opacity: 0.8;
+      margin-bottom: 44px;
+      max-width: 440px;
+    }
+    .wb-hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .wb-hero-cta-note {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.55;
+    }
+    .wb-book-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wb-book-card {
+      background: var(--color-cream);
+      border-radius: 4px 12px 12px 4px;
+      padding: 52px 44px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow:
+        -4px 0 0 #d4d0c4,
+        -8px 0 0 #c8c4b8,
+        0 20px 60px rgba(58,53,48,0.18);
+      position: relative;
+    }
+    .wb-book-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #9ea39a, #b5baaa, #9ea39a);
+      border-radius: 4px 0 0 4px;
+    }
+    .wb-book-eyebrow {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    .wb-book-name {
+      font-family: var(--serif);
+      font-size: 44px;
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--color-dark);
+      margin-bottom: 6px;
+    }
+    .wb-book-name em {
+      font-style: italic;
+      color: var(--color-rose);
+    }
+    .wb-book-sub {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.6;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .wb-book-divider {
+      height: 1px;
+      background: var(--cream-mid);
+      margin-bottom: 24px;
+    }
+    .wb-book-chapters {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .wb-book-chapter {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.7;
+    }
+    .wb-book-chapter-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-sage);
+      flex-shrink: 0;
+    }
+    .wb-book-author {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--color-dark);
+      opacity: 0.5;
+      margin-top: 28px;
+    }
+
+    /* Promise strip */
+    .wb-promise-strip {
+      background: var(--color-dark);
+      padding: 36px 64px;
+    }
+    .wb-promise-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+    .wb-promise-item {
+      text-align: center;
+    }
+    .wb-promise-label {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-sage);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+    .wb-promise-text {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--color-cream);
+      line-height: 1.3;
+    }
+
+    /* Pain section */
+    .wb-pain-section {
+      padding: 120px 64px;
+      background: var(--color-cream);
+    }
+    .wb-pain-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+    .wb-pain-left {}
+    .wb-pain-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      font-weight: 400;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .wb-pain-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--color-rose);
+    }
+    .wb-pain-headline {
+      font-family: var(--serif);
+      font-size: clamp(36px, 4vw, 54px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--color-dark);
+      margin-bottom: 28px;
+    }
+    .wb-pain-headline em { font-style: italic; }
+    .wb-pain-lead {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--color-dark);
+      opacity: 0.75;
+    }
+    .wb-pain-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .wb-pain-item {
+      display: flex;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--cream-mid);
+    }
+    .wb-pain-item:first-child { border-top: 1px solid var(--cream-mid); }
+    .wb-pain-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--color-rose);
+      opacity: 0.7;
+      min-width: 24px;
+      margin-top: 2px;
+    }
+    .wb-pain-text {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--color-dark);
+    }
+
+    /* Big quote */
+    .wb-quote-full {
+      background: var(--color-rose);
+      padding: 100px 64px;
+      text-align: center;
+    }
+    .wb-quote-text {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.3;
+      color: var(--color-dark);
+      max-width: 860px;
+      margin: 0 auto 24px;
+    }
+    .wb-quote-attr {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--color-dark);
+      opacity: 0.6;
+      text-transform: uppercase;
+    }
+
+    /* Chapters */
+    .wb-chapters-section {
+      padding: 120px 64px;
+      background: var(--color-cream);
+    }
+    .wb-chapters-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .wb-section-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      font-weight: 400;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+    .wb-section-eyebrow::before, .wb-section-eyebrow::after {
+      content: '';
+      display: block;
+      flex: 1;
+      height: 1px;
+      background: var(--cream-mid);
+      max-width: 80px;
+    }
+    .wb-section-headline {
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--color-dark);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .wb-section-headline em { font-style: italic; }
+    .wb-section-sub {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--color-dark);
+      opacity: 0.65;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 80px;
+    }
+    .wb-chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+    }
+    .wb-chapter-card {
+      background: var(--cream-mid);
+      padding: 52px 48px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s var(--ease);
+    }
+    .wb-chapter-card:hover { background: #e0ddd4; }
+    .wb-chapter-card:nth-child(1) { border-radius: 12px 0 0 0; }
+    .wb-chapter-card:nth-child(2) { border-radius: 0 12px 0 0; }
+    .wb-chapter-card:nth-child(3) { border-radius: 0 0 0 12px; }
+    .wb-chapter-card:nth-child(4) { border-radius: 0 0 12px 0; }
+    .wb-chapter-num {
+      font-family: var(--serif);
+      font-size: 80px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.07;
+      line-height: 1;
+      position: absolute;
+      top: 24px;
+      right: 32px;
+    }
+    .wb-chapter-knh {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    .wb-chapter-title {
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 300;
+      color: var(--color-dark);
+      margin-bottom: 6px;
+      line-height: 1.1;
+    }
+    .wb-chapter-tagline {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--color-dark);
+      opacity: 0.5;
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+    .wb-chapter-days {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.45;
+      margin-bottom: 20px;
+    }
+    .wb-chapter-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .wb-chapter-list li {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.75;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .wb-chapter-list li::before {
+      content: '—';
+      color: var(--color-sage);
+      flex-shrink: 0;
+      font-size: 12px;
+    }
+
+    /* Joana section */
+    .wb-joana-section {
+      padding: 120px 64px;
+      background: var(--color-sage);
+    }
+    .wb-joana-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .wb-joana-img {
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+    .wb-joana-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .wb-joana-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .wb-joana-headline {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3.5vw, 48px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--color-dark);
+      margin-bottom: 28px;
+    }
+    .wb-joana-headline em { font-style: italic; }
+    .wb-joana-text {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--color-dark);
+      opacity: 0.8;
+    }
+    .wb-joana-text p + p { margin-top: 16px; }
+    .wb-joana-sig {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--color-dark);
+      opacity: 0.7;
+      margin-top: 36px;
+    }
+
+    /* Inside section */
+    .wb-inside-section {
+      padding: 120px 64px;
+      background: var(--color-cream);
+    }
+    .wb-inside-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .wb-inside-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 0;
+    }
+    .wb-inside-card {
+      background: var(--cream-mid);
+      border-radius: 12px;
+      padding: 36px 32px;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s;
+    }
+    .wb-inside-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(58,53,48,0.08);
+    }
+    .wb-inside-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--color-sage);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .wb-inside-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-dark);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .wb-inside-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--color-dark);
+      margin-bottom: 10px;
+    }
+    .wb-inside-text {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--color-dark);
+      opacity: 0.7;
+    }
+
+    /* Recipes */
+    .wb-recipes-section {
+      padding: 100px 64px;
+      background: var(--color-dark);
+    }
+    .wb-recipes-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .wb-recipes-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-sage);
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .wb-recipes-headline {
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--color-cream);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .wb-recipes-headline em { font-style: italic; }
+    .wb-recipes-sub {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--color-cream);
+      opacity: 0.5;
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .wb-recipes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .wb-recipe-card {
+      background: rgba(242,240,232,0.05);
+      padding: 36px 28px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .wb-recipe-card:hover { background: rgba(242,240,232,0.09); }
+    .wb-recipe-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--color-sage);
+      margin-bottom: 16px;
+      opacity: 0.7;
+    }
+    .wb-recipe-name {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 300;
+      color: var(--color-cream);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .wb-recipe-name em { font-style: italic; }
+    .wb-recipe-tag {
+      font-family: var(--sans);
+      font-size: 11px;
+      color: var(--color-sage);
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .wb-recipe-desc {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--color-cream);
+      opacity: 0.55;
+    }
+
+    /* Quotes row */
+    .wb-quotes-section {
+      padding: 100px 64px;
+      background: var(--color-cream);
+    }
+    .wb-quotes-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+    }
+    .wb-quote-card {
+      background: var(--cream-mid);
+      border-radius: 12px;
+      padding: 44px 40px;
+      position: relative;
+    }
+    .wb-quote-card::before {
+      content: '"';
+      font-family: var(--serif);
+      font-size: 80px;
+      color: var(--color-rose);
+      position: absolute;
+      top: 12px;
+      left: 28px;
+      line-height: 1;
+      opacity: 0.4;
+    }
+    .wb-quote-card-text {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--color-dark);
+      margin-bottom: 20px;
+      padding-top: 28px;
+    }
+    .wb-quote-card-attr {
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.4;
+    }
+
+    /* Price section */
+    .wb-price-section {
+      padding: 120px 64px;
+      background: var(--color-sage);
+    }
+    .wb-price-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .wb-price-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .wb-price-headline {
+      font-family: var(--serif);
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+    .wb-price-headline em { font-style: italic; }
+    .wb-price-sub {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--color-dark);
+      opacity: 0.7;
+      margin-bottom: 56px;
+    }
+    .wb-price-box {
+      background: var(--color-cream);
+      border-radius: 16px;
+      padding: 52px 48px;
+      box-shadow: 0 20px 60px rgba(58,53,48,0.12);
+      margin-bottom: 20px;
+    }
+    .wb-price-product {
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.45;
+      margin-bottom: 8px;
+    }
+    .wb-price-title {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--color-dark);
+      margin-bottom: 32px;
+    }
+    .wb-price-includes {
+      list-style: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .wb-price-includes li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--color-dark);
+    }
+    .wb-price-includes li::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--color-sage);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='%233a3530' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-size: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .wb-price-divider {
+      height: 1px;
+      background: var(--cream-mid);
+      margin-bottom: 32px;
+    }
+    .wb-price-amount-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .wb-price-amount {
+      font-family: var(--serif);
+      font-size: 72px;
+      font-weight: 300;
+      color: var(--color-dark);
+      line-height: 1;
+    }
+    .wb-price-currency {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.7;
+    }
+    .wb-price-once {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.45;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .wb-price-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--color-dark);
+      color: var(--color-cream);
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 18px 40px;
+      border-radius: 4px;
+      text-decoration: none;
+      width: 100%;
+      transition: background 0.3s var(--ease), transform 0.2s;
+    }
+    .wb-price-cta:hover {
+      background: #504a44;
+      transform: translateY(-1px);
+    }
+    .wb-price-cta svg {
+      width: 16px;
+      height: 16px;
+    }
+    .wb-price-guarantee {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.5;
+      margin-top: 16px;
+    }
+
+    /* FAQ */
+    .wb-faq-section {
+      padding: 100px 64px;
+      background: var(--color-cream);
+    }
+    .wb-faq-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .wb-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 60px;
+    }
+    .wb-faq-item {
+      border-bottom: 1px solid var(--cream-mid);
+    }
+    .wb-faq-item:first-child { border-top: 1px solid var(--cream-mid); }
+    .wb-faq-q {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--color-dark);
+      padding: 24px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .wb-faq-q::after {
+      content: '+';
+      font-family: var(--sans);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--color-rose);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .wb-faq-item.open .wb-faq-q::after { transform: rotate(45deg); }
+    .wb-faq-a {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--color-dark);
+      opacity: 0.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s var(--ease), padding 0.3s;
+    }
+    .wb-faq-item.open .wb-faq-a {
+      max-height: 300px;
+      padding-bottom: 24px;
+    }
+
+    /* Final CTA */
+    .wb-final-cta {
+      background: var(--color-dark);
+      padding: 120px 64px;
+      text-align: center;
+    }
+    .wb-final-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 72px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--color-cream);
+      margin-bottom: 24px;
+    }
+    .wb-final-title em {
+      font-style: italic;
+      color: var(--color-rose);
+    }
+    .wb-final-sub {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--color-cream);
+      opacity: 0.55;
+      max-width: 540px;
+      margin: 0 auto 48px;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .wb-hero { padding: 120px 24px 80px; min-height: auto; }
+      .wb-hero-inner { grid-template-columns: 1fr; gap: 52px; }
+      .wb-book-card { max-width: 100%; }
+      .wb-promise-strip { padding: 48px 24px; }
+      .wb-promise-inner { grid-template-columns: 1fr; gap: 32px; }
+      .wb-pain-section { padding: 80px 24px; }
+      .wb-pain-inner { grid-template-columns: 1fr; gap: 52px; }
+      .wb-quote-full { padding: 72px 24px; }
+      .wb-chapters-section { padding: 80px 24px; }
+      .wb-chapters-grid { grid-template-columns: 1fr; }
+      .wb-chapter-card:nth-child(n) { border-radius: 0; }
+      .wb-chapter-card:first-child { border-radius: 12px 12px 0 0; }
+      .wb-chapter-card:last-child { border-radius: 0 0 12px 12px; }
+      .wb-joana-section { padding: 80px 24px; }
+      .wb-joana-inner { grid-template-columns: 1fr; }
+      .wb-joana-img { aspect-ratio: 4/3; }
+      .wb-inside-section { padding: 80px 24px; }
+      .wb-inside-grid { grid-template-columns: 1fr; }
+      .wb-recipes-section { padding: 80px 24px; }
+      .wb-recipes-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+      .wb-quotes-section { padding: 80px 24px; }
+      .wb-quotes-inner { grid-template-columns: 1fr; gap: 24px; }
+      .wb-price-section { padding: 80px 24px; }
+      .wb-price-box { padding: 36px 28px; }
+      .wb-faq-section { padding: 80px 24px; }
+      .wb-final-cta { padding: 80px 24px; }
+    }
+    @media (max-width: 600px) {
+      .wb-recipes-grid { grid-template-columns: 1fr; }
+      .wb-hero-cta-group { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+
+  <script src="/cookie-consent.js"></script>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-nav-link">Start</a>
+  <a href="ueber-mich.html" class="mobile-nav-link">Über mich</a>
+  <a href="workbook.html" class="mobile-nav-link">Workbook</a>
+  <a href="coaching.html" class="mobile-nav-link">Begleitung</a>
+  <a href="funnel/optin.html" class="mobile-nav-link">Gratis Guide</a>
+  <a href="#kaufen" class="mobile-nav-cta" onclick="document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('navHamburger').classList.remove('open');">Jetzt kaufen</a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav" class="inner">
+  <a href="index.html" class="nav-logo">Joana Wöhl</a>
+  <div class="nav-links">
+    <a href="funnel/optin.html" class="nav-link">Gratis Guide</a>
+    <a href="index.html" class="nav-link">Start</a>
+    <a href="ueber-mich.html" class="nav-link">Über mich</a>
+    <a href="workbook.html" class="nav-link">Workbook</a>
+    <a href="coaching.html" class="nav-link">Begleitung</a>
+  </div>
+  <a href="#kaufen" class="nav-cta">Jetzt kaufen</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="wb-hero">
+  <div class="wb-hero-inner">
+    <div>
+      <div class="wb-hero-eyebrow reveal">28-Tage-Workbook · Sofort als E-Book</div>
+      <h1 class="wb-hero-title reveal reveal-delay-1">
+        Komm nach<br><em>Hause.</em>
+      </h1>
+      <p class="wb-hero-sub reveal reveal-delay-2">
+        Nicht noch eine Diät. Nicht noch ein Plan, den du durchhalten musst. Eine Einladung zurück zu dir — zu deinem Körper, deinem Hunger, deiner Freiheit.
+      </p>
+      <div class="wb-hero-cta-group reveal reveal-delay-3">
+        <!-- DIGISTORE-LINK hier einfügen -->
+        <a href="DEIN-DIGISTORE-LINK" class="btn-primary" target="_blank" rel="noopener">
+          Jetzt kaufen
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <span class="wb-hero-cta-note">Sofort-Download als PDF · 155 Seiten</span>
+      </div>
+    </div>
+    <!-- Visuelles Buch-Mockup -->
+    <div class="wb-book-visual reveal reveal-delay-2">
+      <div class="wb-book-card">
+        <div class="wb-book-eyebrow">Joana Wöhl · Workbook</div>
+        <div class="wb-book-name">Komm nach<br><em>Hause.</em></div>
+        <div class="wb-book-sub">Ein 28-Tage-Erlebnis für deinen Körper.<br>Ohne Diät. Ohne Druck. Mit dir.</div>
+        <div class="wb-book-divider"></div>
+        <div class="wb-book-chapters">
+          <div class="wb-book-chapter"><div class="wb-book-chapter-dot"></div>Kapitel 01 · Ankommen</div>
+          <div class="wb-book-chapter"><div class="wb-book-chapter-dot"></div>Kapitel 02 · Nähren</div>
+          <div class="wb-book-chapter"><div class="wb-book-chapter-dot"></div>Kapitel 03 · Heilen</div>
+          <div class="wb-book-chapter"><div class="wb-book-chapter-dot"></div>Kapitel 04 · Frei sein</div>
+        </div>
+        <div class="wb-book-author">von Joana Wöhl</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE STRIP -->
+<div class="wb-promise-strip">
+  <div class="wb-promise-inner">
+    <div class="wb-promise-item reveal">
+      <div class="wb-promise-label">Ohne</div>
+      <div class="wb-promise-text">Diät oder Verbote</div>
+    </div>
+    <div class="wb-promise-item reveal reveal-delay-1">
+      <div class="wb-promise-label">Mit</div>
+      <div class="wb-promise-text">28 Tagen Begleitung</div>
+    </div>
+    <div class="wb-promise-item reveal reveal-delay-2">
+      <div class="wb-promise-label">Für</div>
+      <div class="wb-promise-text">Frieden mit dir selbst</div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Ankommen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Nähren</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Heilen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Frei sein</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Kein Heißhunger</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Kein Druck</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Vertrauen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">28 Tage</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Ankommen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Nähren</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Heilen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Frei sein</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Kein Heißhunger</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Kein Druck</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Vertrauen</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">28 Tage</span>
+    <span class="marquee-item gold">&middot;</span>
+  </div>
+</div>
+
+<!-- PAIN SECTION -->
+<section class="wb-pain-section">
+  <div class="wb-pain-inner">
+    <div class="wb-pain-left">
+      <div class="wb-pain-eyebrow reveal">Für wen ist dieses Workbook?</div>
+      <h2 class="wb-pain-headline reveal reveal-delay-1">
+        Du bist erschöpft vom<br><em>ewigen Kämpfen.</em>
+      </h2>
+      <p class="wb-pain-lead reveal reveal-delay-2">
+        Du hast Diäten ausprobiert. Du hast Pläne befolgt. Du kennst die Regeln — und trotzdem fühlst du dich in diesem Kreislauf aus Kontrolle, Heißhunger und Schuldgefühlen gefangen. Das liegt nicht an dir. Es liegt daran, dass die meisten Ansätze am falschen Punkt ansetzen.
+      </p>
+    </div>
+    <ul class="wb-pain-list">
+      <li class="wb-pain-item reveal">
+        <span class="wb-pain-num">01</span>
+        <span class="wb-pain-text">Du denkst ständig an Essen — und wünschst dir, diese Gedanken würden endlich leiser.</span>
+      </li>
+      <li class="wb-pain-item reveal reveal-delay-1">
+        <span class="wb-pain-num">02</span>
+        <span class="wb-pain-text">Du kennst diesen Kreislauf: Strenge, Heißhunger, Kontrollverlust, Scham — und wieder von vorn.</span>
+      </li>
+      <li class="wb-pain-item reveal reveal-delay-2">
+        <span class="wb-pain-num">03</span>
+        <span class="wb-pain-text">Du weißt eigentlich, was gut für dich wäre — aber etwas tiefer in dir macht es schwer, es wirklich zu leben.</span>
+      </li>
+      <li class="wb-pain-item reveal reveal-delay-3">
+        <span class="wb-pain-num">04</span>
+        <span class="wb-pain-text">Du schämst dich nach bestimmten Mahlzeiten — obwohl du weißt, dass das nicht logisch ist.</span>
+      </li>
+      <li class="wb-pain-item reveal reveal-delay-4">
+        <span class="wb-pain-num">05</span>
+        <span class="wb-pain-text">Du willst nicht mehr kämpfen. Du willst einfach nur essen — und dabei du selbst sein.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- BIG QUOTE 1 -->
+<div class="wb-quote-full">
+  <div class="wb-quote-text reveal">
+    „Ein Mensch, der hungrig ist, denkt an Essen. Ein Mensch, der genährt ist, denkt an sein Leben."
+  </div>
+  <div class="wb-quote-attr reveal reveal-delay-1">— Joana Wöhl</div>
+</div>
+
+<!-- JOANA SECTION -->
+<section class="wb-joana-section">
+  <div class="wb-joana-inner">
+    <div class="wb-joana-img reveal">
+      <img src="assets/joana-kochen.jpg" alt="Joana Wöhl in ihrer Küche" loading="lazy">
+    </div>
+    <div>
+      <div class="wb-joana-eyebrow reveal">Joana erzählt</div>
+      <h2 class="wb-joana-headline reveal reveal-delay-1">
+        Alles, was in diesem Workbook steht,<br>habe ich <em>selbst gelebt.</em>
+      </h2>
+      <div class="wb-joana-text reveal reveal-delay-2">
+        <p>Ich habe jahrelang meinen Körper bewertet. Zu viel hier. Zu wenig dort. Jeder Blick in den Spiegel war ein Urteil. Jeder Bissen eine Entscheidung zwischen gut und schlecht.</p>
+        <p>Ich bin Biologielehrerin, Mutter dreier Jungs, Gründerin. Ich kenne den Alltag — und ich kenne das Gefühl, keine Zeit zu haben, sich wirklich um sich selbst zu kümmern.</p>
+        <p>Dieses Workbook ist das, was mir damals geholfen hätte. Nicht Verbote, nicht Regeln. Wissen, Fragen, Impulse — und der feste Glaube, dass dein Körper weiß, was er braucht. Du musst ihm nur zuhören lernen.</p>
+      </div>
+      <div class="wb-joana-sig reveal reveal-delay-3">Joana</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTERS -->
+<section class="wb-chapters-section">
+  <div class="wb-chapters-inner">
+    <div class="wb-section-eyebrow reveal">Das Programm</div>
+    <h2 class="wb-section-headline reveal reveal-delay-1">
+      Vier Kapitel. Vier <em>Ebenen.</em>
+    </h2>
+    <p class="wb-section-sub reveal reveal-delay-2">
+      28 Tage, die nicht wie ein Plan funktionieren — sondern wie eine Begleitung. Jeden Tag eine Geschichte, ein Impuls, eine Frage.
+    </p>
+    <div class="wb-chapters-grid">
+      <!-- Kapitel 1 -->
+      <div class="wb-chapter-card reveal">
+        <div class="wb-chapter-num">01</div>
+        <div class="wb-chapter-knh">K · Ankommen</div>
+        <h3 class="wb-chapter-title">Ankommen.</h3>
+        <div class="wb-chapter-tagline">Was, wenn du dir selbst zuhörst?</div>
+        <div class="wb-chapter-days">Tage 1 – 7</div>
+        <ul class="wb-chapter-list">
+          <li>Dein eigenes Versprechen</li>
+          <li>Dein Warum finden</li>
+          <li>Start in den Tag — Wasser & Rituale</li>
+          <li>Der grüne Smoothie (Rezept)</li>
+          <li>Sanfte Bewegung am Morgen</li>
+          <li>Das herzhafte Frühstück (Rezept)</li>
+          <li>Zucker verstehen & frei sein</li>
+        </ul>
+      </div>
+      <!-- Kapitel 2 -->
+      <div class="wb-chapter-card reveal reveal-delay-1">
+        <div class="wb-chapter-num">02</div>
+        <div class="wb-chapter-knh">N · Nähren</div>
+        <h3 class="wb-chapter-title">Nähren.</h3>
+        <div class="wb-chapter-tagline">Was dein Körper wirklich braucht.</div>
+        <div class="wb-chapter-days">Tage 8 – 14</div>
+        <ul class="wb-chapter-list">
+          <li>Deinen Körper als Tempel sehen</li>
+          <li>Orientierung beim Essen — ohne Regeln</li>
+          <li>Schlaf als Werkzeug für den Stoffwechsel</li>
+          <li>Darm & Kopf — der stille Zusammenhang</li>
+          <li>Der Protein-Kakao (Rezept, 1 Liter, 181 kcal)</li>
+          <li>Ziele, die sich ehrlich anfühlen</li>
+          <li>Wissen über Mikronährstoffe</li>
+        </ul>
+      </div>
+      <!-- Kapitel 3 -->
+      <div class="wb-chapter-card reveal">
+        <div class="wb-chapter-num">03</div>
+        <div class="wb-chapter-knh">H · Heilen</div>
+        <h3 class="wb-chapter-title">Heilen.</h3>
+        <div class="wb-chapter-tagline">Die tiefere Schicht.</div>
+        <div class="wb-chapter-days">Tage 15 – 21</div>
+        <ul class="wb-chapter-list">
+          <li>Angst vor Nahrung — woher sie kommt</li>
+          <li>Der Healing Shake (Rezept, Abendbrot)</li>
+          <li>Fettstoffwechsel durch Sicherheit, nicht Disziplin</li>
+          <li>Scham nach dem Essen — und wie du dich befreist</li>
+          <li>Wissen über Fett — das Richtige davon</li>
+          <li>Dankbarkeit für deinen Körper</li>
+          <li>Schneller Nähr-Eintopf (Rezept)</li>
+        </ul>
+      </div>
+      <!-- Kapitel 4 -->
+      <div class="wb-chapter-card reveal reveal-delay-1">
+        <div class="wb-chapter-num">04</div>
+        <div class="wb-chapter-knh">Frei sein · Das neue Ich</div>
+        <h3 class="wb-chapter-title">Frei sein.</h3>
+        <div class="wb-chapter-tagline">Das neue Ich.</div>
+        <div class="wb-chapter-days">Tage 22 – 28</div>
+        <ul class="wb-chapter-list">
+          <li>Was ist Nahrung wirklich für dich?</li>
+          <li>4 Hacks für stabilen Blutzucker</li>
+          <li>Sprossen, Paranüsse & Bitterstoffe</li>
+          <li>Werkzeuge zur inneren Ruhe</li>
+          <li>Brief ans zukünftige Ich</li>
+          <li>Dein persönlicher Rückblick</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAS IST DRIN -->
+<section class="wb-inside-section">
+  <div class="wb-inside-inner">
+    <div class="wb-section-eyebrow reveal">Was dich erwartet</div>
+    <h2 class="wb-section-headline reveal reveal-delay-1">Mehr als ein <em>Buch.</em></h2>
+    <p class="wb-section-sub reveal reveal-delay-2">155 Seiten voller echter Begleitung — mit Rezepten, Wissen und Reflexionen, die dich wirklich etwas fühlen lassen.</p>
+    <div class="wb-inside-grid">
+      <div class="wb-inside-card reveal">
+        <div class="wb-inside-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="wb-inside-title">Tägliche Reflexionen</div>
+        <p class="wb-inside-text">Jeden Tag eine Frage, die tiefer geht. Kein Bewerten, kein richtig oder falsch — nur echtes Hinschauen.</p>
+      </div>
+      <div class="wb-inside-card reveal reveal-delay-1">
+        <div class="wb-inside-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </div>
+        <div class="wb-inside-title">Tagesaufgaben</div>
+        <p class="wb-inside-text">Kleine, konkrete Schritte — so gestaltet, dass sie sich in deinen Alltag einfügen. Nie überwältigend, immer machbar.</p>
+      </div>
+      <div class="wb-inside-card reveal reveal-delay-2">
+        <div class="wb-inside-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <div class="wb-inside-title">Joanas Geschichten</div>
+        <p class="wb-inside-text">Zu jedem Tag erzählt Joana etwas aus ihrem eigenen Weg. Echt, verletzlich, direkt aus dem Leben.</p>
+      </div>
+      <div class="wb-inside-card reveal">
+        <div class="wb-inside-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        </div>
+        <div class="wb-inside-title">Fundiertes Wissen</div>
+        <p class="wb-inside-text">Blutzucker, Schlaf, Darm, Mikronährstoffe, Fettstoffwechsel — verständlich erklärt. Wer versteht, muss nicht kämpfen.</p>
+      </div>
+      <div class="wb-inside-card reveal reveal-delay-1">
+        <div class="wb-inside-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="wb-inside-title">Wöchentliche Check-ins</div>
+        <p class="wb-inside-text">Am Anfang jeder Woche: Wie geht es dir? Was beschäftigt dich? Was nimmst du dir vor? — Raum für dich.</p>
+      </div>
+      <div class="wb-inside-card reveal reveal-delay-2">
+        <div class="wb-inside-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <div class="wb-inside-title">Brief ans Zukunfts-Ich</div>
+        <p class="wb-inside-text">An Tag 28 schreibst du dir selbst — aus der Perspektive der Version von dir, die Frieden gefunden hat. Das ist kraftvoll.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REZEPTE -->
+<section class="wb-recipes-section">
+  <div class="wb-recipes-inner">
+    <div class="wb-recipes-eyebrow reveal">Im Workbook enthalten</div>
+    <h2 class="wb-recipes-headline reveal reveal-delay-1">Echte <em>Rezepte.</em><br>Keine Diätküche.</h2>
+    <p class="wb-recipes-sub reveal reveal-delay-2">Diese Rezepte kommen aus Joanas eigenem Alltag — entwickelt in ihrer Küche, getestet mit ihrer Familie.</p>
+    <div class="wb-recipes-grid">
+      <div class="wb-recipe-card reveal">
+        <div class="wb-recipe-num">01</div>
+        <div class="wb-recipe-name">Der grüne <em>Smoothie.</em></div>
+        <div class="wb-recipe-tag">Morgens · Auf nüchternem Magen</div>
+        <p class="wb-recipe-desc">Mit Ingwer, Kurkuma, Möhrengrün und Limette. Entzündungshemmend, immunstärkend — und besser als du denkst.</p>
+      </div>
+      <div class="wb-recipe-card reveal reveal-delay-1">
+        <div class="wb-recipe-num">02</div>
+        <div class="wb-recipe-name">Der <em>Protein-Kakao.</em></div>
+        <div class="wb-recipe-tag">1 Liter · Nur 181 Kalorien</div>
+        <p class="wb-recipe-desc">Joanas Versehen, das alles verändert hat. Schaumig, süß, cremig — und danach kein Heißhunger mehr.</p>
+      </div>
+      <div class="wb-recipe-card reveal reveal-delay-2">
+        <div class="wb-recipe-num">03</div>
+        <div class="wb-recipe-name">Der <em>Healing Shake.</em></div>
+        <div class="wb-recipe-tag">Abendbrot · Leicht & nährend</div>
+        <p class="wb-recipe-desc">Grüner Proteinshake, der von innen heilt. Joanas Familie trinkt ihn jeden Abend — und schläft seitdem besser.</p>
+      </div>
+      <div class="wb-recipe-card reveal reveal-delay-3">
+        <div class="wb-recipe-num">04</div>
+        <div class="wb-recipe-name">Schneller <em>Eintopf.</em></div>
+        <div class="wb-recipe-tag">Einmal kochen · Tage versorgt</div>
+        <p class="wb-recipe-desc">Alles darf rein. Alles darf nähren. Einmal gekocht — für mehrere Tage versorgt, ohne täglich entscheiden zu müssen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTES ROW -->
+<section class="wb-quotes-section">
+  <div class="wb-quotes-inner">
+    <div class="wb-quote-card reveal">
+      <div class="wb-quote-card-text">Dein Körper ist nicht dein Gegner. Er ist ein System, das auf Sicherheit reagiert. Gib ihm, was er braucht — und er arbeitet mit dir.</div>
+      <div class="wb-quote-card-attr">— Joana Wöhl, Kapitel 02</div>
+    </div>
+    <div class="wb-quote-card reveal reveal-delay-1">
+      <div class="wb-quote-card-text">Freiheit entsteht nicht, wenn du weniger wirst. Sondern wenn du beginnst, dir zu vertrauen.</div>
+      <div class="wb-quote-card-attr">— Joana Wöhl, Kapitel 03</div>
+    </div>
+    <div class="wb-quote-card reveal">
+      <div class="wb-quote-card-text">Dein Körper denkt nicht in Zahlen. Er denkt in Energie, Sicherheit und Erholung.</div>
+      <div class="wb-quote-card-attr">— Joana Wöhl, Kapitel 01</div>
+    </div>
+    <div class="wb-quote-card reveal reveal-delay-1">
+      <div class="wb-quote-card-text">Dein Weg beginnt dort, wo du aufhörst, dich zu kontrollieren.</div>
+      <div class="wb-quote-card-attr">— Joana Wöhl, Kapitel 04</div>
+    </div>
+  </div>
+</section>
+
+<!-- PREIS -->
+<section class="wb-price-section" id="kaufen">
+  <div class="wb-price-inner">
+    <div class="wb-price-eyebrow reveal">Jetzt starten</div>
+    <h2 class="wb-price-headline reveal reveal-delay-1">
+      Dein Weg nach<br><em>Hause.</em>
+    </h2>
+    <p class="wb-price-sub reveal reveal-delay-2">
+      Einmalig kaufen. Sofort runterladen. Für immer behalten — und immer wieder aufschlagen.
+    </p>
+    <div class="wb-price-box reveal reveal-delay-3">
+      <div class="wb-price-product">E-Book · Sofort-Download · PDF</div>
+      <div class="wb-price-title">Komm nach Hause – Das Workbook</div>
+      <ul class="wb-price-includes">
+        <li>155 Seiten Begleitung über 28 Tage</li>
+        <li>4 Kapitel: Ankommen · Nähren · Heilen · Frei sein</li>
+        <li>4 Rezepte aus Joanas eigenem Alltag</li>
+        <li>Tägliche Reflexionsfragen & Aufgaben</li>
+        <li>Wöchentliche Check-ins & Check-outs</li>
+        <li>Wissensimpulse zu Blutzucker, Schlaf, Darm & mehr</li>
+        <li>Brief ans zukünftige Ich (Tag 28)</li>
+      </ul>
+      <div class="wb-price-divider"></div>
+      <!-- PREIS HIER ANPASSEN -->
+      <div class="wb-price-amount-row">
+        <span class="wb-price-amount">27</span>
+        <span class="wb-price-currency">€</span>
+      </div>
+      <div class="wb-price-once">Einmalig · inkl. MwSt.</div>
+      <!-- DIGISTORE-LINK hier einfügen -->
+      <a href="DEIN-DIGISTORE-LINK" class="wb-price-cta" target="_blank" rel="noopener">
+        Jetzt kaufen & sofort herunterladen
+        <svg viewBox="0 0 16 16" fill="none" width="16" height="16">
+          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    <div class="wb-price-guarantee reveal">Sofort-Download nach Kauf. Sicherer Checkout über Digistore24.</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="wb-faq-section">
+  <div class="wb-faq-inner">
+    <div class="wb-section-eyebrow reveal">Häufige Fragen</div>
+    <h2 class="wb-section-headline reveal reveal-delay-1">Du fragst dich noch <em>etwas?</em></h2>
+    <div class="wb-faq-list">
+      <div class="wb-faq-item reveal">
+        <div class="wb-faq-q">Was bekomme ich genau?</div>
+        <div class="wb-faq-a">Du bekommst ein 155-seitiges PDF-Workbook — sofort nach dem Kauf zum Herunterladen. Du kannst es ausdrucken oder digital ausfüllen. Es begleitet dich 28 Tage lang, Tag für Tag, Kapitel für Kapitel.</div>
+      </div>
+      <div class="wb-faq-item reveal">
+        <div class="wb-faq-q">Muss ich das Workbook in 28 Tagen durcharbeiten?</div>
+        <div class="wb-faq-a">Nein. Das Workbook ist eine Einladung, kein Programm mit Ziellinie. Du kannst es in deinem eigenen Tempo nutzen — intensiver in manchen Wochen, ruhiger in anderen. Es bleibt für immer deins und du kannst immer wieder darin blättern.</div>
+      </div>
+      <div class="wb-faq-item reveal">
+        <div class="wb-faq-q">Ist das eine Diät?</div>
+        <div class="wb-faq-a">Nein. Es gibt keine Verbotslisten, kein Kalorienzählen, keine Regeln. Stattdessen bekommst du Wissen, Impulse und Fragen, die dir helfen, deinen Körper besser zu verstehen und ihm wieder zu vertrauen. Dein Körper weiß, was er braucht — du lernst, ihm zuzuhören.</div>
+      </div>
+      <div class="wb-faq-item reveal">
+        <div class="wb-faq-q">Für wen ist das Workbook nicht geeignet?</div>
+        <div class="wb-faq-a">Dieses Workbook ersetzt keine Therapie. Wenn du dich gerade in einer akuten Essstörung befindest, empfehle ich dir zunächst professionelle therapeutische Unterstützung. Ich sage das, weil es mir wichtig ist — nicht um dich abzuwimmeln.</div>
+      </div>
+      <div class="wb-faq-item reveal">
+        <div class="wb-faq-q">Wie viel Zeit brauche ich täglich?</div>
+        <div class="wb-faq-a">Pro Tag reichen 10–20 Minuten: Joanas Geschichte lesen, eine Aufgabe umsetzen, eine Frage reflektieren. Es ist so gestaltet, dass es sich in deinen Alltag fügt — nicht umgekehrt.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="wb-final-cta">
+  <h2 class="wb-final-title reveal">
+    Du bist schon<br>auf dem <em>Weg.</em>
+  </h2>
+  <p class="wb-final-sub reveal reveal-delay-1">
+    Der Weg ist das Ziel. Und du bist bereits auf ihm. Dieses Workbook begleitet dich — ohne Druck, ohne Kontrolle. Mit dir.
+  </p>
+  <!-- DIGISTORE-LINK hier einfügen -->
+  <a href="DEIN-DIGISTORE-LINK" class="btn-primary reveal reveal-delay-2" target="_blank" rel="noopener">
+    Komm nach Hause — jetzt kaufen
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Joana Wöhl</div>
+        <div class="footer-tagline">Frieden mit Essen. Vertrauen in den Körper.</div>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">Instagram @joanawoehl</a>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Joana Wöhl. Alle Rechte vorbehalten.</span>
+      <div class="footer-instagram"><a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">@joanawoehl</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Cursor
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  });
+  document.querySelectorAll('a, button, input, .wb-inside-card, .wb-chapter-card, .wb-recipe-card, .wb-quote-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { dot.classList.add('active'); ring.classList.add('active'); });
+    el.addEventListener('mouseleave', () => { dot.classList.remove('active'); ring.classList.remove('active'); });
+  });
+  (function animRing() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  // Mobile menu
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+  revealEls.forEach(el => obs.observe(el));
+
+  // Nav scroll effect
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.wb-faq-item').forEach(item => {
+    item.querySelector('.wb-faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.wb-faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
