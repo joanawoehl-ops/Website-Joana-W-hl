@@ -147,14 +147,14 @@ nav.inner .nav-logo { color: var(--color-dark); }
 }
 .nav-link:hover { color: var(--color-dark); }
 .nav-link:hover::after { transform: scaleX(1); }
-.nav-link.active { color: var(--color-sage); }
+.nav-link.active { color: var(--color-dark); }
 .nav-link.active::after { transform: scaleX(1); }
 nav.scrolled .nav-link,
 nav.inner .nav-link { color: rgba(58,53,48,0.5); }
 nav.scrolled .nav-link:hover,
 nav.inner .nav-link:hover { color: var(--color-dark); }
 nav.scrolled .nav-link.active,
-nav.inner .nav-link.active { color: var(--sage-muted); }
+nav.inner .nav-link.active { color: var(--color-dark); }
 nav.scrolled .nav-link.active::after,
 nav.inner .nav-link.active::after { background: var(--color-rose); }
 
