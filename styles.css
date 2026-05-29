@@ -147,8 +147,8 @@ nav.inner .nav-logo { color: var(--color-dark); }
 }
 .nav-link:hover { color: var(--color-dark); }
 .nav-link:hover::after { transform: scaleX(1); }
-.nav-link.active { color: var(--color-dark); }
-.nav-link.active::after { transform: scaleX(1); }
+.nav-link.active { color: rgba(58,53,48,0.55); }
+.nav-link.active::after { transform: scaleX(1); background: var(--color-rose); }
 nav.scrolled .nav-link,
 nav.inner .nav-link { color: rgba(58,53,48,0.5); }
 nav.scrolled .nav-link:hover,
