@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein Platz ist gesichert! | Joana Wöhl</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .danke-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-sage);
+      padding: 120px 32px 80px;
+    }
+    .danke-inner {
+      max-width: 620px;
+      width: 100%;
+      text-align: center;
+    }
+    .danke-checkmark {
+      width: 72px;
+      height: 72px;
+      background: var(--color-cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 36px;
+      animation: popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .danke-checkmark svg {
+      width: 32px;
+      height: 32px;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+    .danke-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.55;
+      margin-bottom: 16px;
+    }
+    .danke-headline {
+      font-family: var(--serif);
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--color-dark);
+      margin-bottom: 24px;
+    }
+    .danke-headline em {
+      font-style: italic;
+    }
+    .danke-text {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--color-dark);
+      opacity: 0.75;
+      margin-bottom: 48px;
+    }
+    .danke-date-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-rose);
+      border-radius: 40px;
+      padding: 10px 22px;
+      margin-bottom: 48px;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--color-dark);
+      letter-spacing: 0.04em;
+    }
+    .danke-box {
+      background: var(--color-cream);
+      border-radius: 12px;
+      padding: 36px 40px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    .danke-box-title {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+    .danke-box-steps {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .danke-box-steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--color-dark);
+    }
+    .danke-step-num {
+      width: 24px;
+      height: 24px;
+      background: var(--color-sage);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--color-dark);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .danke-sig {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--color-dark);
+      opacity: 0.6;
+      margin-bottom: 32px;
+    }
+    .danke-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .danke-link-secondary {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.55;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .danke-link-secondary:hover { opacity: 0.9; }
+  </style>
+  <script src="/cookie-consent.js"></script>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav" class="inner">
+  <a href="index.html" class="nav-logo">Joana Wöhl</a>
+</nav>
+
+<!-- DANKE -->
+<section class="danke-section">
+  <div class="danke-inner">
+
+    <div class="danke-checkmark">
+      <svg viewBox="0 0 32 32" fill="none">
+        <path d="M6 16l7 7 13-13" stroke="#3a3530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="danke-eyebrow">Anmeldung bestätigt</div>
+
+    <h1 class="danke-headline">
+      Dein Platz ist<br><em>gesichert.</em>
+    </h1>
+
+    <p class="danke-text">
+      Ich freue mich so sehr, dass du dabei bist.<br>
+      Bis zum 15. Juli — dann kommen wir gemeinsam nach Hause.
+    </p>
+
+    <div class="danke-date-chip">
+      ✦ &nbsp;15. Juli 2025 · 19 Uhr · 90 Minuten · online
+    </div>
+
+    <div class="danke-box">
+      <div class="danke-box-title">Was jetzt passiert</div>
+      <ul class="danke-box-steps">
+        <li>
+          <span class="danke-step-num">1</span>
+          <span>Du bekommst kurz vor dem Abend eine E-Mail von mir mit dem Zoom-Link — schau also in dein Postfach.</span>
+        </li>
+        <li>
+          <span class="danke-step-num">2</span>
+          <span>Am 15. Juli um 19 Uhr bist du einfach dabei — kein Vorbereiten, kein Wissen nötig. Nur du und dein Körper.</span>
+        </li>
+        <li>
+          <span class="danke-step-num">3</span>
+          <span>Die Aufzeichnung des Abends steht dir anschließend 10 Tage lang zur Verfügung, falls du nicht live dabei sein kannst oder nochmal schauen möchtest.</span>
+        </li>
+      </ul>
+    </div>
+
+    <p class="danke-sig">Joana</p>
+
+    <div class="danke-links">
+      <a href="index.html" class="danke-link-secondary">Zurück zur Startseite</a>
+      <a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener" class="danke-link-secondary">@joanawoehl auf Instagram</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Joana Wöhl</div>
+        <div class="footer-tagline">Frieden mit Essen. Vertrauen in den Körper.</div>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">Instagram @joanawoehl</a>
+        <div class="footer-legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Joana Wöhl. Alle Rechte vorbehalten.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  });
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => { dot.classList.add('active'); ring.classList.add('active'); });
+    el.addEventListener('mouseleave', () => { dot.classList.remove('active'); ring.classList.remove('active'); });
+  });
+  (function animRing() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+</script>
+<script src="cookie-banner.js"></script>
+</body>
+</html>
