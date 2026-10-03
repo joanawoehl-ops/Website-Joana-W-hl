@@ -3,60 +3,269 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joana Wöhl – Wohlfühlfigur mit Leichtigkeit | Mein Weg zu freiem Essverhalten</title>
-  <meta name="description" content="Ich hungere nie. Ich habe keinen Heißhunger. Ich lebe in meiner Wohlfühlfigur – mit Leichtigkeit, als Ergebnis meines inneren Weges. Das ist Joanas Realität. Sie zeigt Frauen diesen Weg.">
+  <title>Joana Wöhl – Frieden mit dem Essen & Freiheit & Figur</title>
+  <meta name="description" content="Seminare für Frauen, die Frieden mit dem Essen finden möchten. Von Joana Wöhl – Biologielehrerin, Gründerin von MAKECAKE & Mama von drei Jungs.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Joana Wöhl">
   <meta name="google-site-verification" content="oNaPIgKuDkB-qZfESMPyzsNDhjWSCWCJR2nQYqy1pI0">
   <link rel="canonical" href="https://woehl.de/">
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Joana Wöhl – Wohlfühlfigur mit Leichtigkeit">
-  <meta property="og:description" content="Ich hungere nie. Kein Heißhunger. Wohlfühlfigur mit Leichtigkeit – das ist meine Realität. Ich zeige Frauen diesen inneren Weg.">
+  <meta property="og:title" content="Joana Wöhl – Frieden mit dem Essen">
+  <meta property="og:description" content="Seminare für Frauen, die endlich aufhören möchten, über Essen nachzudenken.">
   <meta property="og:url" content="https://woehl.de/">
-  <meta property="og:site_name" content="Joana Wöhl">
-  <meta property="og:locale" content="de_DE">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Joana Wöhl – Freiheit &amp; Figur">
-  <meta name="twitter:description" content="Ich hungere nie. Kein Heißhunger. Wohlfühlfigur mit Leichtigkeit – das ist Joanas Realität. Sie zeigt Frauen diesen Weg.">
-  <!-- Fonts -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "Joana Wöhl",
-        "url": "https://woehl.de/"
-      },
-      {
-        "@type": "Person",
-        "name": "Joana Wöhl",
-        "url": "https://woehl.de/",
-        "jobTitle": "Begleiterin für Körperbild & Essverhalten",
-        "description": "Biologielehrerin, Mutter dreier Jungs und Begleiterin, die Frauen zu einem freien Verhältnis mit Essen und ihrem Körper begleitet.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Obermarkt 18",
-          "addressLocality": "Eschwege",
-          "postalCode": "37269",
-          "addressCountry": "DE"
-        },
-        "email": "j.woehl@familienunternehmenjw.de",
-        "sameAs": ["https://www.instagram.com/joanawoehl/"]
-      }
-    ]
-  }
-  </script>
   <style>
-    @media (max-width: 860px) {
-      .wb-teaser-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
-      .wb-teaser-section { padding: 72px 24px !important; }
-      .reset-grid { grid-template-columns: 1fr !important; }
+    /* === HOMEPAGE OVERRIDES: cleaner, whiter === */
+    body { background: #fff; }
+
+    .home-hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #fff;
+      padding-top: 80px;
+    }
+    .home-hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 64px 80px 64px;
+    }
+    .home-hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      margin-bottom: 28px;
+    }
+    .home-hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(44px, 5.5vw, 78px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--color-dark);
+      margin-bottom: 28px;
+    }
+    .home-hero-headline em { font-style: italic; color: var(--color-rose); }
+    .home-hero-sub {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--color-dark);
+      opacity: 0.65;
+      max-width: 460px;
+      margin-bottom: 16px;
+    }
+    .home-hero-origin {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.4;
+      margin-bottom: 44px;
+      line-height: 1.6;
+    }
+    .home-hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .home-hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ANGEBOTE */
+    .angebote-section {
+      padding: 120px 64px;
+      background: #fff;
+    }
+    .angebote-inner { max-width: 1100px; margin: 0 auto; }
+    .angebote-label {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .angebote-label::before, .angebote-label::after {
+      content: ''; display: block; height: 1px; background: #e8e5de; flex: 1; max-width: 60px;
+    }
+    .angebote-headline {
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 300;
+      color: var(--color-dark);
+      text-align: center;
+      margin-bottom: 64px;
+      line-height: 1.2;
+    }
+    .angebote-headline em { font-style: italic; }
+    .angebote-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* Angebot Card */
+    .angebot-card {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f5f3ef;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+    .angebot-card:hover { transform: translateY(-4px); }
+    .angebot-card-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .angebot-card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.6s;
+    }
+    .angebot-card:hover .angebot-card-photo img { transform: scale(1.04); }
+    .angebot-card-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--color-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .angebot-card-body {
+      padding: 36px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .angebot-card-meta {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      margin-bottom: 12px;
+    }
+    .angebot-card-title {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 300;
+      color: var(--color-dark);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .angebot-card-title em { font-style: italic; }
+    .angebot-card-desc {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--color-dark);
+      opacity: 0.65;
+      margin-bottom: 28px;
+      flex: 1;
+    }
+    .angebot-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .angebot-card-price {
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--color-dark);
+      line-height: 1;
+    }
+    .angebot-card-price span {
+      font-size: 18px;
+      opacity: 0.45;
+    }
+    .angebot-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-dark);
+      color: var(--color-cream);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .angebot-card-cta:hover { background: #2a2520; transform: translateY(-1px); }
+    .angebot-card-cta.soon {
+      background: rgba(58,53,48,0.12);
+      color: rgba(58,53,48,0.35);
+      cursor: default;
+      pointer-events: none;
+    }
+    .angebot-card-detail {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.4;
+      margin-top: 10px;
+    }
+
+    /* PAIN */
+    .pain-section { background: #fff; }
+
+    /* MANIFESTO */
+    .manifesto-section { background: #f5f3ef; }
+
+    /* ABOUT */
+    .about-section { background: #fff; }
+
+    /* KITCHEN */
+    .kitchen-section { background: #f5f3ef; }
+    .kitchen-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 48px;
+    }
+    .kitchen-photo-grid img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* NEWSLETTER */
+    .waitlist-section { background: var(--color-dark); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .home-hero { grid-template-columns: 1fr; min-height: auto; }
+      .home-hero-left { padding: 100px 24px 48px; }
+      .home-hero-right { height: 60vw; max-height: 480px; }
+      .angebote-section { padding: 80px 24px; }
+      .angebote-grid { grid-template-columns: 1fr; }
+      .angebot-card-body { padding: 28px 28px 32px; }
     }
   </style>
   <script src="/cookie-consent.js"></script>
@@ -69,8 +278,7 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="reset.html" class="mobile-nav-link">KNH Reset</a>
-  <a href="workbook.html" class="mobile-nav-link">Workbook</a>
+  <a href="#angebote" class="mobile-nav-link" onclick="document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('navHamburger').classList.remove('open');">Angebote</a>
   <a href="ueber-mich.html" class="mobile-nav-link">Über mich</a>
   <a href="coaching.html" class="mobile-nav-link">Begleitung</a>
   <a href="funnel/optin.html" class="mobile-nav-cta" onclick="document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('navHamburger').classList.remove('open');">Gratis Guide sichern</a>
@@ -80,8 +288,7 @@
 <nav id="mainNav">
   <a href="index.html" class="nav-logo">Joana Wöhl</a>
   <div class="nav-links">
-    <a href="reset.html" class="nav-link">KNH Reset</a>
-    <a href="workbook.html" class="nav-link">Workbook</a>
+    <a href="#angebote" class="nav-link">Angebote</a>
     <a href="ueber-mich.html" class="nav-link">Über mich</a>
     <a href="coaching.html" class="nav-link">Begleitung</a>
   </div>
@@ -92,81 +299,124 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Workbook &middot; Reset-Abende</div>
-    <h1 class="hero-headline">
-      Du denkst mehr<br>über <em>Essen</em> nach als<br>über das Leben selbst.
+<section class="home-hero">
+  <div class="home-hero-left">
+    <div class="home-hero-eyebrow">Seminare · Online & Präsenz</div>
+    <h1 class="home-hero-headline">
+      Frieden mit<br><em>dem Essen.</em>
     </h1>
-    <p class="hero-sub">
-      Ich hungere nie. Ich habe keinen Heißhunger mehr. Ich lebe in meiner Wohlfühlfigur — mit Leichtigkeit, als Ergebnis eines inneren Weges. Das ist meine Realität geworden. Ich zeige dir diesen Weg.
+    <p class="home-hero-sub">
+      Ich hungere nie. Ich habe keinen Heißhunger mehr. Ich lebe in meiner Wohlfühlfigur — mit Leichtigkeit, als Ergebnis eines inneren Weges. Das ist meine Realität. Ich zeige dir diesen Weg.
     </p>
-    <p class="hero-origin">Von einer Biologielehrerin &amp; Mutter dreier Jungs — die selbst diesen langen Weg gegangen ist und heute auf der anderen Seite lebt.</p>
-    <div class="hero-actions">
-      <a href="#newsletter" class="btn-primary">
-        Gratis Guide sichern
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
+    <p class="home-hero-origin">Von einer Biologielehrerin &amp; Mama von drei Jungs — Gründerin von MAKECAKE.</p>
+    <a href="#angebote" class="btn-primary">
+      Zu den Seminaren
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </div>
-  <div class="hero-right">
-    <div class="hero-image-wrap">
-      <img src="assets/joana2.jpg" alt="Joana Wöhl" loading="eager">
-    </div>
-    <div class="hero-badge">
-      <span class="badge-main">4.75</span>
-      <span class="badge-sub">von 5 ★</span>
-    </div>
+  <div class="home-hero-right">
+    <img src="assets/joana2.jpg" alt="Joana Wöhl" loading="eager">
   </div>
 </section>
 
 <!-- MARQUEE -->
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track">
-    <span class="marquee-item">Verstehen</span>
-    <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Erleben</span>
-    <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Integration</span>
-    <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Frieden mit Essen</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Freiheit</span>
+    <span class="marquee-item">Freiheit & Figur</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Figur</span>
+    <span class="marquee-item">Verstehen</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Vertrauen</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Innere Ruhe</span>
-    <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Nervensystem</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Selbstverständnis</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Verstehen</span>
-    <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Erleben</span>
-    <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Integration</span>
-    <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Frieden mit Essen</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Freiheit</span>
+    <span class="marquee-item">Freiheit & Figur</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Figur</span>
+    <span class="marquee-item">Verstehen</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Vertrauen</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Innere Ruhe</span>
-    <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Nervensystem</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Selbstverständnis</span>
     <span class="marquee-item gold">&middot;</span>
   </div>
 </div>
+
+<!-- ANGEBOTE -->
+<section class="angebote-section" id="angebote">
+  <div class="angebote-inner">
+
+    <div class="angebote-label reveal" style="justify-content: center;">Aktuelle Seminare</div>
+    <h2 class="angebote-headline reveal reveal-delay-1">
+      Zwei Wege — <em>ein Ziel.</em>
+    </h2>
+
+    <div class="angebote-grid">
+
+      <!-- FRIEDEN MIT DEM ESSEN -->
+      <div class="angebot-card reveal">
+        <div class="angebot-card-photo">
+          <img src="assets/Joana mit grünem Smoothie1.jpg" alt="Joana mit grünem Smoothie" loading="lazy">
+        </div>
+        <div class="angebot-card-body">
+          <div class="angebot-card-meta">Online · 28. Oktober · 90 Minuten · 49 €</div>
+          <div class="angebot-card-title">Frieden mit<br><em>dem Essen.</em></div>
+          <p class="angebot-card-desc">
+            Ein Online-Seminar, das tatsächlich etwas bewegt. Joana bringt jedes Mal ein anderes Thema rund ums Essen, den Körper und das innere Erleben mit — und begleitet dich durch 90 Minuten echte Tiefe. Inkl. Aufzeichnung.
+          </p>
+          <div>
+            <div class="angebot-card-footer">
+              <div class="angebot-card-price">49 <span>€</span></div>
+              <!-- ABLEFY-FRIEDEN-LINK hier eintragen -->
+              <a class="angebot-card-cta soon">
+                Anmeldung öffnet bald
+              </a>
+            </div>
+            <div class="angebot-card-detail">28. Oktober · Online via Zoom · Thema folgt · inkl. 10 Tage Aufzeichnung</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FREIHEIT & FIGUR -->
+      <div class="angebot-card reveal reveal-delay-1">
+        <div class="angebot-card-photo-placeholder">
+          <div style="text-align: center; padding: 48px 32px;">
+            <div style="font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 20px;">10. Januar 2025</div>
+            <div style="font-family: var(--serif); font-size: clamp(36px, 5vw, 60px); font-weight: 300; color: var(--color-cream); line-height: 1.1;">Freiheit<br><em style="font-style:italic; color: var(--color-rose);">&amp; Figur.</em></div>
+            <div style="font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--color-cream); opacity: 0.45; margin-top: 20px; line-height: 1.7;">10:00 – 14:00 Uhr<br>4 Stunden · Präsenz</div>
+          </div>
+        </div>
+        <div class="angebot-card-body" style="background: var(--color-dark);">
+          <div class="angebot-card-meta" style="color: var(--color-sage);">Präsenz · 4 Stunden · 199 €</div>
+          <div class="angebot-card-title" style="color: var(--color-cream);">Freiheit<br><em>&amp; Figur.</em></div>
+          <p class="angebot-card-desc" style="color: var(--color-cream);">
+            Ein intensiver Halbtages-Workshop für Frauen, die bereit sind, die Beziehung zu ihrem Körper und zum Essen wirklich zu verändern. 4 Stunden, die etwas hinterlassen — nicht als Motivation, sondern als echte Erkenntnis.
+          </p>
+          <div>
+            <div class="angebot-card-footer">
+              <div class="angebot-card-price" style="color: var(--color-cream);">199 <span>€</span></div>
+              <!-- ABLEFY-FREIHEIT-LINK hier eintragen -->
+              <a class="angebot-card-cta soon" style="background: rgba(242,240,232,0.1); color: rgba(242,240,232,0.35);">
+                Anmeldung öffnet bald
+              </a>
+            </div>
+            <div class="angebot-card-detail" style="color: var(--color-cream);">10. Januar · 10–14 Uhr · Termin &amp; Ort folgen</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- PAIN MIRROR -->
 <section class="pain-section">
@@ -222,244 +472,48 @@
   </div>
 </section>
 
-
-<!-- TRANSFORMATION -->
-<section class="transform-section">
-  <div class="section-inner">
-    <div class="section-label reveal">Die Veränderung</div>
-    <h2 class="section-headline reveal reveal-delay-1">Von hier — nach dort.</h2>
-    <div class="transform-grid">
-      <div>
-        <div class="transform-col-label before reveal">Vorher</div>
-        <ul class="transform-items reveal reveal-delay-1">
-          <li class="transform-item">Ständige Gedanken rund ums Essen</li>
-          <li class="transform-item">Schuldgefühle nach dem Essen</li>
-          <li class="transform-item">Kampf zwischen Kontrolle &amp; Kontrollverlust</li>
-          <li class="transform-item">Körper als Gegner</li>
-          <li class="transform-item">Essen als kompliziert erleben</li>
-          <li class="transform-item">Mentale Erschöpfung &amp; innerer Druck</li>
-        </ul>
-      </div>
-      <div class="transform-divider reveal">
-        <div class="transform-arrow">→</div>
-      </div>
-      <div>
-        <div class="transform-col-label after reveal">Meine Realität heute</div>
-        <ul class="transform-items reveal reveal-delay-1">
-          <li class="transform-item after-item">Kein Hunger, kein Heißhunger — nie</li>
-          <li class="transform-item after-item">Keine quälenden Gedanken mehr rund ums Essen</li>
-          <li class="transform-item after-item">Vertrauen in meinen Körper statt Kontrolle</li>
-          <li class="transform-item after-item">Wohlfühlfigur — als Ergebnis des inneren Weges</li>
-          <li class="transform-item after-item">Ich esse in Hülle und Fülle, ohne Schuldgefühle</li>
-          <li class="transform-item after-item">Freiheit — ich war nie freier als ohne Diät</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats-section">
-  <div class="section-inner">
-    <div class="stats-grid">
-      <div class="stat-item reveal">
-        <span class="stat-number" data-count="4.75" data-suffix="">0</span>
-        <span class="stat-label">von 5 Sternen —<br>Pilotgruppe · 12 Bewertungen</span>
-      </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <span class="stat-number" data-count="100" data-suffix="%">0</span>
-        <span class="stat-label">empfanden Struktur &amp; Länge<br>als „genau richtig"</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORKBOOK TEASER -->
-<section class="wb-teaser-section" style="background: var(--color-dark); padding: 100px 64px;">
-  <div class="wb-teaser-grid" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
-    <!-- Buch-Mockup -->
-    <div class="reveal" style="position: relative;">
-      <div style="background: var(--color-cream); border-radius: 4px 12px 12px 4px; padding: 48px 40px; box-shadow: -4px 0 0 #d4d0c4, -8px 0 0 #c8c4b8, 0 20px 60px rgba(0,0,0,0.3); position: relative;">
-        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, #9ea39a, #b5baaa, #9ea39a); border-radius: 4px 0 0 4px;"></div>
-        <div style="font-family: var(--sans); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-rose); margin-bottom: 16px;">Joana Wöhl · E-Book</div>
-        <div style="font-family: var(--serif); font-size: 40px; font-weight: 300; line-height: 1.05; color: var(--color-dark); margin-bottom: 8px;">Komm nach<br><em style="font-style:italic; color: var(--color-rose);">Hause.</em></div>
-        <div style="font-family: var(--sans); font-size: 12px; font-weight: 300; color: var(--color-dark); opacity: 0.55; line-height: 1.6; margin-bottom: 24px;">Ein 28-Tage-Erlebnis für deinen Körper.<br>Ohne Diät. Ohne Druck. Mit dir.</div>
-        <div style="height: 1px; background: var(--cream-mid); margin-bottom: 20px;"></div>
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-          <div style="font-family: var(--sans); font-size: 12px; font-weight: 300; color: var(--color-dark); opacity: 0.6; display: flex; gap: 10px; align-items: center;"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-sage);flex-shrink:0;display:block;"></span>Kapitel 01 · Ankommen</div>
-          <div style="font-family: var(--sans); font-size: 12px; font-weight: 300; color: var(--color-dark); opacity: 0.6; display: flex; gap: 10px; align-items: center;"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-sage);flex-shrink:0;display:block;"></span>Kapitel 02 · Nähren</div>
-          <div style="font-family: var(--sans); font-size: 12px; font-weight: 300; color: var(--color-dark); opacity: 0.6; display: flex; gap: 10px; align-items: center;"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-sage);flex-shrink:0;display:block;"></span>Kapitel 03 · Heilen</div>
-          <div style="font-family: var(--sans); font-size: 12px; font-weight: 300; color: var(--color-dark); opacity: 0.6; display: flex; gap: 10px; align-items: center;"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-sage);flex-shrink:0;display:block;"></span>Kapitel 04 · Frei sein</div>
-        </div>
-        <div style="font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--color-dark); opacity: 0.4; margin-top: 24px;">von Joana Wöhl</div>
-      </div>
-    </div>
-    <!-- Text -->
-    <div>
-      <div class="reveal" style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 20px;">E-Book · Sofort-Download · 94 Seiten</div>
-      <h2 class="reveal reveal-delay-1" style="font-family: var(--serif); font-size: clamp(34px, 4vw, 52px); font-weight: 300; line-height: 1.15; color: var(--color-cream); margin-bottom: 24px;">
-        Dein Begleiter für<br><em style="font-style:italic; color: var(--color-rose);">28 Tage.</em>
-      </h2>
-      <p class="reveal reveal-delay-2" style="font-family: var(--sans); font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--color-cream); opacity: 0.65; margin-bottom: 32px;">
-        Das Workbook begleitet dich 28 Tage lang — mit echten Rezepten, tiefen Reflexionen und Joanas persönlichen Geschichten. Jeden Tag ein Impuls, eine Aufgabe, eine Frage. Ohne Diät. Ohne Druck. Mit dir.
-      </p>
-      <div class="reveal reveal-delay-2" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px;">
-        <div style="font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--color-cream); opacity: 0.7; display: flex; align-items: center; gap: 12px;">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;opacity:0.5;"><path d="M2 8l4 4 8-8" stroke="#b5baaa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          94 Seiten · 4 Kapitel · 4 Rezepte
-        </div>
-        <div style="font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--color-cream); opacity: 0.7; display: flex; align-items: center; gap: 12px;">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;opacity:0.5;"><path d="M2 8l4 4 8-8" stroke="#b5baaa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Tägliche Reflexionen & Tagesaufgaben
-        </div>
-        <div style="font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--color-cream); opacity: 0.7; display: flex; align-items: center; gap: 12px;">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;opacity:0.5;"><path d="M2 8l4 4 8-8" stroke="#b5baaa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Sofort als PDF nach dem Kauf
-        </div>
-      </div>
-      <div class="reveal reveal-delay-3" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-        <a href="workbook.html" class="btn-primary" style="background: var(--color-rose); color: var(--color-dark);">
-          Zum Workbook — 27&nbsp;€
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <span style="font-family: var(--sans); font-size: 12px; font-weight: 300; color: var(--color-cream); opacity: 0.4;">Einmalig · inkl. MwSt.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- RESET ABEND -->
-<section style="background: var(--color-cream); padding: 120px 64px;">
-  <div style="max-width: 1100px; margin: 0 auto;">
-
-    <!-- Header -->
-    <div style="text-align: center; margin-bottom: 72px;">
-      <div class="section-label reveal" style="justify-content: center;">Live · Online · 15. Juli 2025</div>
-      <h2 class="section-headline reveal reveal-delay-1" style="text-align: center;">
-        Komm nach Hause <em>Reset.</em>
-      </h2>
-      <p class="section-sub reveal reveal-delay-2" style="text-align: center; max-width: 580px; margin: 0 auto;">
-        Ein Abend im Monat, an dem du alles loslässt — und wieder zu dir findest. Aktuelle Themen, geführte Meditation, echte Begegnung. Online, von zuhause aus.
-      </p>
-    </div>
-
-    <!-- Karten-Grid -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-bottom: 48px;" class="reset-grid">
-
-      <!-- Was passiert -->
-      <div class="layer-card reveal" style="padding: 48px 44px;">
-        <div class="layer-num">01</div>
-        <h3 class="layer-title">Was dich erwartet</h3>
-        <p class="layer-text">Joana greift ein aktuelles Thema auf — Essen, Körperbild, innere Ruhe — und gibt dir Wissen und Impulse, die wirklich etwas bewegen. Keine leere Motivation, sondern echte Tiefe.</p>
-      </div>
-
-      <!-- Meditation -->
-      <div class="layer-card reveal reveal-delay-1" style="padding: 48px 44px;">
-        <div class="layer-num">02</div>
-        <h3 class="layer-title">Geführte Meditation</h3>
-        <p class="layer-text">Jeder Reset endet mit einer geführten Meditation — speziell auf das Abendthema abgestimmt. Du gehst ruhiger ins Bett als du gekommen bist.</p>
-      </div>
-
-      <!-- Format -->
-      <div class="layer-card reveal" style="padding: 48px 44px;">
-        <div class="layer-num">03</div>
-        <h3 class="layer-title">Format &amp; Termin</h3>
-        <p class="layer-text">90 Minuten · Online via Zoom · 19 Uhr. Der nächste Reset findet am <strong>15. Juli 2025</strong> statt.</p>
-      </div>
-
-      <!-- Aufzeichnung -->
-      <div class="layer-card reveal reveal-delay-1" style="padding: 48px 44px; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 20px; right: 20px; background: var(--color-rose); color: var(--color-dark); font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border-radius: 20px;">Inklusive</div>
-        <div class="layer-num">04</div>
-        <h3 class="layer-title">Aufzeichnung</h3>
-        <p class="layer-text">Du bekommst die Aufzeichnung automatisch nach dem Abend — und hast sie <strong>10 Tage lang</strong> verfügbar. Kannst du nicht live dabei sein? Kein Problem.</p>
-      </div>
-    </div>
-
-    <!-- Preis + CTA -->
-    <div class="reveal" style="background: var(--color-dark); border-radius: 16px; padding: 52px 56px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
-      <div>
-        <div style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 12px;">Nächster Termin</div>
-        <div style="font-family: var(--serif); font-size: clamp(22px, 3vw, 34px); font-weight: 300; color: var(--color-cream); line-height: 1.2; margin-bottom: 8px;">
-          15. Juli 2025 · 19 Uhr<br><em style="font-style:italic;">Komm nach Hause Reset</em>
-        </div>
-        <div style="font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--color-cream); opacity: 0.5; margin-top: 8px;">90 Minuten · Online · inkl. 10 Tage Aufzeichnung</div>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px; flex-shrink: 0;">
-        <div style="display: flex; align-items: baseline; gap: 6px;">
-          <span style="font-family: var(--serif); font-size: 56px; font-weight: 300; color: var(--color-cream); line-height: 1;">20</span>
-          <span style="font-family: var(--serif); font-size: 22px; font-weight: 300; color: var(--color-cream); opacity: 0.6;">€</span>
-        </div>
-        <a href="https://www.checkout-ds24.com/product/696709" class="btn-primary" target="_blank" rel="noopener" style="white-space: nowrap;">
-          Jetzt Platz sichern
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <span style="font-family: var(--sans); font-size: 12px; font-weight: 300; color: var(--color-cream); opacity: 0.35;">Einmalig · inkl. MwSt.</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
-<section class="testimonials-section">
+<section class="testimonials-section" style="background: #fff;">
   <div class="section-inner">
-    <div class="section-label reveal">Stimmen aus dem Reset</div>
-    <h2 class="section-headline reveal reveal-delay-1">Was Frauen sagen,<br>die schon dabei waren.</h2>
+    <div class="section-label reveal">Stimmen</div>
+    <h2 class="section-headline reveal reveal-delay-1">Was Frauen sagen,<br>die dabei waren.</h2>
   </div>
   <div class="testimonials-scroll" id="testimonialsScroll">
     <div class="testimonial-card">
       <span class="testimonial-quote-mark">"</span>
       <p class="testimonial-text">Ich fühle mich so unglaublich befreit und erlöst. Die Begleitung hat tiefsitzende Blockaden gelöst. Wie wundervoll ist doch mein Körper — mein Tempel.</p>
       <div class="testimonial-stars">★★★★★</div>
-      <div class="testimonial-name">Marion, 38
-        <span class="testimonial-context">Mama von zwei Kindern · vorher 15 Jahre Diät-Kreislauf</span>
-      </div>
+      <div class="testimonial-name">Marion, 38<span class="testimonial-context">Mama von zwei Kindern · vorher 15 Jahre Diät-Kreislauf</span></div>
     </div>
     <div class="testimonial-card">
       <span class="testimonial-quote-mark">"</span>
       <p class="testimonial-text">Überzeugt, voller Energie und viel Vorfreude auf den Weg, der jetzt gestartet ist und nicht mehr enden soll.</p>
       <div class="testimonial-stars">★★★★★</div>
-      <div class="testimonial-name">Sabrina, 29
-        <span class="testimonial-context">Bürokauffrau · vorher ständige Gedanken ums Essen</span>
-      </div>
+      <div class="testimonial-name">Sabrina, 29<span class="testimonial-context">Bürokauffrau · vorher ständige Gedanken ums Essen</span></div>
     </div>
     <div class="testimonial-card">
       <span class="testimonial-quote-mark">"</span>
       <p class="testimonial-text">Absolutes Spa-Erlebnis, das mich auf sanfte Art geweckt hat. Das war genau das, was ich gebraucht habe — ich musste schon selbst tun, aber mit dem Vertrauen, dass es klappt.</p>
       <div class="testimonial-stars">★★★★★</div>
-      <div class="testimonial-name">Lisa K., 44
-        <span class="testimonial-context">Lehrerin · vorher Kontrolle &amp; Kontrollverlust im Wechsel</span>
-      </div>
+      <div class="testimonial-name">Lisa K., 44<span class="testimonial-context">Lehrerin · vorher Kontrolle & Kontrollverlust im Wechsel</span></div>
     </div>
     <div class="testimonial-card">
       <span class="testimonial-quote-mark">"</span>
       <p class="testimonial-text">Ein Weg zu Frieden und Gelassenheit. Ein großes Stück näher an Freiheit.</p>
       <div class="testimonial-stars">★★★★☆</div>
-      <div class="testimonial-name">Anna M., 33
-        <span class="testimonial-context">Ernährungsberaterin · suchte den Schritt hinter dem Wissen</span>
-      </div>
+      <div class="testimonial-name">Anna M., 33<span class="testimonial-context">Ernährungsberaterin · suchte den Schritt hinter dem Wissen</span></div>
     </div>
     <div class="testimonial-card">
       <span class="testimonial-quote-mark">"</span>
       <p class="testimonial-text">Tu es. Es ist einfach wundervoll investierte Zeit in dich. Du bist der einzige Mensch, der dafür verantwortlich ist, dass es dir gut geht.</p>
       <div class="testimonial-stars">★★★★★</div>
-      <div class="testimonial-name">Petra W., 51
-        <span class="testimonial-context">Selbstständig · vorher jahrelange Schuldgefühle nach dem Essen</span>
-      </div>
+      <div class="testimonial-name">Petra W., 51<span class="testimonial-context">Selbstständig · vorher jahrelange Schuldgefühle nach dem Essen</span></div>
     </div>
     <div class="testimonial-card">
       <span class="testimonial-quote-mark">"</span>
       <p class="testimonial-text">Sei mutig und wage diesen Schritt. Er ist ein Schritt zu dir — und du wirst begeistert sein, versprochen.</p>
       <div class="testimonial-stars">★★★★★</div>
-      <div class="testimonial-name">Julia R., 27
-        <span class="testimonial-context">Studentin · vorher Binge-Eating-Muster seit dem Abitur</span>
-      </div>
+      <div class="testimonial-name">Julia R., 27<span class="testimonial-context">Studentin · vorher Binge-Eating-Muster seit dem Abitur</span></div>
     </div>
   </div>
 </section>
@@ -484,7 +538,7 @@
         <div class="about-text reveal reveal-delay-2">
           <p>Ich bin Joana — Mama von drei Jungs, Biologielehrerin und Gründerin von MAKECAKE. In meiner Jugend habe ich Anorexie erlebt. Diese Erfahrung hat mein Leben geprägt — und mich zu der Arbeit geführt, die ich heute tue.</p>
           <p>In den letzten Jahren habe ich aktiv an meiner eigenen Heilung gearbeitet. Ich weiß, wie sich der innere Kampf anfühlt. Und ich weiß, wie es ist, wenn dieser Kampf aufhört.</p>
-          <p>Heute hungere ich nicht. Ich habe keinen Heißhunger. Ich lebe in meiner Wohlfühlfigur — mit Leichtigkeit, nicht durch Kontrolle. Das ist meine Realität geworden. Ich zeige dir diesen Weg.</p>
+          <p>Heute hungere ich nicht. Ich habe keinen Heißhunger. Ich lebe in meiner Wohlfühlfigur — mit Leichtigkeit, nicht durch Kontrolle. Das ist meine Realität. Ich zeige dir diesen Weg.</p>
         </div>
         <div class="about-values reveal reveal-delay-3">
           <span class="value-tag">Ehrlichkeit</span>
@@ -499,36 +553,20 @@
   </div>
 </section>
 
-<!-- KÜCHEN-ALLTAG GALERIE -->
+<!-- KÜCHE GALERIE -->
 <section class="kitchen-section">
   <div class="section-inner">
-    <div class="kitchen-layout">
-
-      <div class="kitchen-text">
-        <div class="section-label reveal">Meine Küche</div>
-        <h2 class="kitchen-headline reveal reveal-delay-1">
-          Essen, das nährt —<br><em>ohne Regeln.</em>
-        </h2>
-        <p class="kitchen-lead reveal reveal-delay-2">
-          Ich koche intuitiv. Keine abgemessenen Portionen, keine Verbotslisten — nur Freude, Farbe und das, was sich wirklich gut anfühlt. Hier bekommst du einen echten Blick in meinen Küchen-Alltag.
-        </p>
-      </div>
-
-      <div class="kitchen-mosaic">
-
-        <div class="mosaic-item mosaic-large">
-          <img src="images/rezepte/tomaten.jpg" alt="Frische bunte Tomaten aus Joanas Küche" loading="lazy">
-        </div>
-
-        <div class="mosaic-item mosaic-tall">
-          <img src="images/rezepte/joanamitproteinshake.jpg" alt="Joana mit ihrem Lieblings-Shake" loading="lazy">
-        </div>
-
-        <div class="mosaic-item mosaic-small">
-          <img src="images/rezepte/buntekarotten.jpg" alt="Bunte Karotten – Joanas Küche" loading="lazy">
-        </div>
-
-      </div>
+    <div class="section-label reveal" style="justify-content: center;">Meine Küche</div>
+    <h2 class="section-headline reveal reveal-delay-1" style="text-align: center;">
+      Essen, das nährt —<br><em>ohne Regeln.</em>
+    </h2>
+    <p style="font-family: var(--sans); font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--color-dark); opacity: 0.6; text-align: center; max-width: 520px; margin: 0 auto 48px;" class="reveal reveal-delay-2">
+      Ich koche intuitiv. Keine abgemessenen Portionen, keine Verbotslisten — nur Freude, Farbe und das, was sich wirklich gut anfühlt.
+    </p>
+    <div class="kitchen-photo-grid reveal reveal-delay-2">
+      <img src="assets/Grüner Smoothie1.jpg" alt="Grüner Smoothie aus Joanas Küche" loading="lazy">
+      <img src="assets/Proteinkakao1.jpg" alt="Proteinkakao aus Joanas Küche" loading="lazy">
+      <img src="assets/Herzhaftes Frühstück Teller1.jpg" alt="Herzhaftes Frühstück" loading="lazy">
     </div>
   </div>
 </section>
@@ -541,7 +579,7 @@
       Gratis Guide sichern &amp;<br><em>im Newsletter bleiben.</em>
     </h2>
     <p class="waitlist-sub reveal reveal-delay-2">
-      Trag dich ein und du bekommst sofort den Gratis Mini-Guide mit meinem Lieblingsrezept. Dazu: neue Reset-Termine, Impulse und alles, was mich gerade bewegt. Kein Spam. Jederzeit abmeldbar.
+      Trag dich ein und du bekommst sofort den Gratis Mini-Guide mit meinem Lieblingsrezept. Dazu: neue Seminar-Termine, Impulse und alles, was mich gerade bewegt. Kein Spam. Jederzeit abmeldbar.
     </p>
     <form class="waitlist-form reveal reveal-delay-3" id="waitlistForm" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="a3418d41-cf30-4d9e-85d7-22b952fc1d8d">
@@ -596,7 +634,6 @@
 </footer>
 
 <script>
-  // CURSOR
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -604,7 +641,7 @@
     mx = e.clientX; my = e.clientY;
     dot.style.left = mx + 'px'; dot.style.top = my + 'px';
   });
-  document.querySelectorAll('a, button, input, .testimonial-card, .layer-card, .inside-card, .explore-card').forEach(el => {
+  document.querySelectorAll('a, button, input, .testimonial-card, .angebot-card').forEach(el => {
     el.addEventListener('mouseenter', () => { dot.classList.add('active'); ring.classList.add('active'); });
     el.addEventListener('mouseleave', () => { dot.classList.remove('active'); ring.classList.remove('active'); });
   });
@@ -614,11 +651,9 @@
     requestAnimationFrame(animRing);
   })();
 
-  // STICKY NAV
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
 
-  // HAMBURGER
   const hamburger = document.getElementById('navHamburger');
   const mobileMenu = document.getElementById('mobileMenu');
   hamburger.addEventListener('click', () => {
@@ -626,44 +661,13 @@
     mobileMenu.classList.toggle('open');
     document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
   });
-  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
 
-  // SCROLL REVEAL
   const revealEls = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
   revealEls.forEach(el => obs.observe(el));
 
-  // COUNT-UP
-  const statEls = document.querySelectorAll('.stat-number[data-count]');
-  const countObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseFloat(el.dataset.count);
-      const suffix = el.dataset.suffix || '';
-      const isDecimal = String(target).includes('.');
-      const dur = 1800; const t0 = performance.now();
-      (function tick(now) {
-        const p = Math.min((now - t0) / dur, 1);
-        const ease = 1 - Math.pow(1 - p, 3);
-        el.textContent = (isDecimal ? (target * ease).toFixed(2) : Math.round(target * ease)) + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-        else el.textContent = (isDecimal ? target.toFixed(2) : target) + suffix;
-      })(t0);
-      countObs.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-  statEls.forEach(el => countObs.observe(el));
-
-  // TESTIMONIALS DRAG
   const scrl = document.getElementById('testimonialsScroll');
   let isDown = false, startX, scrollLeft;
   scrl.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - scrl.offsetLeft; scrollLeft = scrl.scrollLeft; });
@@ -674,14 +678,17 @@
     scrl.scrollLeft = scrollLeft - (e.pageX - scrl.offsetLeft - startX) * 1.5;
   });
 
-  // FORM
   document.getElementById('waitlistForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    this.style.display = 'none';
-    document.getElementById('formSuccess').classList.add('visible');
+    const fd = new FormData(this);
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
+      .then(() => {
+        this.style.display = 'none';
+        document.getElementById('formSuccess').classList.add('visible');
+        window.location.href = 'danke.html';
+      });
   });
 </script>
-<script src="premium.js"></script>
 <script src="cookie-banner.js"></script>
 </body>
 </html>
