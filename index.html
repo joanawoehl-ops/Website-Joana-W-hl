@@ -16,73 +16,86 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* === HOMEPAGE OVERRIDES: cleaner, whiter === */
     body { background: #fff; }
 
+    /* ─── HERO ──────────────────────────────── */
+    /* Banner-Bereich: hier kommt dein Canva-Banner rein (1440 × 810 px)
+       Tausch einfach assets/joana-shake.jpg gegen deinen Banner aus */
     .home-hero {
-      min-height: 92vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      background: #fff;
-      padding-top: 80px;
-    }
-    .home-hero-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 80px 64px 80px 64px;
-    }
-    .home-hero-eyebrow {
-      font-family: var(--sans);
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--color-rose);
-      margin-bottom: 28px;
-    }
-    .home-hero-headline {
-      font-family: var(--serif);
-      font-size: clamp(44px, 5.5vw, 78px);
-      font-weight: 300;
-      line-height: 1.05;
-      color: var(--color-dark);
-      margin-bottom: 28px;
-    }
-    .home-hero-headline em { font-style: italic; color: var(--color-rose); }
-    .home-hero-sub {
-      font-family: var(--sans);
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 1.85;
-      color: var(--color-dark);
-      opacity: 0.65;
-      max-width: 460px;
-      margin-bottom: 16px;
-    }
-    .home-hero-origin {
-      font-family: var(--sans);
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--color-dark);
-      opacity: 0.4;
-      margin-bottom: 44px;
-      line-height: 1.6;
-    }
-    .home-hero-right {
-      position: relative;
-      overflow: hidden;
-    }
-    .home-hero-right img {
       width: 100%;
-      height: 100%;
+      padding-top: 72px; /* nav height */
+      background: #fff;
+    }
+    .hero-banner {
+      width: 100%;
+      max-height: 82vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-banner img {
+      width: 100%;
+      height: 82vh;
       object-fit: cover;
       object-position: center top;
       display: block;
     }
+    .hero-text-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 56px 80px 64px;
+      max-width: 760px;
+    }
+    .home-hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      margin-bottom: 24px;
+    }
+    .home-hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(46px, 5.5vw, 76px);
+      font-weight: 300;
+      line-height: 1.06;
+      color: var(--color-dark);
+      margin-bottom: 24px;
+    }
+    .home-hero-headline em { font-style: italic; }
+    .home-hero-sub {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--color-dark);
+      opacity: 0.6;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
 
-    /* ANGEBOTE */
+    /* ─── PHILOSOPHIE ───────────────────────── */
+    .philosophy-section {
+      background: #f5f3ef;
+      padding: 72px 80px;
+    }
+    .philosophy-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .philosophy-text {
+      font-family: var(--serif);
+      font-size: clamp(20px, 2.4vw, 28px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--color-dark);
+    }
+
+    /* ─── ANGEBOTE ──────────────────────────── */
     .angebote-section {
-      padding: 120px 64px;
+      padding: 104px 64px 120px;
       background: #fff;
     }
     .angebote-inner { max-width: 1100px; margin: 0 auto; }
@@ -94,11 +107,13 @@
       color: var(--color-rose);
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       margin-bottom: 16px;
     }
     .angebote-label::before, .angebote-label::after {
-      content: ''; display: block; height: 1px; background: #e8e5de; flex: 1; max-width: 60px;
+      content: ''; display: block; height: 1px;
+      background: #e8e5de; flex: 1; max-width: 60px;
     }
     .angebote-headline {
       font-family: var(--serif);
@@ -113,12 +128,12 @@
     .angebote-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 28px;
     }
 
-    /* Angebot Card */
+    /* ─── ANGEBOT CARD ──────────────────────── */
     .angebot-card {
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       background: #f5f3ef;
       display: flex;
@@ -140,16 +155,8 @@
       transition: transform 0.6s;
     }
     .angebot-card:hover .angebot-card-photo img { transform: scale(1.04); }
-    .angebot-card-photo-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: var(--color-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
     .angebot-card-body {
-      padding: 36px 40px 40px;
+      padding: 36px 40px 44px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -175,29 +182,11 @@
       font-family: var(--sans);
       font-size: 14px;
       font-weight: 300;
-      line-height: 1.8;
+      line-height: 1.85;
       color: var(--color-dark);
       opacity: 0.65;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
       flex: 1;
-    }
-    .angebot-card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .angebot-card-price {
-      font-family: var(--serif);
-      font-size: 40px;
-      font-weight: 300;
-      color: var(--color-dark);
-      line-height: 1;
-    }
-    .angebot-card-price span {
-      font-size: 18px;
-      opacity: 0.45;
     }
     .angebot-card-cta {
       display: inline-flex;
@@ -214,11 +203,12 @@
       text-decoration: none;
       transition: background 0.3s, transform 0.2s;
       white-space: nowrap;
+      align-self: flex-start;
     }
     .angebot-card-cta:hover { background: #2a2520; transform: translateY(-1px); }
     .angebot-card-cta.soon {
-      background: rgba(58,53,48,0.12);
-      color: rgba(58,53,48,0.35);
+      background: rgba(58,53,48,0.1);
+      color: rgba(58,53,48,0.32);
       cursor: default;
       pointer-events: none;
     }
@@ -227,20 +217,20 @@
       font-size: 12px;
       font-weight: 300;
       color: var(--color-dark);
-      opacity: 0.4;
-      margin-top: 10px;
+      opacity: 0.38;
+      margin-top: 14px;
     }
 
-    /* PAIN */
+    /* ─── PAIN ──────────────────────────────── */
     .pain-section { background: #fff; }
 
-    /* MANIFESTO */
+    /* ─── MANIFESTO ─────────────────────────── */
     .manifesto-section { background: #f5f3ef; }
 
-    /* ABOUT */
+    /* ─── ABOUT ─────────────────────────────── */
     .about-section { background: #fff; }
 
-    /* KITCHEN */
+    /* ─── KÜCHE ─────────────────────────────── */
     .kitchen-section { background: #f5f3ef; }
     .kitchen-photo-grid {
       display: grid;
@@ -252,20 +242,34 @@
       width: 100%;
       aspect-ratio: 3/4;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 10px;
     }
 
-    /* NEWSLETTER */
-    .waitlist-section { background: var(--color-dark); }
+    /* ─── NEWSLETTER ────────────────────────── */
+    .waitlist-section { background: #f5f3ef !important; }
+    .waitlist-eyebrow { color: var(--color-rose) !important; opacity: 0.8 !important; }
+    .waitlist-headline { color: var(--color-dark) !important; }
+    .waitlist-headline em { color: var(--color-dark) !important; }
+    .waitlist-sub { color: var(--color-dark) !important; opacity: 0.6 !important; }
+    .waitlist-section input {
+      background: #fff !important;
+      color: var(--color-dark) !important;
+      border-color: #e0ddd6 !important;
+    }
+    .waitlist-section input::placeholder { color: rgba(58,53,48,0.4) !important; }
+    .form-submit {
+      background: var(--color-dark) !important;
+      color: var(--color-cream) !important;
+    }
+    .form-privacy { color: var(--color-dark) !important; opacity: 0.4 !important; }
 
-    /* RESPONSIVE */
+    /* ─── RESPONSIVE ────────────────────────── */
     @media (max-width: 900px) {
-      .home-hero { grid-template-columns: 1fr; min-height: auto; }
-      .home-hero-left { padding: 100px 24px 48px; }
-      .home-hero-right { height: 60vw; max-height: 480px; }
-      .angebote-section { padding: 80px 24px; }
-      .angebote-grid { grid-template-columns: 1fr; }
-      .angebot-card-body { padding: 28px 28px 32px; }
+      .hero-text-panel { padding: 40px 24px 48px; }
+      .philosophy-section { padding: 56px 24px; }
+      .angebote-section { padding: 72px 24px 80px; }
+      .angebote-grid { grid-template-columns: 1fr; gap: 20px; }
+      .angebot-card-body { padding: 28px 28px 36px; }
     }
   </style>
   <script src="/cookie-consent.js"></script>
@@ -299,25 +303,25 @@
 </nav>
 
 <!-- HERO -->
+<!-- Banner: Tausch assets/joana-shake.jpg gegen deinen Canva-Banner (1440 × 810 px) aus -->
 <section class="home-hero">
-  <div class="home-hero-left">
-    <div class="home-hero-eyebrow">Seminare · Online & Präsenz</div>
+  <div class="hero-banner">
+    <img src="assets/header neu final.jpg" alt="Joana Wöhl" loading="eager">
+  </div>
+  <div class="hero-text-panel">
+    <div class="home-hero-eyebrow">Seminare · Online &amp; Präsenz</div>
     <h1 class="home-hero-headline">
-      Frieden mit<br><em>dem Essen.</em>
+      Komm zurück<br><em>zu dir.</em>
     </h1>
     <p class="home-hero-sub">
-      Ich hungere nie. Ich habe keinen Heißhunger mehr. Ich lebe in meiner Wohlfühlfigur — mit Leichtigkeit, als Ergebnis eines inneren Weges. Das ist meine Realität. Ich zeige dir diesen Weg.
+      Du kennst das Gefühl: nach dem Essen schlechte Gedanken, der ewige Kampf mit Regeln und Verboten, das Auf-und-Ab mit dem Körper. Was wäre, wenn das aufhören darf?
     </p>
-    <p class="home-hero-origin">Von einer Biologielehrerin &amp; Mama von drei Jungs — Gründerin von MAKECAKE.</p>
     <a href="#angebote" class="btn-primary">
       Zu den Seminaren
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
-  </div>
-  <div class="home-hero-right">
-    <img src="assets/joana2.jpg" alt="Joana Wöhl" loading="eager">
   </div>
 </section>
 
@@ -326,36 +330,45 @@
   <div class="marquee-track">
     <span class="marquee-item">Frieden mit Essen</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Freiheit & Figur</span>
-    <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Verstehen</span>
+    <span class="marquee-item">Freiheit &amp; Figur</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Vertrauen</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Innere Ruhe</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Selbstverständnis</span>
+    <span class="marquee-item">Selbstliebe</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Körpergefühl</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Frieden mit Essen</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Freiheit & Figur</span>
-    <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Verstehen</span>
+    <span class="marquee-item">Freiheit &amp; Figur</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Vertrauen</span>
     <span class="marquee-item gold">&middot;</span>
     <span class="marquee-item">Innere Ruhe</span>
     <span class="marquee-item gold">&middot;</span>
-    <span class="marquee-item">Selbstverständnis</span>
+    <span class="marquee-item">Selbstliebe</span>
+    <span class="marquee-item gold">&middot;</span>
+    <span class="marquee-item">Körpergefühl</span>
     <span class="marquee-item gold">&middot;</span>
   </div>
 </div>
+
+<!-- PHILOSOPHIE -->
+<section class="philosophy-section">
+  <div class="philosophy-inner">
+    <p class="philosophy-text reveal">
+      „Intuitives Essen ist keine Technik — es ist das, womit du auf die Welt gekommen bist. Das Vertrauen in deinen Hunger. Die Verbindung zu deinem Körper. Die Fähigkeit, einfach zu essen, ohne nachzudenken. Irgendwann hast du aufgehört, zuzuhören. Ich begleite dich zurück."
+    </p>
+  </div>
+</section>
 
 <!-- ANGEBOTE -->
 <section class="angebote-section" id="angebote">
   <div class="angebote-inner">
 
-    <div class="angebote-label reveal" style="justify-content: center;">Aktuelle Seminare</div>
+    <div class="angebote-label reveal">Aktuelle Seminare</div>
     <h2 class="angebote-headline reveal reveal-delay-1">
       Zwei Wege — <em>ein Ziel.</em>
     </h2>
@@ -365,52 +378,38 @@
       <!-- FRIEDEN MIT DEM ESSEN -->
       <div class="angebot-card reveal">
         <div class="angebot-card-photo">
-          <img src="assets/Joana mit grünem Smoothie1.jpg" alt="Joana mit grünem Smoothie" loading="lazy">
+          <img src="assets/joana-couch.jpg" alt="Joana Wöhl – Frieden mit dem Essen" loading="lazy">
         </div>
         <div class="angebot-card-body">
-          <div class="angebot-card-meta">Online · 28. Oktober · 90 Minuten · 49 €</div>
+          <div class="angebot-card-meta">Online · 28. Oktober · 90 Minuten</div>
           <div class="angebot-card-title">Frieden mit<br><em>dem Essen.</em></div>
           <p class="angebot-card-desc">
-            Ein Online-Seminar, das tatsächlich etwas bewegt. Joana bringt jedes Mal ein anderes Thema rund ums Essen, den Körper und das innere Erleben mit — und begleitet dich durch 90 Minuten echte Tiefe. Inkl. Aufzeichnung.
+            Neunzig Minuten, die sich anfühlen wie nach Hause kommen. Kein Plan, keine Verbotsliste — nur du, dein Körper und ein neues Verständnis davon, was Essen wirklich bedeutet. Jeder Abend trägt ein anderes Thema. Inklusive 10-Tage-Aufzeichnung.
           </p>
-          <div>
-            <div class="angebot-card-footer">
-              <div class="angebot-card-price">49 <span>€</span></div>
-              <!-- ABLEFY-FRIEDEN-LINK hier eintragen -->
-              <a class="angebot-card-cta soon">
-                Anmeldung öffnet bald
-              </a>
-            </div>
-            <div class="angebot-card-detail">28. Oktober · Online via Zoom · Thema folgt · inkl. 10 Tage Aufzeichnung</div>
-          </div>
+          <!-- ABLEFY-FRIEDEN-LINK hier eintragen: href="DEIN-ABLEFY-LINK" -->
+          <a class="angebot-card-cta soon">
+            Anmeldung öffnet bald
+          </a>
+          <div class="angebot-card-detail">28. Oktober · Online via Zoom · Thema folgt · inkl. 10 Tage Aufzeichnung</div>
         </div>
       </div>
 
       <!-- FREIHEIT & FIGUR -->
       <div class="angebot-card reveal reveal-delay-1">
-        <div class="angebot-card-photo-placeholder">
-          <div style="text-align: center; padding: 48px 32px;">
-            <div style="font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 20px;">10. Januar 2025</div>
-            <div style="font-family: var(--serif); font-size: clamp(36px, 5vw, 60px); font-weight: 300; color: var(--color-cream); line-height: 1.1;">Freiheit<br><em style="font-style:italic; color: var(--color-rose);">&amp; Figur.</em></div>
-            <div style="font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--color-cream); opacity: 0.45; margin-top: 20px; line-height: 1.7;">10:00 – 14:00 Uhr<br>4 Stunden · Präsenz</div>
-          </div>
+        <div class="angebot-card-photo">
+          <img src="assets/joana-kueche.jpg" alt="Joana Wöhl – Freiheit & Figur Workshop" loading="lazy">
         </div>
-        <div class="angebot-card-body" style="background: var(--color-dark);">
-          <div class="angebot-card-meta" style="color: var(--color-sage);">Präsenz · 4 Stunden · 199 €</div>
-          <div class="angebot-card-title" style="color: var(--color-cream);">Freiheit<br><em>&amp; Figur.</em></div>
-          <p class="angebot-card-desc" style="color: var(--color-cream);">
-            Ein intensiver Halbtages-Workshop für Frauen, die bereit sind, die Beziehung zu ihrem Körper und zum Essen wirklich zu verändern. 4 Stunden, die etwas hinterlassen — nicht als Motivation, sondern als echte Erkenntnis.
+        <div class="angebot-card-body">
+          <div class="angebot-card-meta">Präsenz · 10. Januar · 4 Stunden</div>
+          <div class="angebot-card-title">Freiheit<br><em>&amp; Figur.</em></div>
+          <p class="angebot-card-desc">
+            Ein ganzer Halbtag mit mir. Wir gehen tief — in die Muster, die dich beim Essen bremsen, und in die Freiheit, die auf der anderen Seite wartet. Intensiv. Persönlich. Nachhaltig.
           </p>
-          <div>
-            <div class="angebot-card-footer">
-              <div class="angebot-card-price" style="color: var(--color-cream);">199 <span>€</span></div>
-              <!-- ABLEFY-FREIHEIT-LINK hier eintragen -->
-              <a class="angebot-card-cta soon" style="background: rgba(242,240,232,0.1); color: rgba(242,240,232,0.35);">
-                Anmeldung öffnet bald
-              </a>
-            </div>
-            <div class="angebot-card-detail" style="color: var(--color-cream);">10. Januar · 10–14 Uhr · Termin &amp; Ort folgen</div>
-          </div>
+          <!-- ABLEFY-FREIHEIT-LINK hier eintragen: href="DEIN-ABLEFY-LINK" -->
+          <a class="angebot-card-cta soon">
+            Anmeldung öffnet bald
+          </a>
+          <div class="angebot-card-detail">10. Januar · 10–14 Uhr · Termin &amp; Ort folgen</div>
         </div>
       </div>
 
@@ -466,7 +465,7 @@
     </blockquote>
     <div class="manifesto-rule reveal reveal-delay-1"></div>
     <p class="manifesto-sub reveal reveal-delay-2">
-      Das ist meine Realität geworden. Ich lebe in Hülle und Fülle, ohne quälende Gedanken rund ums Essen, ohne Heißhunger, ohne Kampf. Nicht weil ich mehr Willenskraft habe — sondern weil ich am richtigen Punkt angesetzt habe. Diesen Weg zeige ich dir.
+      Das darf auch deine Realität werden. Kein Kampf mehr. Kein Zählen. Kein Schuldgefühl nach dem Essen. Nur du — in Frieden mit dem, was auf deinem Teller liegt, und in Vertrauen zu deinem Körper.
     </p>
     <p class="manifesto-attribution reveal reveal-delay-3">— Joana Wöhl</p>
   </div>
@@ -524,7 +523,7 @@
     <div class="about-grid">
       <div class="about-image-wrap reveal">
         <div class="about-image-frame">
-          <img src="assets/joana.jpg" alt="Joana Wöhl – Lehrerin, Gründerin, Mama von drei Jungs" loading="lazy">
+          <img src="assets/joana-kueche.jpg" alt="Joana Wöhl – Biologielehrerin, Gründerin MAKECAKE, Mama" loading="lazy">
         </div>
         <div class="about-badge">
           <span class="ab-label">Gründerin von<br>MAKECAKE</span>
@@ -533,12 +532,12 @@
       <div class="about-content">
         <div class="section-label reveal">Über Joana Wöhl</div>
         <h2 class="about-headline reveal reveal-delay-1">
-          Ich kenne diesen Kampf —<br><em>aus eigener Erfahrung.</em>
+          Ich kenne diesen Kampf —<br><em>von innen.</em>
         </h2>
         <div class="about-text reveal reveal-delay-2">
-          <p>Ich bin Joana — Mama von drei Jungs, Biologielehrerin und Gründerin von MAKECAKE. In meiner Jugend habe ich Anorexie erlebt. Diese Erfahrung hat mein Leben geprägt — und mich zu der Arbeit geführt, die ich heute tue.</p>
-          <p>In den letzten Jahren habe ich aktiv an meiner eigenen Heilung gearbeitet. Ich weiß, wie sich der innere Kampf anfühlt. Und ich weiß, wie es ist, wenn dieser Kampf aufhört.</p>
-          <p>Heute hungere ich nicht. Ich habe keinen Heißhunger. Ich lebe in meiner Wohlfühlfigur — mit Leichtigkeit, nicht durch Kontrolle. Das ist meine Realität. Ich zeige dir diesen Weg.</p>
+          <p>Ich bin Joana — Mama von drei Jungs, Biologielehrerin und Gründerin von MAKECAKE. Ich kenne den Kampf mit dem Essen aus eigener Erfahrung. In meiner Jugend habe ich Anorexie erlebt. Diese Zeit hat mich geprägt — und zur Arbeit geführt, die ich heute tue.</p>
+          <p>Was ich heute weiß: Der Weg zu Frieden mit dem Essen führt nicht durch mehr Kontrolle. Er führt nach innen. Zu dem Vertrauen, das du eigentlich immer hattest — und das du wiederfinden kannst.</p>
+          <p>Genau das begleite ich dich zu entdecken.</p>
         </div>
         <div class="about-values reveal reveal-delay-3">
           <span class="value-tag">Ehrlichkeit</span>
@@ -560,7 +559,7 @@
     <h2 class="section-headline reveal reveal-delay-1" style="text-align: center;">
       Essen, das nährt —<br><em>ohne Regeln.</em>
     </h2>
-    <p style="font-family: var(--sans); font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--color-dark); opacity: 0.6; text-align: center; max-width: 520px; margin: 0 auto 48px;" class="reveal reveal-delay-2">
+    <p style="font-family: var(--sans); font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--color-dark); opacity: 0.6; text-align: center; max-width: 520px; margin: 0 auto;" class="reveal reveal-delay-2">
       Ich koche intuitiv. Keine abgemessenen Portionen, keine Verbotslisten — nur Freude, Farbe und das, was sich wirklich gut anfühlt.
     </p>
     <div class="kitchen-photo-grid reveal reveal-delay-2">
@@ -646,7 +645,7 @@
     el.addEventListener('mouseleave', () => { dot.classList.remove('active'); ring.classList.remove('active'); });
   });
   (function animRing() {
-    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    rx += (mx - rx) *.12; ry += (my - ry) * .12;
     ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
     requestAnimationFrame(animRing);
   })();
