@@ -3,37 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dein Guide ist unterwegs! | Joana Wöhl</title>
+  <title>Danke! | Joana Wöhl</title>
   <meta name="robots" content="noindex, nofollow">
-  <link rel="canonical" href="https://woehl.de/danke.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: #fff; }
+    .danke-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      padding: 120px 32px 80px;
+    }
+    .danke-inner {
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+    }
+    .danke-checkmark {
+      width: 64px;
+      height: 64px;
+      background: #f5f3ef;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      animation: popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+    .danke-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-rose);
+      margin-bottom: 16px;
+    }
+    .danke-headline {
+      font-family: var(--serif);
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--color-dark);
+      margin-bottom: 24px;
+    }
+    .danke-headline em { font-style: italic; }
+    .danke-text {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--color-dark);
+      opacity: 0.6;
+      margin-bottom: 48px;
+    }
+    .danke-box {
+      background: #f5f3ef;
+      border-radius: 12px;
+      padding: 32px 36px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    .danke-box-title {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+    }
+    .danke-box-steps {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .danke-box-steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--color-dark);
+      opacity: 0.75;
+    }
+    .danke-step-num {
+      width: 22px;
+      height: 22px;
+      background: var(--color-rose);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 500;
+      color: #fff;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .danke-sig {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 20px;
+      color: var(--color-dark);
+      opacity: 0.45;
+      margin-bottom: 32px;
+    }
+    .danke-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .danke-link {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-dark);
+      opacity: 0.45;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .danke-link:hover { opacity: 0.8; }
+    footer { background: #f5f3ef !important; }
+  </style>
   <script src="/cookie-consent.js"></script>
 </head>
 <body>
 
-<!-- CURSOR -->
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- NAV -->
 <nav id="mainNav">
   <a href="index.html" class="nav-logo">Joana Wöhl</a>
 </nav>
 
-<!-- DANKE -->
-<section class="waitlist-section" style="min-height: calc(100vh - 80px); display: flex; align-items: center;">
-  <div class="waitlist-inner" style="padding-top: 80px; padding-bottom: 80px;">
-    <div class="success-icon" style="animation: popIn 0.5s var(--ease) forwards;">📬</div>
-    <h1 class="success-title">Dein Guide ist unterwegs.</h1>
-    <p class="success-text">
-      Schau gleich in dein Postfach — der Gratis Mini-Guide mit Joanas Lieblingsrezept ist bereits auf dem Weg zu dir.<br><br>
-      Du bist jetzt im Newsletter und bekommst neue Reset-Termine, Impulse und alles, was Joana gerade bewegt.
+<section class="danke-section">
+  <div class="danke-inner">
+
+    <div class="danke-checkmark">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M4 12l5 5 11-11" stroke="#3a3530" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="danke-eyebrow">Anmeldung bestätigt</div>
+
+    <h1 class="danke-headline">
+      Schön, dass<br><em>du da bist.</em>
+    </h1>
+
+    <p class="danke-text">
+      Schau gleich in dein Postfach —<br>dein Gratis Mini-Guide ist bereits unterwegs.
     </p>
+
+    <div class="danke-box">
+      <div class="danke-box-title">Was jetzt passiert</div>
+      <ul class="danke-box-steps">
+        <li>
+          <span class="danke-step-num">1</span>
+          <span>Du bekommst gleich eine E-Mail mit deinem Gratis Mini-Guide. Schau auch im Spam-Ordner nach, falls du nichts siehst.</span>
+        </li>
+        <li>
+          <span class="danke-step-num">2</span>
+          <span>Du erhältst ab jetzt Impulse, neue Seminar-Termine und alles, was mich gerade bewegt — direkt in dein Postfach.</span>
+        </li>
+        <li>
+          <span class="danke-step-num">3</span>
+          <span>Jederzeit abmeldbar — kein Spam, versprochen.</span>
+        </li>
+      </ul>
+    </div>
+
+    <p class="danke-sig">Joana</p>
+
+    <div class="danke-links">
+      <a href="index.html" class="danke-link">Zurück zur Startseite</a>
+      <a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener" class="danke-link">@joanawoehl auf Instagram</a>
+    </div>
+
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -51,7 +209,6 @@
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 Joana Wöhl. Alle Rechte vorbehalten.</span>
-      <div class="footer-instagram"><a href="https://www.instagram.com/joanawoehl" target="_blank" rel="noopener">@joanawoehl</a></div>
     </div>
   </div>
 </footer>
@@ -64,33 +221,14 @@
     mx = e.clientX; my = e.clientY;
     dot.style.left = mx + 'px'; dot.style.top = my + 'px';
   });
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => { dot.classList.add('active'); ring.classList.add('active'); });
-    el.addEventListener('mouseleave', () => { dot.classList.remove('active'); ring.classList.remove('active'); });
-  });
   (function animRing() {
     rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
     ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
     requestAnimationFrame(animRing);
   })();
   const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
-  const hamburger = document.getElementById('navHamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-  });
-  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
 </script>
-<script src="premium.js"></script>
 <script src="cookie-banner.js"></script>
 </body>
 </html>
