@@ -658,12 +658,22 @@
   document.getElementById('waitlistForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const fd = new FormData(this);
-    fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
-      .then(() => {
-        this.style.display = 'none';
-        document.getElementById('formSuccess').classList.add('visible');
-        window.location.href = 'danke.html';
-      });
+    const email = fd.get('email');
+    const firstname = fd.get('firstname');
+    const form = this;
+
+    Promise.all([
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd }),
+      fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, firstname })
+      })
+    ]).finally(() => {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').classList.add('visible');
+      window.location.href = 'danke.html';
+    });
   });
 </script>
 <script src="cookie-banner.js"></script>
